@@ -1,8 +1,8 @@
-const {DataTypes} = require('sequelize')
-const {sequelize} = require('../util/database')
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../util/database");
 
 module.exports = {
-  Post: sequelize.define('post', {
+  Posts: sequelize.define("posts", {
     postId: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -10,6 +10,6 @@ module.exports = {
       primaryKey: true,
     },
     postTitle: DataTypes.STRING,
-    postText: DataTypes.TEXT
-  })
-}
+    postText: DataTypes.TEXT,
+  }),
+};
