@@ -2,7 +2,7 @@ require("dotenv").config();
 const { SECRET } = process.env;
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const { User } = require("../models/user");
+const { Users } = require("../models/user");
 
 createToken = (username, id) => {
   return jwt.sign({ username, id }, SECRET, { expiresIn: "2 days" });
@@ -11,16 +11,17 @@ createToken = (username, id) => {
 module.exports = {
   login: async (req, res) => {
     try {
+      console.log('trying login')
       const { username, password } = req.body;
-      let foundUser = await User.findOne({ where: { username } });
+      let foundUser = await Users.findOne({ where: { username } });
       if (foundUser) {
-        console.log('username exists')
+        console.log("username exists");
         const isAuthenticated = bcrypt.compareSync(
           password,
           foundUser.hashedPass
         );
         if (isAuthenticated) {
-          console.log('password correct')
+          console.log("password correct");
           const token = createToken(
             foundUser.dataValues.username,
             foundUser.dataValues.id
@@ -39,12 +40,41 @@ module.exports = {
         console.log("That username does not exist");
       }
     } catch (theseHands) {
-      console.log("Login failed");
-      console.log(theseHands);
+      console.log("Login failed", theseHands);
       res.sendStatus(400);
     }
   },
   register: async (req, res) => {
-    // TODO:
+    try {
+      console.log('trying register')
+      const { username, password } = req.body;
+      let foundUser = await Users.findOne({ where: { username } });
+      if (foundUser) {
+        res.status(400).send("username already exists");
+      } else {
+        const salt = bcrypt.genSaltSync(10);
+        const hash = bcrypt.hashSync(password, salt);
+        const newUser = await Users.create({
+          username,
+          hashedPass: hash,
+        });
+        console.log(newUser);
+        const token = createToken(
+          newUser.dataValues.username,
+          newUser.dataValues.id
+        );
+        console.log("TOOOOKEN", token);
+        const exp = Date.now() + 1000 * 60 * 60 * 48;
+        res.status(200).send({
+          username: newUser.dataValues.username,
+          userId: newUser.dataValues.id,
+          token,
+          exp,
+        });
+      }
+    } catch (theseHands) {
+      console.log("error in registering", theseHands);
+      res.sendStatus(400);
+    }
   },
 };
