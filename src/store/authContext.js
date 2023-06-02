@@ -12,7 +12,7 @@ const AuthContext = createContext({
 const calculateRemainingTime = (exp) => {
   const currentTime = new Date().getTime();
   const expTime = exp;
-  const remainingTime = expTime + currentTime;
+  const remainingTime = expTime - currentTime;
   return remainingTime;
 };
 

@@ -6,7 +6,7 @@ import AuthContext from "../store/authContext";
 const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [cPassword, setCPassword] = useState("");
+  // const [cPassword, setCPassword] = useState("");
   const [email, setEmail] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -42,7 +42,7 @@ const Auth = () => {
       .catch((theseHands) => {
         console.log("error with registering/logging in", theseHands);
         setPassword("");
-        setCPassword("");
+        // setCPassword("");
         setUsername("");
         setEmail("");
         setFirstname("");
@@ -94,14 +94,14 @@ const Auth = () => {
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-            <input
+            {/* <input
               className="form-input"
               type="password"
               placeholder="Confirm Password"
               value={cPassword}
               required
               onChange={(e) => setCPassword(e.target.value)}
-            />
+            /> */}
           </div>
         ) : (
           <div>

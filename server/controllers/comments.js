@@ -1,6 +1,6 @@
 const { Users } = require("../models/users");
 const { Posts } = require("../models/posts");
-const { Comments } = require("../controllers/comments");
+const { Comments } = require("./comments");
 
 module.exports = {
   getComments: async (req, res) => {
@@ -17,6 +17,8 @@ module.exports = {
           }, // FIXME: May need to add more parts here
         ],
       });
+      // console.log(comments)
+      res.status(200).send(comments)
     } catch (theseHands) {
       console.log("error in getting comments", theseHands);
       res.sendStatus(400);

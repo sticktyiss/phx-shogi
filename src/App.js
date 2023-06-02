@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Auth from "./components/Auth";
+import Profile from './components/Profile'
+import Posts from './components/Posts'
 
 import AuthContext from "./store/authContext";
 
@@ -17,7 +19,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/auth" element={ authCtx.token ? <Auth signedIn={true} /> : <Auth signedIn={false} /> }/>
+        <Route path="/auth" element={ !authCtx.token ? <Auth /> : <Navigate to="/"/>}/>
+        <Route path="/posts" element={ <Posts /> }/>  //TODO: Add more authCtx ternaries
+        <Route path="/profile" element={ <Profile /> }/>
         <Route path="*" element={ <Navigate to='/'/> }/>
       </Routes>
       <Footer />
