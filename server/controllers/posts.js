@@ -12,7 +12,11 @@ module.exports = {
             required: true,
             attributes: [`username`],
           },
-        ],// TODO: Add comments table in here possibly
+          {
+            model: Comments,
+            required: true,
+          }
+        ],
       });
       res.status(200).send(posts);
     } catch (theseHands) {
@@ -32,7 +36,11 @@ module.exports = {
             required: true,
             attributes: [`username`],
           },
-        ],// TODO: Add comments table in here possibly
+          {
+            model: Comments,
+            required: true,
+          }
+        ],
       });
     } catch (theseHands) {
       console.log("error in getCurrentUserPosts", theseHands);

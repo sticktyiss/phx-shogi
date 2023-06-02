@@ -2,6 +2,8 @@
   "name": "phx-shogi",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4765",
+  "main": "server/index.js",
   "dependencies": {
     "@supabase/supabase-js": "^2.24.0",
     "@testing-library/jest-dom": "^5.16.5",
