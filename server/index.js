@@ -4,9 +4,10 @@ const cors = require('cors')
 const {SERVER_PORT} = process.env
 
 const {login, register} = require('./controllers/auth')
+// TODO: Add endpoints for posting and commenting
 const {isAuthenticated} = require('./middleware/isAuthenticated')
 const {sequelize} = require('./util/database')
-const {Users} = require('./models/user')
+const {Users} = require('./models/users')
 const {Posts} = require('./models/posts')
 const {Comments} = require('./models/comments')
 

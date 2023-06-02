@@ -2,7 +2,7 @@ require("dotenv").config();
 const { SECRET } = process.env;
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const { Users } = require("../models/user");
+const { Users } = require("../models/users");
 
 createToken = (username, id) => {
   return jwt.sign({ username, id }, SECRET, { expiresIn: "2 days" });
@@ -47,7 +47,6 @@ module.exports = {
   register: async (req, res) => {
     try {
       console.log('trying register')
-      // TODO: FIXME: Register isn't connecting.
       const { username, password, email, firstname, lastname, wins, losses, draws } = req.body;
       let foundUser = await Users.findOne({ where: { username } });
       if (foundUser) {

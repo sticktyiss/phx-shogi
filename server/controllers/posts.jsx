@@ -1,5 +1,6 @@
-const { Users } = require("../models/user");
+const { Users } = require("../models/users");
 const { Posts } = require("../models/posts");
+const { Comments } = require("../controllers/comments");
 
 module.exports = {
   getAllPosts: async (req, res) => {
@@ -15,7 +16,7 @@ module.exports = {
           {
             model: Comments,
             required: true,
-          }
+          },
         ],
       });
       res.status(200).send(posts);
@@ -39,7 +40,7 @@ module.exports = {
           {
             model: Comments,
             required: true,
-          }
+          },
         ],
       });
     } catch (theseHands) {
