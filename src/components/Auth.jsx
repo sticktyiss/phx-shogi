@@ -13,7 +13,7 @@ const Auth = () => {
   const wins = 0;
   const losses = 0;
   const draws = 0;
-  const [register, setRegister] = useState(true);
+  const [register, setRegister] = useState(false);
 
   const authCtx = useContext(AuthContext);
 
@@ -34,7 +34,7 @@ const Auth = () => {
 
     console.log("BODY", body);
     axios
-      .post(register ? `/api/register` : `/api/login`, body)
+      .post(register ? '/api/register' : '/api/login', body)
       .then(({ data }) => {
         console.log("AFTER AUTH", data);
         authCtx.login(data.token, data.exp, data.userId);
@@ -42,6 +42,7 @@ const Auth = () => {
       .catch((theseHands) => {
         console.log("error with registering/logging in", theseHands);
         setPassword("");
+        setCPassword("");
         setUsername("");
         setEmail("");
         setFirstname("");
@@ -53,52 +54,75 @@ const Auth = () => {
     <main id="Auth">
       <h1>Welcome to Phoenix Shogi</h1>
       <form className="form auth-form" onSubmit={submitHandler}>
-        <input
-          className="form-input"
-          type="email"
-          placeholder="Email"
-          value={email}
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          className="form-input"
-          type="text"
-          placeholder="First name"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-        />
-        <input
-          className="form-input"
-          type="text"
-          placeholder="Last name"
-          value={lastname}
-          onChange={(e) => setLastname(e.target.value)}
-        />
-        <input
-          className="form-input"
-          type="text"
-          placeholder="Username"
-          value={username}
-          required
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          className="form-input"
-          type="password"
-          placeholder="Password"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <input
-          className="form-input"
-          type="password"
-          placeholder="Confirm Password"
-          value={cPassword}
-          required
-          onChange={(e) => setCPassword(e.target.value)}
-        />
+        {register ? (
+          <div>
+            <input
+              className="form-input"
+              type="email"
+              placeholder="Email"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="text"
+              placeholder="First name"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Last name"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Username"
+              value={username}
+              required
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="password"
+              placeholder="Password"
+              value={password}
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="password"
+              placeholder="Confirm Password"
+              value={cPassword}
+              required
+              onChange={(e) => setCPassword(e.target.value)}
+            />
+          </div>
+        ) : (
+          <div>
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Username"
+              value={username}
+              required
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="form-input"
+              type="password"
+              placeholder="Password"
+              value={password}
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+        )}
         <button className="form-btn">{register ? `Sign up` : `Login`}</button>
       </form>
       <button className="form-btn" onClick={() => setRegister(!register)}>

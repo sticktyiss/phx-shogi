@@ -19,13 +19,13 @@ module.exports = {
         const isAuthenticated = bcrypt.compareSync(
           password,
           foundUser.hashedPass
-        );
-        if (isAuthenticated) {
-          console.log("password correct");
-          const token = createToken(
-            foundUser.dataValues.username,
-            foundUser.dataValues.id
           );
+          if (isAuthenticated) {
+            console.log("password correct");
+            const token = createToken(
+              foundUser.dataValues.username,
+              foundUser.dataValues.id
+              );
           const exp = Date.now() + 1000 * 60 * 60 * 3;
           res.status(200).send({
             username: foundUser.dataValues.username,
@@ -47,7 +47,8 @@ module.exports = {
   register: async (req, res) => {
     try {
       console.log('trying register')
-      const { username, password } = req.body;
+      // TODO: FIXME: Register isn't connecting.
+      const { username, password, email, firstname, lastname, wins, losses, draws } = req.body;
       let foundUser = await Users.findOne({ where: { username } });
       if (foundUser) {
         res.status(400).send("username already exists");
@@ -57,6 +58,12 @@ module.exports = {
         const newUser = await Users.create({
           username,
           hashedPass: hash,
+          email,
+          firstname,
+          lastname,
+          wins: +wins,
+          losses: +losses,
+          draws: +draws,
         });
         console.log(newUser);
         const token = createToken(
