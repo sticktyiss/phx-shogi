@@ -16,6 +16,7 @@ const Header = () => {
 
   return (
     <header>
+      <h1>Phoenix Shogi</h1>
       <nav>
         {authCtx.token ? (
           <ul>

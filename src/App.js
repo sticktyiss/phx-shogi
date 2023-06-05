@@ -20,8 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/auth" element={ !authCtx.token ? <Auth /> : <Navigate to="/"/>}/>
-        <Route path="/posts" element={ <Posts /> }/>  //TODO: Add more authCtx ternaries
-        <Route path="/profile" element={ <Profile /> }/>
+        <Route path="/posts" element={ authCtx? <Posts /> : <Navigate to="/auth"/>}/>  //TODO: Add more authCtx ternaries
+        <Route path="/profile" element={ authCtx? <Profile /> : <Navigate to="/auth"/> }/>
         <Route path="*" element={ <Navigate to='/'/> }/>
       </Routes>
       <Footer />

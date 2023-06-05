@@ -52,7 +52,8 @@ const Auth = () => {
 
   return (
     <main id="Auth">
-      <h1>Welcome to Phoenix Shogi</h1>
+      <h1>Welcome</h1>
+      <h2>Please login to view the full website.</h2>
       <form className="form auth-form" onSubmit={submitHandler}>
         {register ? (
           <div>
