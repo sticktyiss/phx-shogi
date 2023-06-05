@@ -26,6 +26,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink style={styleActiveLink} to="learn">
+                Learn
+              </NavLink>
+            </li>
+            <li>
               <NavLink style={styleActiveLink} to="posts">
                 Forum
               </NavLink>
@@ -46,6 +51,11 @@ const Header = () => {
             <li>
               <NavLink style={styleActiveLink} to="/">
                 Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink style={styleActiveLink} to="learn">
+                Learn
               </NavLink>
             </li>
             <li>
