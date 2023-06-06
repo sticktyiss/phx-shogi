@@ -2,8 +2,9 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import AuthContext from "../store/authContext";
-import AddPost from "./AddPost";
+import ShowComments from "./ShowComments";
+// import AuthContext from "../store/authContext";
+// import AddPost from "./AddPost";
 
 const Posts = () => {
   // const {userId} = useContext(AuthContext)
@@ -11,8 +12,9 @@ const Posts = () => {
 
   useEffect(() => {
     axios
-      .get("/posts")
+      .get("/api/posts")
       .then((res) => {
+        console.log('RES.data:', res.data)
         setPosts(res.data);
       })
       .catch((theseHands) => {
@@ -24,8 +26,9 @@ const Posts = () => {
     return (
       <div key={post.id} className="postCard">
         <h2>{post.postTitle}</h2>
-        <h3>{post.users.username}</h3>
+        <h3>{post.user.username}</h3>
         <p>{post.postText}</p>
+        <ShowComments comments={post.comments} />
       </div>
     );
   });

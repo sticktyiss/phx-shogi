@@ -43,8 +43,7 @@ app.put("/api/posts/:id", isAuthenticated, editPost);
 app.delete("/api/posts/:id", isAuthenticated, deletePost);
 
 // sequelize.sync({force: true})
-sequelize
-  .sync()
+sequelize.sync()
   .then(() => {
     app.listen(SERVER_PORT, () =>
       console.log(`DB sync successful & server is up on ${SERVER_PORT}`)

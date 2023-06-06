@@ -1,11 +1,11 @@
 const { Users } = require("../models/users");
 const { Posts } = require("../models/posts");
-const { Comments } = require("./comments");
+const { Comments } = require("../models/comments");
 
 module.exports = {
   getAllPosts: async (req, res) => {
     try {
-      console.log("get all posts");
+      console.log("getAllPosts hit");
       const posts = await Posts.findAll({
         include: [
           {
@@ -13,22 +13,22 @@ module.exports = {
             required: true,
             attributes: [`username`],
           },
-          {
-            model: Comments,
-            required: true,
-          },
+          // { TODO: add these back in FIXME:
+          //   model: Comments,
+          //   required: true,
+          // },
         ],
       });
-      // console.log(posts)
+      console.log(posts)
       res.status(200).send(posts);
     } catch (theseHands) {
-      console.log("Error in getAllPosts", theseHands);
+      console.log("Error getAllPosts:", theseHands);
       res.sendStatus(400);
     }
   },
   getCurrentUserPosts: async (req, res) => {
     try {
-      console.log("get current user posts");
+      console.log("getCurrentUserPosts");
       const { userId } = req.params;
       const posts = await Posts.findAll({
         where: { userId: userId },
@@ -38,22 +38,22 @@ module.exports = {
             required: true,
             attributes: [`username`],
           },
-          {
-            model: Comments,
-            required: true,
-          },
+          // { TODO: add these back in FIXME:
+          //   model: Comments,
+          //   required: true,
+          // },
         ],
       });
       // console.log(posts)
       res.status(200).send(posts);
     } catch (theseHands) {
-      console.log("error in getCurrentUserPosts", theseHands);
+      console.log("error in getCurrentUserPosts:", theseHands);
       res.sendStatus(400);
     }
   },
   addPost: async (req, res) => {
     try {
-      console.log("add post");
+      console.log("add post hit");
       const { title, content, userId } = req.body;
       await Posts.create({ postTitle: title, postText: content, userId });
     } catch (theseHands) {
