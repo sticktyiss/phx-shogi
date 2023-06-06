@@ -9,6 +9,7 @@ import Auth from "./components/Auth";
 import Learn from "./components/Learn";
 import Profile from './components/Profile'
 import Posts from './components/Posts'
+import AddPost from "./components/AddPost";
 
 import AuthContext from "./store/authContext";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/learn" element={ <Learn /> } />
         <Route path="/posts" element={ authCtx? <Posts /> : <Navigate to="/auth"/>}/>
         <Route path="/profile" element={ authCtx? <Profile /> : <Navigate to="/auth"/> }/>
+        <Route path="/addpost" element={ authCtx? <AddPost /> : <Navigate to='/auth'/> } />
         <Route path="*" element={ <Navigate to='/'/> }/>
       </Routes>
       <Footer />
