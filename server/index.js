@@ -11,7 +11,11 @@ const {
   editPost,
   deletePost,
 } = require("./controllers/posts");
-// TODO: Add endpoints for commenting
+const {
+  getComments,
+  addComment,
+  deleteComment,
+} = require("./controllers/comments");
 const { isAuthenticated } = require("./middleware/isAuthenticated");
 const { sequelize } = require("./util/database");
 const { Users } = require("./models/users");
@@ -42,8 +46,14 @@ app.post("/api/posts", isAuthenticated, addPost);
 app.put("/api/posts/:id", isAuthenticated, editPost);
 app.delete("/api/posts/:id", isAuthenticated, deletePost);
 
+// Comment endpoints
+app.get("/api/comments", getComments);
+app.post("/api/comments", isAuthenticated, addComment);
+app.delete("/api/comments/:id", isAuthenticated, deleteComment);
+
 // sequelize.sync({force: true})
-sequelize.sync()
+sequelize
+  .sync()
   .then(() => {
     app.listen(SERVER_PORT, () =>
       console.log(`DB sync successful & server is up on ${SERVER_PORT}`)

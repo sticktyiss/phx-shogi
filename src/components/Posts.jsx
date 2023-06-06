@@ -14,8 +14,9 @@ const Posts = () => {
     axios
       .get("/api/posts")
       .then((res) => {
-        console.log('RES.data:', res.data)
+        // FIXME: console.log('RES.data:', res.data)
         setPosts(res.data);
+        console.log(res.data)
       })
       .catch((theseHands) => {
         console.log(theseHands);
@@ -27,6 +28,7 @@ const Posts = () => {
       <div key={post.id} className="postCard">
         <h2>{post.postTitle}</h2>
         <h3>{post.user.username}</h3>
+        <h4>{post.updatedAt /* TODO: Convert the date into something pretty FIXME: */ }</h4> 
         <p>{post.postText}</p>
         <ShowComments comments={post.comments} />
       </div>
