@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import AuthContext from "../store/authContext";
 import AddPost from "./AddPost";
@@ -31,7 +32,7 @@ const Posts = () => {
 
   return (
     <main>
-      <NavLink to='addpost'>Add Post</NavLink> //TODO: add button functionality.
+      <NavLink className='addPostRender' to='/addpost'>Add Post</NavLink>
       {mappedPosts}</main>
   )
 };
