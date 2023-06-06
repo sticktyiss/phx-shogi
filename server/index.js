@@ -37,7 +37,7 @@ app.post("/api/login", login);
 
 // Post endpoints
 app.get("/api/posts", getAllPosts);
-app.get("/api/userposts/:id", getCurrentUserPosts);
+app.get("/api/userposts/:userId", getCurrentUserPosts);
 app.post("/api/posts", isAuthenticated, addPost);
 app.put("/api/posts/:id", isAuthenticated, editPost);
 app.delete("/api/posts/:id", isAuthenticated, deletePost);
