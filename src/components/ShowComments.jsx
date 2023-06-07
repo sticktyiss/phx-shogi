@@ -10,13 +10,13 @@ const ShowComments = ({ postId }) => {
 
   useEffect(() => {
     axios
-      .get(`/api/comments${postId}`)
+      .get(`/api/comments/${postId}`)
       .then((res) => {
         console.log(res.data);
         setPostComments(res.data);
       })
       .catch((theseHands) => console.log(theseHands));
-  });
+  }, []);
 
   const mappedComments = postComments.map((commentItem) => {
     return (
@@ -32,21 +32,30 @@ const ShowComments = ({ postId }) => {
 
   if (!showComments) {
     return (
-      <div className="commentArea" onClick={() => setShowComments(!showComments)}>
-        <BiChevronDownCircle
-          className="commentArrow"
-        />
-        <p>Show comments</p>
+      <div className="commentArea">
+        <div
+          className="showComment"
+          onClick={() => setShowComments(!showComments)}
+        >
+          <BiChevronDownCircle className="commentArrow" />
+          <p>Show comments</p>
+        </div>
       </div>
     );
   } else {
     return (
       <div className="commentArea">
-        <BiChevronUpCircle className='commentArrow' onClick={() => setShowComments(!showComments)} />
+        <div className="showComment">
+          <BiChevronUpCircle
+            className="commentArrow"
+            onClick={() => setShowComments(!showComments)}
+          />
+          <p>Hide comments</p>
+        </div>
         <AddComment postId={postId} />
         {mappedComments}
       </div>
-    )
+    );
   }
 };
 

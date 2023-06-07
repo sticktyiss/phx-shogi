@@ -54,7 +54,7 @@ const Profile = () => {
         <h2>{post.postTitle}</h2>
         <h3>{post.username}</h3>
         <p>{post.postText}</p>
-        <ShowComments comments={post.comments} />
+        <ShowComments postId={post.id} />
       </div>
     );
   });

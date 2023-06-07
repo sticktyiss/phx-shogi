@@ -1,11 +1,11 @@
 const { Users } = require("../models/users");
 const { Posts } = require("../models/posts");
-const { Comments } = require("./comments");
+const { Comments } = require("../models/comments");
 
 module.exports = {
   getComments: async (req, res) => {
     try {
-      console.log("get comments");
+      console.log("getComments hit");
       const { postId } = req.params;
       const comments = await Comments.findAll({
         where: { postId: postId },
@@ -26,8 +26,8 @@ module.exports = {
   },
   addComment: async (req, res) => {
     try {
-      console.log("add comment hit");
-      const { content, userId } = req.body;
+      console.log("addComment hit");
+      const { content, userId, postId } = req.body;
       await Comments.create({ commentText: content, userId, postId });
       res.sendStatus(200);
     } catch (theseHands) {
