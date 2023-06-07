@@ -18,7 +18,7 @@ module.exports = {
         ],
       });
       // console.log(comments)
-      res.status(200).send(comments)
+      res.status(200).send(comments.reverse());
     } catch (theseHands) {
       console.log("error in getting comments", theseHands);
       res.sendStatus(400);
@@ -26,7 +26,10 @@ module.exports = {
   },
   addComment: async (req, res) => {
     try {
-      console.log("adding comment");
+      console.log("add comment hit");
+      const { content, userId } = req.body;
+      await Comments.create({ commentText: content, userId, postId });
+      res.sendStatus(200);
     } catch (theseHands) {
       console.log("error in adding comment", theseHands);
       res.sendStatus(400);

@@ -4,6 +4,8 @@ import AuthContext from "../store/authContext";
 import axios from "axios";
 import ShowComments from "./ShowComments";
 
+// TODO: Put a comment section so you can view and delete comments you've made.
+
 const Profile = () => {
   const { userId, token } = useContext(AuthContext);
   const [userPosts, setUserPosts] = useState([]);

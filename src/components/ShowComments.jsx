@@ -4,13 +4,13 @@ import AddComment from "./AddComment";
 import { useState, useEffect } from "react";
 import { BiChevronDownCircle, BiChevronUpCircle } from "react-icons/bi";
 
-const ShowComments = ({ comments }) => {
+const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
   const [postComments, setPostComments] = useState([]);
 
   useEffect(() => {
     axios
-      .get("/api/comments")
+      .get(`/api/comments${postId}`)
       .then((res) => {
         console.log(res.data);
         setPostComments(res.data);
@@ -32,10 +32,9 @@ const ShowComments = ({ comments }) => {
 
   if (!showComments) {
     return (
-      <div className="commentArea">
+      <div className="commentArea" onClick={() => setShowComments(!showComments)}>
         <BiChevronDownCircle
           className="commentArrow"
-          onClick={() => setShowComments(!showComments)}
         />
         <p>Show comments</p>
       </div>
@@ -44,7 +43,7 @@ const ShowComments = ({ comments }) => {
     return (
       <div className="commentArea">
         <BiChevronUpCircle className='commentArrow' onClick={() => setShowComments(!showComments)} />
-        <AddComment />
+        <AddComment postId={postId} />
         {mappedComments}
       </div>
     )

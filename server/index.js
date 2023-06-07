@@ -47,7 +47,7 @@ app.put("/api/posts/:id", isAuthenticated, editPost);
 app.delete("/api/posts/:id", isAuthenticated, deletePost);
 
 // Comment endpoints
-app.get("/api/comments", getComments);
+app.get("/api/comments/:postId", getComments);
 app.post("/api/comments", isAuthenticated, addComment);
 app.delete("/api/comments/:id", isAuthenticated, deleteComment);
 

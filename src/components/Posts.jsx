@@ -30,7 +30,7 @@ const Posts = () => {
         <h3>{post.user.username}</h3>
         <h4>{post.updatedAt /* TODO: Convert the date into something pretty FIXME: */ }</h4> 
         <p>{post.postText}</p>
-        <ShowComments comments={post.comments} />
+        <ShowComments postId={post.id} />
       </div>
     );
   });
