@@ -57,7 +57,10 @@ module.exports = {
   },
   deleteComment: async (req, res) => {
     try {
-      console.log("deleting comment");
+      console.log("deleteComment hit");
+      const {id} = req.params;
+      await Comments.destroy({where: {id:+id}})
+      res.sendStatus(200)
     } catch (theseHands) {
       console.log("error in deleting comment", theseHands);
       res.sendStatus(400);

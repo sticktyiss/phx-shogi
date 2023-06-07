@@ -13,7 +13,7 @@ const Profile = () => {
 
   const [showPosts, setShowPosts] = useState(true);
 
-  // AXIOS requests
+  // AXIOS requests for posts
   const getUserPosts = useCallback(() => {
     axios
       .get(`/api/userposts/${userId}`)
@@ -51,6 +51,7 @@ const Profile = () => {
       .catch((theseHands) => console.log("ERR in deleting", theseHands));
   };
 
+  // AXIOS requests for comments
   const getUserComments = useCallback(() => {
     axios
       .get(`/api/userComments/${userId}`)
@@ -62,10 +63,23 @@ const Profile = () => {
     getUserComments();
   }, [getUserComments]);
 
+  const deleteComment = (id) => {
+    axios
+      .delete(`/api/comments/${id}`, {
+        headers: {
+          authorization: token,
+        },
+      })
+      .then(() => {
+        getUserComments();
+      })
+      .catch((theseHands) => console.log("ERR in deleteComment:", theseHands));
+  };
+
   const mappedPosts = userPosts.map((post) => {
     return (
       <div key={post.id} className="postCard">
-        <button onClick={() => deletePost(post.id)}></button>
+        <button onClick={() => deletePost(post.id)}>X</button>
         <h2>{post.postTitle}</h2>
         <h3>{post.username}</h3>
         <p>{post.postText}</p>
@@ -77,6 +91,7 @@ const Profile = () => {
   const mappedComments = userComments.map((commentItem) => {
     return (
       <div key={commentItem.id} className="commentCard">
+        <button onClick={() => deleteComment(commentItem.id)}>X</button>
         <h5>{commentItem.user.username}</h5>
         <h6>
           {commentItem.createdAt /* FIXME: convert to pretty date w/ time */}
