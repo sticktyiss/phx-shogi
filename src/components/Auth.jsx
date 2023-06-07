@@ -44,9 +44,9 @@ const Auth = () => {
         setPassword("");
         // setCPassword("");
         setUsername("");
-        setEmail("");
-        setFirstname("");
-        setLastname("");
+        // setEmail("");
+        // setFirstname("");
+        // setLastname("");
       });
   };
 

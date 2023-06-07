@@ -9,7 +9,11 @@ import ShowComments from "./ShowComments";
 const Profile = () => {
   const { userId, token } = useContext(AuthContext);
   const [userPosts, setUserPosts] = useState([]);
+  const [userComments, setUserComments] = useState([]);
 
+  const [showPosts, setShowPosts] = useState(true);
+
+  // AXIOS requests
   const getUserPosts = useCallback(() => {
     axios
       .get(`/api/userposts/${userId}`)
@@ -47,6 +51,17 @@ const Profile = () => {
       .catch((theseHands) => console.log("ERR in deleting", theseHands));
   };
 
+  const getUserComments = useCallback(() => {
+    axios
+      .get(`/api/userComments/${userId}`)
+      .then((res) => setUserComments(res.data))
+      .catch((theseHands) => console.log("getUserComments Error:", theseHands));
+  }, []);
+
+  useEffect(() => {
+    getUserComments();
+  }, [getUserComments]);
+
   const mappedPosts = userPosts.map((post) => {
     return (
       <div key={post.id} className="postCard">
@@ -59,17 +74,51 @@ const Profile = () => {
     );
   });
 
-  return mappedPosts.length >= 1 ? (
-    <main className="Profile">
-      <h2>Your Posts</h2>
-      {mappedPosts}
-    </main>
-  ) : (
-    <main>
-      <h2>Your Posts</h2>
-      <h3>You haven't posted anything yet!</h3>
-    </main>
-  );
+  const mappedComments = userComments.map((commentItem) => {
+    return (
+      <div key={commentItem.id} className="commentCard">
+        <h5>{commentItem.user.username}</h5>
+        <h6>
+          {commentItem.createdAt /* FIXME: convert to pretty date w/ time */}
+        </h6>
+        <p>{commentItem.commentText}</p>
+      </div>
+    );
+  });
+
+  if (showPosts) {
+    return (
+      <main className="Profile">
+        <h2 onClick={() => setShowPosts(true)} className="bigNCenter">
+          Your Posts
+        </h2>
+        <h2 onClick={() => setShowPosts(false)} className="">
+          Your Comments
+        </h2>
+        {mappedPosts.length >= 1 ? (
+          mappedPosts
+        ) : (
+          <h3>You haven't made a post yet!</h3>
+        )}
+      </main>
+    );
+  } else {
+    return (
+      <main className="Profile">
+        <h2 onClick={() => setShowPosts(true)} className="">
+          Your Posts
+        </h2>
+        <h2 onClick={() => setShowPosts(false)} className="bigNCenter">
+          Your Comments
+        </h2>
+        {mappedComments.length >= 1 ? (
+          mappedComments
+        ) : (
+          <h3>You haven't posted any comments yet!</h3>
+        )}
+      </main>
+    );
+  }
 };
 
 export default Profile;

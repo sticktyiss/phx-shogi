@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, createContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 let logoutTimer;
 
@@ -28,7 +29,7 @@ const getLocalData = () => {
     localStorage.removeItem("userId");
     return null;
   }
-
+  
   return {
     token: storedToken,
     duration: remainingTime,
@@ -38,7 +39,7 @@ const getLocalData = () => {
 
 export const AuthContextProvider = (props) => {
   const localData = getLocalData();
-
+  
   let initialToken;
   let initialId;
   if (localData) {

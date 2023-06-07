@@ -2,15 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import AuthContext from "../store/authContext";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 // import logo from '...'
 
 const Header = () => {
   const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const styleActiveLink = ({ isActive }) => {
     return {
-      color: isActive ? "grey" : "",
+      color: isActive ? "grey" : "", //TODO: Style this out
     };
   };
 
@@ -41,7 +43,13 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <button className="logout-btn" onClick={() => authCtx.logout()}>
+              <button
+                className="logout-btn"
+                onClick={() => {
+                  authCtx.logout();
+                  navigate("/");
+                }}
+              >
                 Logout
               </button>
             </li>

@@ -24,6 +24,26 @@ module.exports = {
       res.sendStatus(400);
     }
   },
+  getUserComments: async (req,res) => {
+    try {
+      console.log('getUserComments hit')
+      const { userId } = req.params
+      const comments = await Comments.findAll({
+        where: {userId: userId},
+        include: [
+          {
+            model: Users,
+            required: true,
+            attributes: [`username`],
+          }
+        ]
+      })
+      res.status(200).send(comments.reverse())
+    } catch (theseHands) {
+      console.log('ERR in getUserComments', theseHands)
+      res.sendStatus(400)
+    }
+  },
   addComment: async (req, res) => {
     try {
       console.log("addComment hit");

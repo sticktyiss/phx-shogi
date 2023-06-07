@@ -40,7 +40,7 @@ module.exports = {
         console.log("That username does not exist");
       }
     } catch (theseHands) {
-      console.log("Login failed", theseHands);
+      console.log("Login request failed", theseHands);
       res.sendStatus(400);
     }
   },

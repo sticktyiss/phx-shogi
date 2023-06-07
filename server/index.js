@@ -13,6 +13,7 @@ const {
 } = require("./controllers/posts");
 const {
   getComments,
+  getUserComments,
   addComment,
   deleteComment,
 } = require("./controllers/comments");
@@ -48,6 +49,7 @@ app.delete("/api/posts/:id", isAuthenticated, deletePost);
 
 // Comment endpoints
 app.get("/api/comments/:postId", getComments);
+app.get("/api/usercomments/:userId", getUserComments);
 app.post("/api/comments", isAuthenticated, addComment);
 app.delete("/api/comments/:id", isAuthenticated, deleteComment);
 
