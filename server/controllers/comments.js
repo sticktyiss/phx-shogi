@@ -24,24 +24,24 @@ module.exports = {
       res.sendStatus(400);
     }
   },
-  getUserComments: async (req,res) => {
+  getUserComments: async (req, res) => {
     try {
-      console.log('getUserComments hit')
-      const { userId } = req.params
+      console.log("getUserComments hit");
+      const { userId } = req.params;
       const comments = await Comments.findAll({
-        where: {userId: userId},
+        where: { userId: userId },
         include: [
           {
             model: Users,
             required: true,
             attributes: [`username`],
-          }
-        ]
-      })
-      res.status(200).send(comments.reverse())
+          },
+        ],
+      });
+      res.status(200).send(comments.reverse());
     } catch (theseHands) {
-      console.log('ERR in getUserComments', theseHands)
-      res.sendStatus(400)
+      console.log("ERR in getUserComments", theseHands);
+      res.sendStatus(400);
     }
   },
   addComment: async (req, res) => {
@@ -58,9 +58,9 @@ module.exports = {
   deleteComment: async (req, res) => {
     try {
       console.log("deleteComment hit");
-      const {id} = req.params;
-      await Comments.destroy({where: {id:+id}})
-      res.sendStatus(200)
+      const { id } = req.params;
+      await Comments.destroy({ where: { id: +id } });
+      res.sendStatus(200);
     } catch (theseHands) {
       console.log("error in deleting comment", theseHands);
       res.sendStatus(400);

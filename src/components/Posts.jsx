@@ -16,7 +16,6 @@ const Posts = () => {
       .then((res) => {
         // FIXME: console.log('RES.data:', res.data)
         setPosts(res.data);
-        console.log(res.data)
       })
       .catch((theseHands) => {
         console.log(theseHands);

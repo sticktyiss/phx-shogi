@@ -12,7 +12,6 @@ const ShowComments = ({ postId }) => {
     axios
       .get(`/api/comments/${postId}`)
       .then((res) => {
-        console.log(res.data);
         setPostComments(res.data);
       })
       .catch((theseHands) => console.log(theseHands));
