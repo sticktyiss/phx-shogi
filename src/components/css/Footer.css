@@ -9,8 +9,9 @@ footer {
   color: #AC8F73;
 }
   footer h1 {
-  font-size: 5vh;
-  font-family: KongJapanese;
+  font-size: 10vh;
+  font-family: Harukaze;
+  letter-spacing: 5px;
 }
 footer a {
   color: #AC8F73;
