@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../store/authContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import './css/Header.css'
+import logo from '../images/phxshogi-logo.png'
 
 // import logo from '...'
 
@@ -12,12 +14,13 @@ const Header = () => {
 
   const styleActiveLink = ({ isActive }) => {
     return {
-      color: isActive ? "grey" : "", //TODO: Style this out
+      color: isActive ? "#d04646" : "#463d35", //TODO: Style this out
     };
   };
 
   return (
     <header>
+      <img src={logo} alt="Logo" />
       <h1>Phoenix Shogi</h1>
       <nav>
         {authCtx.token ? (
