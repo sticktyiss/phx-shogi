@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../store/authContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import './css/Header.css'
+import './css/Header.module.css'
 import logo from '../images/phxshogi-logo.png'
 
 // import logo from '...'

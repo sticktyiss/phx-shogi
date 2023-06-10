@@ -1,0 +1,48 @@
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fcf4e1;
+}
+main h1 {
+  font-family: Harukaze;
+  font-size: 20vh;
+  margin-top: 30vh;
+  letter-spacing: 5px;
+}
+.disclaimer {
+  color: #d04646;
+  width: 30vw;
+  text-align: center;
+}
+main h2 {
+  font-family: Harukaze;
+  font-size: 8vh;
+  letter-spacing: 5px;
+  color: #d04646;
+}
+.comelearn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 10vh;
+  opacity: 0;
+  /* transition: opacity 1s ease-in; */
+  animation: fadeIn 2s;
+}
+/* .comelearn:{
+  opacity: 1;
+} */
+.comelearn div {
+  width: 35vw;
+}
+.comelearn img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+.meetup {
+
+}

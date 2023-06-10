@@ -2,7 +2,7 @@ import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { IconContext } from "react-icons";
-import './css/Footer.css'
+import './css/Footer.module.css'
 
 const Footer = () => {
   return (
