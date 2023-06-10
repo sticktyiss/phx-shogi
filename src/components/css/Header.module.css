@@ -8,7 +8,7 @@ header {
   background-color: #AC8F73;
   box-shadow: 0px 2px 5px black;
 }
-img {
+header img {
   height: 9vh;
   margin-left: 2vw;
   margin-right: 1.5vw;
@@ -35,5 +35,11 @@ nav a {
   text-decoration: none;
   margin-left: 1vw;
   margin-right: 1vw;
-  padding: 1vw;
+  padding: 1vh 1vw;
+  border: 3px solid transparent;
+}
+nav a:hover {
+  background-color: #927c6e;
+  border: 3px solid #d04646;
+  border-radius: 10px;
 }

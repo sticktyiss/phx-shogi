@@ -1,3 +1,10 @@
+body {
+	background-image: url('../../images/shogi-king-BKG.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: cover;
+  background-position: 0vw -8vh;
+}
 main {
   min-height: 90vh;
   display: flex;
@@ -5,15 +12,25 @@ main {
   align-items: center;
   color: #fcf4e1;
 }
+main > div {
+  background-color: #463d35;
+  border: 5px solid #927c6e;
+}
+.title {
+  margin: 28vh;
+  padding: 5vh 5vw;
+  border-top-right-radius: 20vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 20vh;
+  border-bottom-right-radius: 10px;
+}
 main h1 {
   font-family: Harukaze;
   font-size: 20vh;
-  margin-top: 30vh;
   letter-spacing: 5px;
 }
 .disclaimer {
   color: #d04646;
-  width: 30vw;
   text-align: center;
 }
 main h2 {
@@ -25,18 +42,16 @@ main h2 {
 .comelearn {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  /* width: 100%; */
   justify-content: space-around;
-  margin-top: 10vh;
-  opacity: 0;
-  /* transition: opacity 1s ease-in; */
-  animation: fadeIn 2s;
+  padding: 10vh;
 }
-/* .comelearn:{
-  opacity: 1;
-} */
 .comelearn div {
   width: 35vw;
+}
+.comelearn p {
+  line-height: 120%;
+  letter-spacing: 1px;
 }
 .comelearn img {
   width: auto;

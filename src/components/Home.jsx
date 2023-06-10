@@ -1,20 +1,19 @@
 import React from "react";
 import "./css/Home.css";
 import promo from '../images/promo-shogi.gif'
-
-// window.addEventListener('load', () => {
-//   console.log('removed css')
-//   document.querySelector("div").classList.remove('fade-in')
-// })
+import mapLoc from '../images/map-locations.gif'
+import map from '../images/map.gif'
 
 const Home = () => {
   return (
     <main className="Home">
+      <div className="title">
       <h1>Welcome to Phoenix Shogi</h1>
       <p className="disclaimer">
         *We are a developing group and will have updates to all facets of the
         group as the organization develops.
       </p>
+      </div>
       <div className="comelearn fade-in">
         <div>
         <h2>Come Learn</h2>
@@ -24,12 +23,15 @@ const Home = () => {
         <img src={promo} alt="Shogi piece promotion" />
       </div>
       <div className="meetup">
+        <img src={mapLoc} alt="Map Gif" />
+        <div>
         <h2>Meet Up With Us</h2>
         <p>
-          We are still deciding on a permanent location at this time, but in the meantime please fill <a href="https://www.bit.ly/phxshogi" target="_blank">
-            this form</a> out so you can receive info regarding meetups. We currently meetup
-          once a month.
+          We are still deciding on a permanent location at this time, but in the meantime we're meeting at various locations. Please fill <a href="https://www.bit.ly/phxshogi" target="_blank">
+            this form</a> out so you can receive info regarding meetups. We currently meetup once a month.
         </p>
+        </div>
+        <img src={map} alt="Map Gif" />
       </div>
     </main>
   );
