@@ -1,0 +1,60 @@
+#auth {
+  background-color: #463d35;
+  display: flex;
+  width: fit-content;
+  min-height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  margin-bottom: 15vh;
+  padding: 10vh;
+  border: 5px solid #927c6e;
+  border-radius: 1vw 10vw;
+}
+#auth h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3vh;
+}
+#auth form {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#auth div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3vw;
+}
+#auth input {
+  background-color: #927c6e;
+  padding: 3px;
+  border: none;
+  border-radius: 10px;
+  color: #fcf4e1;
+}
+#auth form button {
+  color: #fcf4e1;
+  font-family: Harukaze;
+  font-size: 10vh;
+  letter-spacing: 5px;
+  background-color: transparent;
+  border: none;
+  transition: .3s;
+}
+#auth form button:hover {
+  color: #d04646;
+}
+#auth > button {
+  color: #fcf4e1;
+  background-color: transparent;
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 5px;
+  margin-top: 2vh;
+  transition: .3s;
+}
+#auth > button:hover {
+  color: #d04646;
+}

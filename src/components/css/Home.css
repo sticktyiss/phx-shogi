@@ -3,7 +3,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 	background-size: cover;
-  background-position: 0vw -8vh;
 }
 main {
   min-height: 90vh;

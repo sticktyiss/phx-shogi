@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/authContext";
+import './css/Auth.css'
 
 const Auth = () => {
   const [username, setUsername] = useState("");
@@ -51,50 +52,54 @@ const Auth = () => {
   };
 
   return (
-    <main id="Auth">
+    <main id="auth">
       <h1>Welcome</h1>
-      <h2>Please login to view the full website.</h2>
+      <h2>{!register ? 'Please login to view the full site.': 'Please register to access the full site.' }</h2>
       <form className="form auth-form" onSubmit={submitHandler}>
         {register ? (
           <div>
+              <label>First name:</label>
+            <input
+              className="form-input"
+              type="text"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
+              />
+              <br />
+              <label>Last name:</label>
+            <input
+              className="form-input"
+              type="text"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+              />
+              <br />
+            <label>Email:</label>
             <input
               className="form-input"
               type="email"
-              placeholder="Email"
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-            />
+              />
+              <br />
+              <label>Username:</label>
             <input
               className="form-input"
               type="text"
-              placeholder="First name"
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-            />
-            <input
-              className="form-input"
-              type="text"
-              placeholder="Last name"
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
-            />
-            <input
-              className="form-input"
-              type="text"
-              placeholder="Username"
               value={username}
               required
               onChange={(e) => setUsername(e.target.value)}
-            />
+              />
+              <br />
+              <label>Password:</label>
             <input
               className="form-input"
-              type="password"
-              placeholder="Password"
+              type="text"
               value={password}
               required
               onChange={(e) => setPassword(e.target.value)}
-            />
+              />
             {/* <input
               className="form-input"
               type="password"
@@ -106,18 +111,19 @@ const Auth = () => {
           </div>
         ) : (
           <div>
+            <label>Username:</label>
             <input
               className="form-input"
               type="text"
-              placeholder="Username"
               value={username}
               required
               onChange={(e) => setUsername(e.target.value)}
-            />
+              />
+              <br />
+              <label>Password:</label>
             <input
               className="form-input"
               type="password"
-              placeholder="Password"
               value={password}
               required
               onChange={(e) => setPassword(e.target.value)}
@@ -127,7 +133,7 @@ const Auth = () => {
         <button className="form-btn">{register ? `Sign up` : `Login`}</button>
       </form>
       <button className="form-btn" onClick={() => setRegister(!register)}>
-        Need to <span>{register ? `Login` : `Sign up`}</span>?
+        Need to <span>{register ? `login` : `sign up`}</span>?
       </button>
     </main>
   );
