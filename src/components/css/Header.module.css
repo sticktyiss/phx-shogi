@@ -7,6 +7,8 @@ header {
   height: 10vh;
   background-color: #AC8F73;
   box-shadow: 0px 2px 5px black;
+  position: sticky;
+  top: 0px;
 }
 header img {
   height: 9vh;

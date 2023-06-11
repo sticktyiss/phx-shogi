@@ -17,21 +17,22 @@ const Home = () => {
       <div className="comelearn fade-in">
         <div>
         <h2>Come Learn</h2>
-        <p>The captivating "Game of Generals," is an ancient Japanese chess variant that breathes life into the battlefield of a 9x9 board. As the sun casts its golden rays, two players lock horns, commanding an army of warriors ready to seize glory or succumb to defeat. In this enthralling contest, cunning strategy and lightning-fast calculations intertwine as players employ intricate maneuvers, deceptive traps, and a symphony of sacrifices to outwit their opponent. </p>
-        <p>Each piece embodies the spirit of a legendary warrior, from noble generals to formidable foot soldiers, vying for supremacy in a game where every move echoes with history and whispers tales of unfathomable skill. Shogi's enigmatic beauty lies in its ability to blend timeless traditions with an endless realm of possibilities, captivating both masters of strategy and those venturing into its mystic realm for the first time.</p>
+        <p>The captivating "Game of Generals," is an ancient Japanese chess variant that breathes life into the battlefield of a 9x9 board. As the sun casts its golden rays, two players lock horns, commanding an army of warriors ready to seize glory or succumb to defeat. In this enthralling contest, cunning strategy and lightning-fast calculations intertwine as players employ intricate maneuvers, deceptive traps, and a symphony of sacrifices to outwit their opponent. Shogi's enigmatic beauty lies in its ability to blend timeless traditions with an endless realm of possibilities, captivating both masters of strategy and those venturing into its mystic realm for the first time.</p>
         </div>
         <img src={promo} alt="Shogi piece promotion" />
       </div>
       <div className="meetup">
-        <img src={mapLoc} alt="Map Gif" />
+        {/* <img src={mapLoc} alt="Map Gif" className="world" /> */}
+        <img src={map} alt="Map Gif" />
         <div>
         <h2>Meet Up With Us</h2>
         <p>
           We are still deciding on a permanent location at this time, but in the meantime we're meeting at various locations. Please fill <a href="https://www.bit.ly/phxshogi" target="_blank">
-            this form</a> out so you can receive info regarding meetups. We currently meetup once a month.
+            this form </a> 
+            out so you can receive info regarding meetups. We currently meetup once a month.
         </p>
+        <p>If you have any suggestions, feel free to send a message via the contacts at the bottom of the page.</p>
         </div>
-        <img src={map} alt="Map Gif" />
       </div>
     </main>
   );

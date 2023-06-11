@@ -15,18 +15,22 @@ main {
 main > div {
   background-color: #463d35;
   border: 5px solid #927c6e;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
 }
 .title {
-  margin: 28vh;
+  margin-top: 28vh;
+  margin-bottom: 28vh;
   padding: 5vh 5vw;
-  border-top-right-radius: 20vh;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 20vh;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10vw;
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 10vw;
+  border-bottom-right-radius: 1vw;
 }
 main h1 {
   font-family: Harukaze;
-  font-size: 20vh;
+  font-size: 10vw;
   letter-spacing: 5px;
 }
 .disclaimer {
@@ -35,29 +39,62 @@ main h1 {
 }
 main h2 {
   font-family: Harukaze;
-  font-size: 8vh;
+  font-size: 10vh;
   letter-spacing: 5px;
   color: #d04646;
 }
 .comelearn {
   display: flex;
   flex-direction: row;
-  /* width: 100%; */
   justify-content: space-around;
-  padding: 10vh;
+  align-items: center;
+  padding: 5vh 3vw;
+  border-radius: 5vh;
+  width: 75vw;
 }
 .comelearn div {
-  width: 35vw;
+  width: 45vw;
+  text-align: center;
 }
 .comelearn p {
   line-height: 120%;
   letter-spacing: 1px;
+  padding-top: 1vh;
+  text-align: justify;
 }
 .comelearn img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
+  margin-left: 3vw;
 }
 .meetup {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5vh 3vw;
+  border-radius: 5vh;
+  width: 75vw;
+}
+.meetup img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 3vw;
+}
+.meetup div {
+  width: 45vw;
+  text-align: center;
+}
+.meetup p {
+  line-height: 120%;
+  letter-spacing: 1px;
+  padding-top: 1vh;
+  text-align: justify;
+}
+.meetup a {
+  text-decoration: none;
+  color: #d04646;
+  font-weight: bold;
 }
