@@ -58,3 +58,15 @@
 #auth > button:hover {
   color: #d04646;
 }
+#auth span {
+  margin-bottom: 20vh;
+}
+#auth span h1 {
+  font-size: 500%;
+  margin-bottom: 5vh;
+}
+#auth img {
+  width: 50vw;
+  height: auto;
+  border-radius: 5vh;
+}

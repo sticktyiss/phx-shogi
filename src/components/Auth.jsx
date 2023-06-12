@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/authContext";
-import './css/Auth.css'
+import "./css/Auth.css";
+import success from "../images/shogi-grab-pieces.gif";
 
 const Auth = () => {
   const [username, setUsername] = useState("");
@@ -33,47 +34,60 @@ const Auth = () => {
       draws,
     };
 
-    console.log("BODY", body);
+    let gif = document.getElementById('loader');
+    let mainSec = document.getElementById('auth');
+
     axios
-      .post(register ? '/api/register' : '/api/login', body)
+      .post(register ? "/api/register" : "/api/login", body)
       .then(({ data }) => {
         console.log("AFTER AUTH", data);
-        authCtx.login(data.token, data.exp, data.userId);
+        //TODO: Finish gif loading sequence
+        register? gif.classList = "hidden" : gif.classList = "";
+        mainSec.style.padding = '10px';
+        setTimeout(() => {
+          authCtx.login(data.token, data.exp, data.userId);
+        }, (register ? 0 : 4000));
       })
       .catch((theseHands) => {
         console.log("error with registering/logging in", theseHands);
         setPassword("");
         // setCPassword("");
         setUsername("");
-        // setEmail("");
-        // setFirstname("");
-        // setLastname("");
       });
   };
 
   return (
     <main id="auth">
+      <span id="loader" className="hidden">
+        {/*TODO: FIXME:*/}
+        <h1>Logging in... Grab Your Pieces</h1>
+        <img src={success} alt="Loaded in successfully..." />
+      </span>
       <h1>Welcome</h1>
-      <h2>{!register ? 'Please login to view the full site.': 'Please register to access the full site.' }</h2>
+      <h2>
+        {!register
+          ? "Please login to view the full site."
+          : "Please register to access the full site."}
+      </h2>
       <form className="form auth-form" onSubmit={submitHandler}>
         {register ? (
           <div>
-              <label>First name:</label>
+            <label>First name:</label>
             <input
               className="form-input"
               type="text"
               value={firstname}
               onChange={(e) => setFirstname(e.target.value)}
-              />
-              <br />
-              <label>Last name:</label>
+            />
+            <br />
+            <label>Last name:</label>
             <input
               className="form-input"
               type="text"
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
-              />
-              <br />
+            />
+            <br />
             <label>Email:</label>
             <input
               className="form-input"
@@ -81,25 +95,25 @@ const Auth = () => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-              />
-              <br />
-              <label>Username:</label>
+            />
+            <br />
+            <label>Username:</label>
             <input
               className="form-input"
               type="text"
               value={username}
               required
               onChange={(e) => setUsername(e.target.value)}
-              />
-              <br />
-              <label>Password:</label>
+            />
+            <br />
+            <label>Password:</label>
             <input
               className="form-input"
               type="text"
               value={password}
               required
               onChange={(e) => setPassword(e.target.value)}
-              />
+            />
             {/* <input
               className="form-input"
               type="password"
@@ -118,9 +132,9 @@ const Auth = () => {
               value={username}
               required
               onChange={(e) => setUsername(e.target.value)}
-              />
-              <br />
-              <label>Password:</label>
+            />
+            <br />
+            <label>Password:</label>
             <input
               className="form-input"
               type="password"
