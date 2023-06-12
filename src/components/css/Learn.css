@@ -1,4 +1,4 @@
-#learn > div {
+.learn > div {
   /* background-color: #463d35; */
   border-radius: 10vh;
   display: flex;
@@ -7,41 +7,100 @@
   margin: 10vh 10vw;
   width: 80vw;
 }
-#learn h1 {
+.learn h1 {
   text-align: center;
   margin-bottom: 10vh;
+  text-shadow: 2px 2px 2px black;
+  font-size: 12vw;
 }
 .madeRed {
   color: #d04646;
   font-weight: bold;
 }
-#learn p {
+.learn p {
   line-height: 120%;
   letter-spacing: 1px;
   padding-top: 1vh;
   text-align: justify;
   width: 30vw;
 }
-#learn .homeDesc {
+.homeDesc {
   display: inherit;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#learn img {
+.homeDesc img {
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
+  max-width: 45vw;;
 }
-#learn button {
+.knowChess {
+  margin: 20vh;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+.learn button {
   background-color: #fcf4e1;
-  font-family: Harukaze;
-  font-size: 8vh;
+  font-family: QueensidesBold;
+  font-size: 5vh;
   letter-spacing: 5px;
   color: #d04646;
-  padding: 0px 2vw;
+  padding: 0vh 1vw 1vh 1vw;
+  margin: 0px 2vw;
   border-radius: 10px;
-  border: solid 5px transparent;
+  border: solid 5px #463d35;
 }
-#learn button:hover {
+.learn button:hover {
   border: solid 5px #d04646;
+}
+.pieceMoves {
+text-align: center;
+}
+.pieceMoves h2 {
+  font-size: 20vh;
+  text-shadow: 2px 2px 2px black;
+}
+.pieceMoves ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80vw;
+}
+.pieceMoves li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 18vw;
+  background-color: #927c6e;
+  width: 15vw;
+  padding: 4vh 1vw;
+  margin: 2vh 4vw;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 2px black;
+}
+.pieceMoves h3 {
+  font-size: 2vw;
+}
+.pieceMoves h4 {
+  font-size: 1.5vw;
+}
+.pieceMoves h5 {
+  font-size: 1.25vw;
+}
+.pieceMoves h5 span {
+  font-size: 2vw;
+}
+.pieceMoves p {
+  font-size: 1vw;
+  width: inherit;
+  text-align: center;
+}
+.pieceMoves img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
 }

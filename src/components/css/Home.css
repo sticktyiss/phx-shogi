@@ -61,6 +61,21 @@ main h2 {
   padding-top: 1vh;
   text-align: justify;
 }
+.comelearn button {
+  background-color: #fcf4e1;
+  font-family: Harukaze;
+  font-size: 6vh;
+  letter-spacing: 5px;
+  color: #d04646;
+  margin-top: 5vh;
+  padding: 0px 1vw;
+  border-radius: 10px;
+  border: solid 5px transparent;
+  cursor: pointer;
+}
+.comelearn button:hover{
+  border: solid 5px #d04646;
+}
 .comelearn img {
   width: 100%;
   height: auto;

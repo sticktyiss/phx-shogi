@@ -37,17 +37,16 @@ nav a {
   text-decoration: none;
   margin-left: 1vw;
   margin-right: 1vw;
-  padding: 1vh 1vw;
+  padding: .5vh .5vw;
   border: 3px solid transparent;
 }
 nav a:hover {
-  background-color: #927c6e;
-  border: 3px solid #d04646;
+  background-color: #d04646;
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
 }
 header button {
-  background-color: #927c6e;
-  border: 3px solid #d04646;
+  background-color: #d04646;
   border-radius: 10px;
+  box-shadow: 0px 0px 2px black;
 }

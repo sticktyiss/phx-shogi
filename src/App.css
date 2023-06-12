@@ -59,8 +59,21 @@ table {
 	font-family: Harukaze;
 	src: url('./components/css/fonts/HarukazeSolid.otf');
 }
+@font-face {
+	font-family: Queensides;
+	src: url('./components/css/fonts/Queensides.ttf');
+}
+@font-face {
+	font-family: QueensidesBold;
+	src: url('./components/css/fonts/QueensidesMedium.ttf');
+}
+@font-face {
+	font-family: QueensidesLight;
+	src: url('./components/css/fonts/QueensidesLight.ttf');
+}
 body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: Queensides;
 }
 .hidden {
 	display: none;

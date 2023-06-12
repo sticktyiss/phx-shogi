@@ -14,10 +14,10 @@ import lance from '../images/pieces/Lance.png';
 import pawn from '../images/pieces/Pawn.png';
 
 const Learn = () => {
-  const [knowChess, setKnowChess] = useState()
+  const [knowChess, setKnowChess] = useState(null)
 
   return (
-    <main id="learn">
+    <main className="learn">
       <div>
           <h1>What is Shogi<span className="madeRed">?</span></h1>
         <div className="homeDesc">
@@ -40,54 +40,69 @@ const Learn = () => {
           <img src={board} alt="shogi board" />
         </div>
         <div className="knowChess">
-        <h2>Do you Know Chess?</h2>
+        <h2>Do you know how to play Chess?</h2>
         <button onClick={() => setKnowChess(true)}>Yes</button>
         <button onClick={() => setKnowChess(false)}>No</button>
         </div>
-        <ul className="pieceMoves">
+        <div  className="pieceMoves">
+        <h2>Piece Moves</h2>
+        <ul>
           <li>
             <h3>King</h3>
+            <p>1 space in any direction</p>
             <img src={king} />
           </li>
           <li>
             <h3>Rook</h3>
+            <p>Any # of empty spaces vertically or horizontally</p>
             <img  src={rook} />
-            <h4>Promoted Rook "Dragon"</h4>
+            </li>
+            <li>
+            <h4>Promoted Rook</h4>
+            <p>Same as Rook, but also 1 space diagonally</p>
             <img src={dragon} />
           </li>
           <li>
             <h3>Bishop</h3>
+            <p>Any # of empty spaces diagonally</p>
             <img src={bishop} />
-            <h4>Promoted Bishop "Horse"</h4>
+            </li>
+            <li>
+            <h4>Promoted Bishop</h4>
+            <p>Same as Bishop, but also 1 space up, down, left, or right.</p>
             <img src={horse} />
           </li>
           <li>
             <h3>Gold General</h3>
+            <p>1 space up, down, left, right, or forwards diagonally</p>
             <img src={gold} />
           </li>
           <li>
-            <h3>Silver General</h3>
+            <h3>Silver General<span className="madeRed">*</span></h3>
+            <p>1 space diagonally or up</p>
             <img src={silver} />
           </li>
           <li>
-            <h3>Knight</h3>
+            <h3>Knight<span className="madeRed">*</span></h3>
+            <p>Jumps 2 spaces forward and 1 to the side</p>
             <img src={knight} />
           </li>
           <li>
-            <h3>Lance</h3>
+            <h3>Lance<span className="madeRed">*</span></h3>
+            <p>Any # of empty spaces forward</p>
             <img src={lance} />
           </li>
           <li>
-            <h3>Pawn</h3>
+            <h3>Pawn<span className="madeRed">*</span></h3>
+            <p>1 space forward</p>
             <img src={pawn} />
           </li>
+          <li>
+            <h5>Any piece with <span className="madeRed">*</span> promotes to a Gold General</h5>
+            <img src={gold} />
+          </li>
         </ul>
-        <p>
-          Discover the ancient art of Shogi, a game that has enthralled
-          strategists for centuries. Whether you're a seasoned player seeking
-          new challenges or a curious beginner eager to learn, our club offers a
-          vibrant community dedicated to the pursuit of Shogi mastery.
-        </p>
+        </div>
       </div>
     </main>
   );

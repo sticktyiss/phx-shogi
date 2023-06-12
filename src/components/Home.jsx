@@ -3,8 +3,11 @@ import "./css/Home.css";
 import promo from '../images/promo-shogi.gif'
 import mapLoc from '../images/map-locations.gif'
 import map from '../images/map.gif'
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate()
+
   return (
     <main className="Home">
       <div className="title">
@@ -14,15 +17,20 @@ const Home = () => {
         group as the organization develops.
       </p>
       </div>
-      <div className="comelearn fade-in">
+      <div className="comelearn">
         <div>
         <h2>Come Learn</h2>
-        <p>The captivating "Game of Generals," is an ancient Japanese chess variant that breathes life into the battlefield of a 9x9 board. As the sun casts its golden rays, two players lock horns, commanding an army of warriors ready to seize glory or succumb to defeat. In this enthralling contest, cunning strategy and lightning-fast calculations intertwine as players employ intricate maneuvers, deceptive traps, and a symphony of sacrifices to outwit their opponent. Shogi's enigmatic beauty lies in its ability to blend timeless traditions with an endless realm of possibilities, captivating both masters of strategy and those venturing into its mystic realm for the first time.</p>
+        <p>
+          Discover the ancient art of Shogi, a game that has enthralled
+          strategists for centuries. Whether you're a seasoned player seeking
+          new challenges or a curious beginner eager to learn, our club offers a
+          vibrant community dedicated to the pursuit of Shogi mastery.
+        </p>
+        <button onClick={() => navigate('/learn')}>How to play</button>
         </div>
         <img src={promo} alt="Shogi piece promotion" />
       </div>
       <div className="meetup">
-        {/* <img src={mapLoc} alt="Map Gif" className="world" /> */}
         <img src={map} alt="Map Gif" />
         <div>
         <h2>Meet Up With Us</h2>
