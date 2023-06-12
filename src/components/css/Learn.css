@@ -1,5 +1,47 @@
-#learn div {
+#learn > div {
   /* background-color: #463d35; */
+  border-radius: 10vh;
   display: flex;
   flex-direction: column;
+  padding: 10vh 5vw;
+  margin: 10vh 10vw;
+  width: 80vw;
+}
+#learn h1 {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+.madeRed {
+  color: #d04646;
+  font-weight: bold;
+}
+#learn p {
+  line-height: 120%;
+  letter-spacing: 1px;
+  padding-top: 1vh;
+  text-align: justify;
+  width: 30vw;
+}
+#learn .homeDesc {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#learn img {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px black;
+}
+#learn button {
+  background-color: #fcf4e1;
+  font-family: Harukaze;
+  font-size: 8vh;
+  letter-spacing: 5px;
+  color: #d04646;
+  padding: 0px 2vw;
+  border-radius: 10px;
+  border: solid 5px transparent;
+}
+#learn button:hover {
+  border: solid 5px #d04646;
 }
