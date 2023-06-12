@@ -40,8 +40,6 @@ const Auth = () => {
     axios
       .post(register ? "/api/register" : "/api/login", body)
       .then(({ data }) => {
-        console.log("AFTER AUTH", data);
-        //TODO: Finish gif loading sequence
         register? gif.classList = "hidden" : gif.classList = "";
         mainSec.style.padding = '10px';
         setTimeout(() => {
