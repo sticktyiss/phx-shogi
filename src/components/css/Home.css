@@ -11,7 +11,7 @@ main {
   align-items: center;
   color: #fcf4e1;
 }
-main > div {
+.home > div {
   background-color: #463d35;
   border: 5px solid #927c6e;
   margin-top: 10vh;

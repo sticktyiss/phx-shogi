@@ -4,36 +4,38 @@ header {
   justify-items: center;
   align-items: center;
   min-height: 80px;
-  height: 10vh;
+  height: 6vw;
   background-color: #AC8F73;
   box-shadow: 0px 2px 5px black;
   position: sticky;
   top: 0px;
+  font-family: KongJapanese;
 }
 header img {
-  height: 9vh;
+  height: 5.25vw;
   margin-left: 2vw;
   margin-right: 1.5vw;
 }
-  header h1 {
+header h1 {
   color: #463d35;
-  font-size: 9vh;
-  font-family: KongJapanese;
+  font-size: 5.25vw;
   text-shadow: 1px 1px 4px ;
 }
 nav {
   position: absolute;
   right: 4vw;
   top: 6vh;
-  font-family: KongJapanese;
+  align-items: flex-start;
+  display: flex;
 }
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 nav a {
-  font-size: 3vh;
+  font-size: 1.5vw;
   text-decoration: none;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -45,8 +47,19 @@ nav a:hover {
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
 }
-header button {
+header button { /* TODO: FIXME: padding is messed up with the hover */
+  font-size: 1.5vw;
+  text-decoration: none;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 3px solid transparent;
+  font-family: KongJapanese;
+  background-color: #AC8F73;
+  color: #463d35;
+}
+header button:hover {
   background-color: #d04646;
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
+  /* padding: .5vh .5vw; */
 }

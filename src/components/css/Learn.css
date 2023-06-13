@@ -1,11 +1,13 @@
 .learn > div {
-  /* background-color: #463d35; */
   border-radius: 10vh;
   display: flex;
   flex-direction: column;
   padding: 10vh 5vw;
   margin: 10vh 10vw;
   width: 80vw;
+  background-color: #463d35;
+  border: 5px solid #927c6e;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
 }
 .learn h1 {
   text-align: center;

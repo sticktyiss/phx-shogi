@@ -3,18 +3,15 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import ShowComments from "./ShowComments";
-// import AuthContext from "../store/authContext";
-// import AddPost from "./AddPost";
+import './css/Posts.css'
 
 const Posts = () => {
-  // const {userId} = useContext(AuthContext)
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
       .get("/api/posts")
       .then((res) => {
-        // FIXME: console.log('RES.data:', res.data)
         setPosts(res.data);
       })
       .catch((theseHands) => {
@@ -23,11 +20,17 @@ const Posts = () => {
   }, []);
 
   const mappedPosts = posts.map((post) => {
+    const dateString = post.updatedAt
+    const date = new Date(dateString)
+    const formattedDate = date.toLocaleString()
+
     return (
       <div key={post.id} className="postCard">
         <h2>{post.postTitle}</h2>
+        <div>
         <h3>{post.user.username}</h3>
-        <h4>{post.updatedAt /* TODO: Convert the date into something pretty FIXME: */ }</h4> 
+        <h4>- {formattedDate}</h4> 
+        </div>
         <p>{post.postText}</p>
         <ShowComments postId={post.id} />
       </div>
@@ -35,9 +38,12 @@ const Posts = () => {
   });
 
   return (
-    <main>
+    <main className="posts">
       <NavLink className='addPostRender' to='/addpost'>Add Post</NavLink>
-      {mappedPosts}</main>
+      <div>
+      {mappedPosts}
+      </div>
+      </main>
   )
 };
 

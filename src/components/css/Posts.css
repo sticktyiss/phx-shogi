@@ -1,0 +1,49 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+.addPostRender {
+  font-family: Harukaze;
+  font-size: 4vw;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: #463d35;
+  border: solid 5px #463d35;
+  background-color: #AC8F73;
+  border-radius: 10vh;
+  margin: 10vh 10vw;
+  width: 80vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+  text-align: center;
+}
+.addPostRender:hover {
+  background-color: #fcf4e1;
+  color: #d04646;
+  border-color: #d04646;
+}
+.posts > div {
+  width: 82vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.postCard {
+  margin: 1vw;
+  padding: 1vw 1.5vw 1.5vw 1.5vw;
+  border: solid 5px #AC8F73;
+  border-radius: 5vh;
+  background-color: #463d35;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.postCard h3 {
+  font-family: Harukaze;
+  letter-spacing: 5px;
+  font-size: 3vw;
+}
+.postCard div {
+  display: flex;
+  align-items: center;
+}
+.postCard p {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}

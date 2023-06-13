@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   return (
-    <main className="Home">
+    <main className="home">
       <div className="title">
       <h1>Welcome to Phoenix Shogi</h1>
       <p className="disclaimer">
