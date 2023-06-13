@@ -14,13 +14,11 @@ main {
 .home > div {
   background-color: #463d35;
   border: 5px solid #927c6e;
-  margin-top: 10vh;
+  margin-top: 25vh;
   margin-bottom: 10vh;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
 }
 .title {
-  margin-top: 28vh;
-  margin-bottom: 28vh;
   padding: 5vh 5vw;
   border-top-right-radius: 10vw;
   border-top-left-radius: 1vw;

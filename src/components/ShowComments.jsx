@@ -8,6 +8,7 @@ import "./css/Posts.css";
 const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
   const [postComments, setPostComments] = useState([]);
+  // const [addCommentData, setAddCommentData] = useState('')
 
   useEffect(() => {
     axios
