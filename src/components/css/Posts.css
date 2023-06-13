@@ -27,6 +27,8 @@
   flex-wrap: wrap;
 }
 .postCard {
+  max-width: 50vw;
+  height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;
   border: solid 5px #AC8F73;
@@ -37,7 +39,7 @@
 .postCard h3 {
   font-family: Harukaze;
   letter-spacing: 5px;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 .postCard div {
   display: flex;
@@ -46,4 +48,104 @@
 .postCard p {
   margin-top: 1vh;
   margin-bottom: 2vh;
+  font-family: QueensidesBold;
+  font-size: 1.25vw;
+}
+
+/* TODO: BEGIN COMMENT CSS */
+.commentArea {
+  display: flex;
+  flex-direction: column;
+}
+.showComment {
+  width: 15vw;
+  margin: 2vh 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #AC8F73;
+  border-radius: 3vw;
+  cursor: pointer;
+}
+.showComment path {
+  color: #d04646;
+}
+.showComment p {
+  margin: .5vw;
+  padding-bottom: .25vw;
+  font-size: 1.25vw;
+}
+.commentCard {
+  display: flex; 
+  flex-direction: column;
+  align-self: flex-start;
+  width: 95%;
+  background-color: #AC8F73;
+  color: #463d35;
+  border-radius: 1vh;
+  margin: 1vh 0px;
+  padding: .5vw;
+}
+.commentCard div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.commentCard h5 {
+  letter-spacing: 1px;
+  font-family: QueensidesBold;
+  font-size: 1.5vw;
+}
+.commentCard h6 {
+  font-size: 1vw;
+}
+.commentCard p {
+  align-self: flex-start;
+  font-size: 1vw;
+}
+.addComment {
+  width: 100%;
+}
+.addComment form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+.addComment textarea {
+  width: 100%;
+  background-color: #AC8F73;
+  border: none;
+  border-radius: 1vh;
+  word-wrap: normal;
+  height: fit-content;
+  color: #fcf4e1;
+  margin-top: 1vh;
+}
+.addComment textarea::placeholder {
+  color: #fcf4e1;
+}
+.addComment div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.addComment button {
+  color: #463d35;
+  background-color: #AC8F73;
+  border: none;
+  border-radius: 3vw;
+  font-size: 2.4vw;
+  padding: 0vw .6vw;
+  font-family: Harukaze;
+  letter-spacing: 5px;
+}
+.addComment button:hover {
+  color: #d04646;
+  background-color: #fcf4e1;
 }

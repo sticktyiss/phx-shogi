@@ -28,14 +28,18 @@ const AddComment = ({ postId }) => {
 
   return (
     <div className="addComment">
-      <form className="addCommentForm" onSubmit={handleSubmit}>
-        <input
+      <form onSubmit={handleSubmit}>
+        <div>
+        <p>Add Comment:</p>
+        <button>Submit</button>
+        </div>
+        <textarea
           type="text"
+          rows={1}
           placeholder="What do you want to comment?.."
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button>Add Comment</button>
       </form>
     </div>
   );

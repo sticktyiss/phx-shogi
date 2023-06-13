@@ -3,6 +3,7 @@ import axios from "axios";
 import AddComment from "./AddComment";
 import { useState, useEffect } from "react";
 import { BiChevronDownCircle, BiChevronUpCircle } from "react-icons/bi";
+import "./css/Posts.css";
 
 const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
@@ -18,12 +19,16 @@ const ShowComments = ({ postId }) => {
   }, []);
 
   const mappedComments = postComments.map((commentItem) => {
+    const dateString = commentItem.updatedAt
+    const date = new Date(dateString)
+    const formattedDate = date.toLocaleString()
+
     return (
       <div key={commentItem.id} className="commentCard">
+        <div>
         <h5>{commentItem.user.username}</h5>
-        <h6>
-          {commentItem.createdAt /* FIXME: convert to pretty date w/ time */}
-        </h6>
+        <h6>{formattedDate}</h6>
+        </div>
         <p>{commentItem.commentText}</p>
       </div>
     );
@@ -44,11 +49,11 @@ const ShowComments = ({ postId }) => {
   } else {
     return (
       <div className="commentArea">
-        <div className="showComment">
-          <BiChevronUpCircle
-            className="commentArrow"
-            onClick={() => setShowComments(!showComments)}
-          />
+        <div
+          className="showComment"
+          onClick={() => setShowComments(!showComments)}
+        >
+          <BiChevronUpCircle className="commentArrow" />
           <p>Hide comments</p>
         </div>
         <AddComment postId={postId} />
