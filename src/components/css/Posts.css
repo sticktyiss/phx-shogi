@@ -22,14 +22,14 @@
   border-color: #d04646;
 }
 .posts > div {
-  width: 82vw;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
 }
 .postCard {
   display: flex;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 20%;
   height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;

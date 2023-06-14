@@ -44,6 +44,7 @@ const AddPost = () => {
           type="text"
           placeholder="Insert Title..."
           value={title}
+          maxLength={20}
           onChange={(e) => setTitle(e.target.value)}
           className="addPostTitle"
           />
