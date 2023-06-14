@@ -80,7 +80,7 @@ const Profile = () => {
   const mappedPosts = userPosts.map((post) => {
     return (
       <div key={post.id} className="postCard">
-        <button onClick={() => deletePost(post.id)}>X</button>
+        <button onClick={() => deletePost(post.id)}>Delete</button>
         <h2>{post.postTitle}</h2>
         <h3>{post.username}</h3>
         <p>{post.postText}</p>
@@ -92,7 +92,7 @@ const Profile = () => {
   const mappedComments = userComments.map((commentItem) => {
     return (
       <div key={commentItem.id} className="commentCard">
-        <button onClick={() => deleteComment(commentItem.id)}>X</button>
+        <button onClick={() => deleteComment(commentItem.id)}>Delete</button>
         <h5>{commentItem.user.username}</h5>
         <h6>
           {commentItem.createdAt /* FIXME: convert to pretty date w/ time */}
