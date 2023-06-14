@@ -4,6 +4,7 @@ import AuthContext from "../store/authContext";
 import axios from "axios";
 import ShowComments from "./ShowComments";
 import './css/Posts.css'
+import './css/Profile.css'
 
 // TODO: Put a comment section so you can view and delete comments you've made.
 
@@ -90,13 +91,17 @@ const Profile = () => {
   });
 
   const mappedComments = userComments.map((commentItem) => {
+    const dateString = commentItem.updatedAt
+    const date = new Date(dateString)
+    const formattedDate = date.toLocaleString()
+
     return (
       <div key={commentItem.id} className="commentCard">
         <button onClick={() => deleteComment(commentItem.id)}>Delete</button>
+        <div>
         <h5>{commentItem.user.username}</h5>
-        <h6>
-          {commentItem.createdAt /* FIXME: convert to pretty date w/ time */}
-        </h6>
+        <h6>{formattedDate}</h6>
+        </div>
         <p>{commentItem.commentText}</p>
       </div>
     );
@@ -104,13 +109,15 @@ const Profile = () => {
 
   if (showPosts) {
     return (
-      <main className="Profile">
-        <h2 onClick={() => setShowPosts(true)} className="bigNCenter">
+      <main className="profile">
+        <div className="postsOrComments">
+        <h2 onClick={() => setShowPosts(true)} className="activeView">
           Your Posts
         </h2>
-        <h2 onClick={() => setShowPosts(false)} className="">
+        <h2 onClick={() => setShowPosts(false)} className="inactiveView">
           Your Comments
         </h2>
+        </div>
         {mappedPosts.length >= 1 ? (
           mappedPosts
         ) : (
@@ -120,15 +127,17 @@ const Profile = () => {
     );
   } else {
     return (
-      <main className="Profile">
-        <h2 onClick={() => setShowPosts(true)} className="">
+      <main className="profile">
+        <div className="postsOrComments">
+        <h2 onClick={() => setShowPosts(true)} className="inactiveView">
           Your Posts
         </h2>
-        <h2 onClick={() => setShowPosts(false)} className="bigNCenter">
+        <h2 onClick={() => setShowPosts(false)} className="activeView">
           Your Comments
         </h2>
+        </div>
         {mappedComments.length >= 1 ? (
-          mappedComments
+          <div className="profComments">{mappedComments}</div>
         ) : (
           <h3>You haven't posted any comments yet!</h3>
         )}

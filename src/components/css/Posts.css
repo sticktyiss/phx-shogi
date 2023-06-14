@@ -38,9 +38,6 @@
   background-color: #463d35;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
 }
-/* .postCard h2 {
-  
-} */
 .postCard h3 {
   letter-spacing: 1px;
   font-size: 2vw;
@@ -48,23 +45,15 @@
 .postCard div {
   display: flex;
   align-items: center;
+  text-align: left;
+  min-width: 15vw;
+  width: 100%;
 }
 .postCard p {
   margin-top: 1vh;
   margin-bottom: 2vh;
   font-family: QueensidesBold;
   font-size: 1.25vw;
-}
-.postCard > button {
-  align-self: flex-end;
-  font-family: Queensides;
-  background-color: #463d35;
-  color: #fcf4e1;
-  border: none;
-}
-.postCard > button:hover {
-  color: #d04646;
-  text-decoration: underline;
 }
 
 /* TODO: ADDPOST BEGIN CSS */

@@ -1,0 +1,70 @@
+.profile .postsOrComments {
+  display: flex;
+  flex-direction: row;
+  margin: 10vh 0px 5vh 0px;
+  border-radius: 10vw;
+  width: 45vw;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.inactiveView {
+  background-color: #fcf4e1;
+  padding: 0vh 3vw;
+  border: solid 5px #fcf4e1;
+  border-radius: 10vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.inactiveView:hover {
+  border: 5px solid #d04646;
+}
+.activeView {
+  padding: 0.5vh 3vw;
+  color: #fcf4e1;
+  background-color: #d04646;
+  border-radius: 10vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.profile .postCard {
+  display: flex;
+  flex-direction: column;
+}
+.profile .postCard div {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.postCard > button {
+  align-self: flex-end;
+  font-family: Queensides;
+  background-color: #463d35;
+  color: #fcf4e1;
+  border: none;
+}
+.postCard > button:hover {
+  color: #d04646;
+  text-decoration: underline;
+}
+
+/* TODO: BEGIN COMMENT VIEW CSS */
+.profComments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+}
+.profComments .commentCard {
+  margin: 1vh 1vw;
+  width: fit-content;
+  max-width: 30vw;
+  height: fit-content;
+}
+.commentCard > button {
+  align-self: flex-end;
+  font-family: Queensides;
+  background-color: #AC8F73;
+  color: #fcf4e1;
+  border: none;
+}
+.commentCard > button:hover {
+  color: #d04646;
+  text-decoration: underline;
+}
