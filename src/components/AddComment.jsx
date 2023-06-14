@@ -3,14 +3,14 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/authContext";
 
-const AddComment = ({ postId }) => {
+const AddComment = ({ postId, onSubmit }) => {
   const { token, userId } = useContext(AuthContext);
 
   const [content, setContent] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('userId:', userId, 'PostId:', postId)
+    onSubmit('')
 
     axios
       .post(

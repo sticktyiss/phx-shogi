@@ -29,7 +29,7 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  max-width: 27%;
+  max-width: 24vw;
   height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;

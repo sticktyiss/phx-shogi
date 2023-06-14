@@ -9,10 +9,17 @@ const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
   const [postComments, setPostComments] = useState([]);
 
+  const [commentForm, setCommentForm] = useState('')
+
+
   const handleShowCommentChange = (e) => {
     const visibility = !showComments;
     setShowComments(visibility);
   };
+
+  const handleFormSubmit = (e) => {
+    setCommentForm('7');
+  }
 
   useEffect(() => {
     axios
@@ -61,8 +68,8 @@ const ShowComments = ({ postId }) => {
           <BiChevronUpCircle className="commentArrow" />
           <p>Hide comments</p>
         </div>
-        <AddComment postId={postId} />
-        {mappedComments}
+        <AddComment postId={postId} onSubmit={handleFormSubmit} />
+        {commentForm}{mappedComments}
       </div>
     );
   }

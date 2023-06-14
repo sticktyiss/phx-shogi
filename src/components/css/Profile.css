@@ -68,3 +68,14 @@
   color: #d04646;
   text-decoration: underline;
 }
+.profile > h3 {
+  color: #d04646;
+  background-color: #463d35;
+  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+  font-family: Harukaze;
+  font-size: 5vw;
+  letter-spacing: 5px;
+  padding: 1vh 2vw;
+  border-radius: 5vw;
+  margin-top: 20vh;
+}
