@@ -35,7 +35,7 @@ const AddComment = ({ postId }) => {
         </div>
         <textarea
           type="text"
-          rows={1}
+          rows={3}
           placeholder="What do you want to comment?.."
           value={content}
           onChange={(e) => setContent(e.target.value)}

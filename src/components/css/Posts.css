@@ -47,7 +47,6 @@
   align-items: center;
   text-align: left;
   min-width: 15vw;
-  /* width: 100%; */
 }
 .postCard > p {
   max-height: 20vh;
@@ -167,6 +166,7 @@
 .addPostForm > textarea::-webkit-scrollbar {
   width: .7vw;
   background-color: #463d35;
+  border-top-right-radius: 2vw;
 }
 .addPostForm > textarea::-webkit-scrollbar-thumb {
   background-color: #fcf4e1;
@@ -244,7 +244,8 @@
 }
 .commentCard p {
   align-self: flex-start;
-  font-size: 1vw;
+  font-size: 1.15vw;
+  font-family: QueensidesBold;
 }
 .addComment {
   width: 100%;
@@ -288,4 +289,34 @@
 .addComment button:hover {
   color: #d04646;
   background-color: #fcf4e1;
+}
+/* ADDCOMMENT SCROLLBAR CSS */
+.addComment textarea::-webkit-scrollbar {
+  width: .7vw;
+  background-color: #AC8F73;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}
+.addComment textarea::-webkit-scrollbar-thumb {
+  background-color: #fcf4e1;
+  border-radius: 2vw;
+}
+.addComment textarea::-webkit-resizer {
+  background-color: #AC8F73;
+}
+.addComment textarea::-ms-scrollbar {
+  width: .5vw;
+}
+.addComment textarea::-ms-scrollbar-thumb {
+  width: .5vw;
+  background-color: #AC8F73;
+  border-radius: 2vw;
+}
+.addComment textarea::-moz-scrollbar {
+  width: .5vw;
+}
+.addComment textarea::-moz-scrollbar-thumb {
+  width: .5vw;
+  background-color: #AC8F73;
+  border-radius: 2vw;
 }
