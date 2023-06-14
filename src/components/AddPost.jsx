@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../store/authContext";
+import './css/Posts.css'
 
 const AddPost = () => {
   const { token, userId } = useContext(AuthContext);
@@ -37,16 +38,20 @@ const AddPost = () => {
         Cancel
       </NavLink>
       <form className="addPostForm" onSubmit={handleSubmit}>
+        <div>
+        <label>Title:</label>
         <input
           type="text"
-          placeholder="Title"
+          placeholder="Insert Title..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="addPostTitle"
-        />
+          />
+        </div>
         <textarea
           type="text"
           placeholder="What do you want to post?.."
+          rows={4}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           className="addPostText"

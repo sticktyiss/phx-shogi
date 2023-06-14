@@ -3,6 +3,7 @@ import { useState, useEffect, useContext, useCallback } from "react";
 import AuthContext from "../store/authContext";
 import axios from "axios";
 import ShowComments from "./ShowComments";
+import './css/Posts.css'
 
 // TODO: Put a comment section so you can view and delete comments you've made.
 

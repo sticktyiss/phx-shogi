@@ -55,6 +55,85 @@
   font-size: 1.25vw;
 }
 
+/* TODO: ADDPOST BEGIN CSS */
+.addPostForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  background-color: #AC8F73;
+  border: solid 5px #463d35;
+  border-radius: 5vh;
+  padding: 3vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.addPostForm div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+.addPostForm label {
+  font-family: Harukaze;
+  font-size: 5vw;
+  letter-spacing: 1vw;
+  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.addPostForm input {
+  background-color: #463d35;
+  font-family: Queensides;
+  color: #fcf4e1;
+  padding: .5vw;
+  font-size: 3vw;
+  background-color: #463d35;
+  border-radius: 2vh;
+  border: none;
+  letter-spacing: .25vw;
+  text-indent: 1vw;
+  margin: 0px 1vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+}
+.addPostForm input::placeholder {
+  color: #fcf4e1;
+}
+.addPostForm textarea {
+  background-color: #463d35;
+  font-family: Queensides;
+  color: #fcf4e1;
+  padding: .5vw;
+  font-size: 1.25vw;
+  background-color: #463d35;
+  border-radius: 2vh;
+  border: none;
+  letter-spacing: .02vw;
+  margin: 0px 1vw;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+  width: 100%;
+  margin-bottom: 2vh;
+}
+.addPostForm textarea::placeholder {
+  color: #fcf4e1;
+}
+.addPostForm button {
+  font-family: Harukaze;
+  font-size: 3vw;
+  color: #fcf4e1;
+  padding: 0px 2vw;
+  letter-spacing: .5vw;
+  text-decoration: none;
+  border: solid 5px #463d35;
+  background-color: #463d35;
+  border-radius: 10vh;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
+  text-align: center;
+  width: fit-content;
+}
+.addPostForm button:hover {
+  background-color: #fcf4e1;
+  color: #d04646;
+  border-color: #d04646;
+}
+
 /* TODO: BEGIN COMMENT CSS */
 .commentArea {
   display: flex;
