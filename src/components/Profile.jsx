@@ -122,7 +122,9 @@ const Profile = () => {
         </h2>
         </div>
         {mappedPosts.length >= 1 ? (
-          mappedPosts
+        <div className="profPosts">
+          {mappedPosts}
+          </div>
         ) : (
           <h3>You haven't made a post yet!</h3>
         )}

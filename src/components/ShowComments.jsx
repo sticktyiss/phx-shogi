@@ -8,7 +8,11 @@ import "./css/Posts.css";
 const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
   const [postComments, setPostComments] = useState([]);
-  // const [addCommentData, setAddCommentData] = useState('')
+
+  const handleShowCommentChange = (e) => {
+    const visibility = !showComments;
+    setShowComments(visibility);
+  };
 
   useEffect(() => {
     axios
@@ -20,15 +24,15 @@ const ShowComments = ({ postId }) => {
   }, []);
 
   const mappedComments = postComments.map((commentItem) => {
-    const dateString = commentItem.updatedAt
-    const date = new Date(dateString)
-    const formattedDate = date.toLocaleString()
+    const dateString = commentItem.updatedAt;
+    const date = new Date(dateString);
+    const formattedDate = date.toLocaleString();
 
     return (
       <div key={commentItem.id} className="commentCard">
         <div>
-        <h5>{commentItem.user.username}</h5>
-        <h6>{formattedDate}</h6>
+          <h5>{commentItem.user.username}</h5>
+          <h6>{formattedDate}</h6>
         </div>
         <p>{commentItem.commentText}</p>
       </div>
@@ -40,7 +44,7 @@ const ShowComments = ({ postId }) => {
       <div className="commentArea">
         <div
           className="showComment"
-          onClick={() => setShowComments(!showComments)}
+          onClick={handleShowCommentChange}
         >
           <BiChevronDownCircle className="commentArrow" />
           <p>Show comments</p>
@@ -52,7 +56,7 @@ const ShowComments = ({ postId }) => {
       <div className="commentArea">
         <div
           className="showComment"
-          onClick={() => setShowComments(!showComments)}
+          onClick={handleShowCommentChange}
         >
           <BiChevronUpCircle className="commentArrow" />
           <p>Hide comments</p>

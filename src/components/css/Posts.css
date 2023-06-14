@@ -29,7 +29,7 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  max-width: 29%;
+  max-width: 27%;
   height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;
@@ -37,7 +37,6 @@
   border-radius: 5vh;
   background-color: #463d35;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.543);
-  max-height: 45vh;
 }
 .postCard h3 {
   letter-spacing: 1px;
@@ -48,13 +47,15 @@
   align-items: center;
   text-align: left;
   min-width: 15vw;
-  width: 100%;
+  /* width: 100%; */
 }
 .postCard > p {
+  max-height: 20vh;
   margin-top: 1vh;
   margin-bottom: 2vh;
   font-family: QueensidesBold;
-  font-size: 1.25vw;
+  font-size: 1.2vw;
+  line-height: 2.5vh;
   overflow: auto;
   padding: 1vh 0px;
 }
@@ -197,7 +198,7 @@
   flex-direction: column;
 }
 .showComment {
-  width: 15vw;
+  width: 90%;
   margin: 1vh 0px 2vh 0px;
   display: flex;
   flex-direction: row;
@@ -219,12 +220,12 @@
   display: flex; 
   flex-direction: column;
   align-self: flex-start;
-  width: 95%;
   background-color: #AC8F73;
   color: #463d35;
   border-radius: 1vh;
   margin: 1vh 0px;
   padding: .5vw;
+  width: 95%;
 }
 .commentCard div {
   display: flex;
@@ -256,7 +257,7 @@
   margin-bottom: 2vh;
 }
 .addComment textarea {
-  width: 100%;
+  width: 98%;
   background-color: #AC8F73;
   border: none;
   border-radius: 1vh;
