@@ -18,6 +18,8 @@ const Header = () => {
     };
   };
 
+  const scroll = () => window.scrollTo(0,0)
+
   return (
     <header>
       <img src={logo} alt="Logo" />
@@ -26,22 +28,22 @@ const Header = () => {
         {authCtx.token ? (
           <ul>
             <li>
-              <NavLink style={styleActiveLink} to="/">
+              <NavLink style={styleActiveLink} to="/" onClick={scroll}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink style={styleActiveLink} to="learn">
+              <NavLink style={styleActiveLink} to="learn" onClick={scroll}>
                 Learn
               </NavLink>
             </li>
             <li>
-              <NavLink style={styleActiveLink} to="posts">
+              <NavLink style={styleActiveLink} to="posts" onClick={scroll}>
                 Forum
               </NavLink>
             </li>
             <li>
-              <NavLink style={styleActiveLink} to="profile">
+              <NavLink style={styleActiveLink} to="profile" onClick={scroll}>
                 Profile
               </NavLink>
             </li>
@@ -51,6 +53,7 @@ const Header = () => {
                 onClick={() => {
                   authCtx.logout();
                   navigate("/");
+                  scroll();
                 }}
               >
                 Logout

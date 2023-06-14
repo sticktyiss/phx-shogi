@@ -79,11 +79,14 @@ const Profile = () => {
   };
 
   const mappedPosts = userPosts.map((post) => {
+    const dateString = post.updatedAt
+    const date = new Date(dateString)
+    const formattedDate = date.toLocaleString()
     return (
       <div key={post.id} className="postCard">
         <button onClick={() => deletePost(post.id)}>Delete</button>
         <h2>{post.postTitle}</h2>
-        <h3>{post.username}</h3>
+        <h3>{formattedDate}</h3>
         <p>{post.postText}</p>
         <ShowComments postId={post.id} />
       </div>

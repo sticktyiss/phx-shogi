@@ -52,7 +52,7 @@ const AddPost = () => {
         <textarea
           type="text"
           placeholder="What do you want to post?.."
-          rows={4}
+          rows={5}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           className="addPostText"
