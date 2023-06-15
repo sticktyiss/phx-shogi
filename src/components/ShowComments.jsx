@@ -9,17 +9,20 @@ const ShowComments = ({ postId }) => {
   const [showComments, setShowComments] = useState(false);
   const [postComments, setPostComments] = useState([]);
 
-  const [commentForm, setCommentForm] = useState('')
-
+  const [addedComment, setAddedComment] = useState("");
 
   const handleShowCommentChange = (e) => {
     const visibility = !showComments;
     setShowComments(visibility);
+    if(showComments===true){
+      requestComments()
+    }
   };
 
-  const handleFormSubmit = (e) => {
-    setCommentForm('7');
-  }
+  const handleFormSubmit = (addedState) => {
+    requestComments();
+    setAddedComment(addedState);
+  };
 
   useEffect(() => {
     axios
@@ -28,8 +31,15 @@ const ShowComments = ({ postId }) => {
         setPostComments(res.data);
       })
       .catch((theseHands) => console.log(theseHands));
-  }, []);
+    }, []);
 
+  const requestComments = () => axios
+      .get(`/api/comments/${postId}`)
+      .then((res) => {
+        setPostComments(res.data);
+      })
+      .catch((theseHands) => console.log(theseHands));
+    
   const mappedComments = postComments.map((commentItem) => {
     const dateString = commentItem.updatedAt;
     const date = new Date(dateString);
@@ -49,10 +59,7 @@ const ShowComments = ({ postId }) => {
   if (!showComments) {
     return (
       <div className="commentArea">
-        <div
-          className="showComment"
-          onClick={handleShowCommentChange}
-        >
+        <div className="showComment" onClick={handleShowCommentChange}>
           <BiChevronDownCircle className="commentArrow" />
           <p>Show comments</p>
         </div>
@@ -61,15 +68,12 @@ const ShowComments = ({ postId }) => {
   } else {
     return (
       <div className="commentArea">
-        <div
-          className="showComment"
-          onClick={handleShowCommentChange}
-        >
+        <div className="showComment" onClick={handleShowCommentChange}>
           <BiChevronUpCircle className="commentArrow" />
           <p>Hide comments</p>
         </div>
-        <AddComment postId={postId} onSubmit={handleFormSubmit} />
-        {commentForm}{mappedComments}
+        <AddComment postId={postId} onSubmit={handleFormSubmit} addedCommentState={addedComment} />
+        {addedComment ? mappedComments : mappedComments}
       </div>
     );
   }

@@ -3,35 +3,36 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/authContext";
 
-const AddComment = ({ postId, onSubmit }) => {
+const AddComment = ({ postId, onSubmit, addedCommentState }) => {
   const { token, userId } = useContext(AuthContext);
 
   const [content, setContent] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit('')
-
+    
     axios
-      .post(
-        "/api/comments",
-        { content, userId, postId },
-        {
-          headers: {
-            authorization: token,
-          },
-        }
+    .post(
+      "/api/comments",
+      { content, userId, postId },
+      {
+        headers: {
+          authorization: token,
+        },
+      }
       )
       .then(() => {})
       .catch((theseHands) => console.log("Err w/ adding comment", theseHands));
-  };
+    
+    onSubmit(!addedCommentState);
+    };
 
   return (
     <div className="addComment">
       <form onSubmit={handleSubmit}>
         <div>
-        <p>Add Comment:</p>
-        <button>Submit</button>
+          <p>Add Comment:</p>
+          <button>Submit</button>
         </div>
         <textarea
           type="text"
