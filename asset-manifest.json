@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/phx-shogi/static/css/main.9eeb21a6.css",
+    "main.js": "/phx-shogi/static/js/main.0bd189c1.js",
+    "static/media/map-locations.gif": "/phx-shogi/static/media/map-locations.badc09452bcb9b289158.gif",
+    "static/media/promo-shogi.gif": "/phx-shogi/static/media/promo-shogi.442942aa5b27cba63a23.gif",
+    "static/media/map.gif": "/phx-shogi/static/media/map.f1a1cc95ce16aa4f2ee5.gif",
+    "static/media/KongJapanese.otf": "/phx-shogi/static/media/KongJapanese.aaf4760be7ab0939ba25.otf",
+    "static/media/QueensidesLight.ttf": "/phx-shogi/static/media/QueensidesLight.68fe009f356bda84eb93.ttf",
+    "static/media/QueensidesMedium.ttf": "/phx-shogi/static/media/QueensidesMedium.05fc9101e644828619df.ttf",
+    "static/media/Queensides.ttf": "/phx-shogi/static/media/Queensides.7d9a9d8c0a15cfdd1c15.ttf",
+    "static/media/shogi-king-BKG.jpg": "/phx-shogi/static/media/shogi-king-BKG.0a71e263138da9548cab.jpg",
+    "static/media/shogiboard.jpg": "/phx-shogi/static/media/shogiboard.3096a8755a984b929f8e.jpg",
+    "static/media/HarukazeSolid.otf": "/phx-shogi/static/media/HarukazeSolid.ea3360d901f752563244.otf",
+    "static/media/KongJapanese.woff": "/phx-shogi/static/media/KongJapanese.639e9ec7e8e88cfb21f9.woff",
+    "static/media/KongJapanese.woff2": "/phx-shogi/static/media/KongJapanese.352862c9670fa56c5519.woff2",
+    "static/media/phxshogi-logo.png": "/phx-shogi/static/media/phxshogi-logo.8eee14e7e9878e1d28f3.png",
+    "index.html": "/phx-shogi/index.html",
+    "main.9eeb21a6.css.map": "/phx-shogi/static/css/main.9eeb21a6.css.map",
+    "main.0bd189c1.js.map": "/phx-shogi/static/js/main.0bd189c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9eeb21a6.css",
+    "static/js/main.0bd189c1.js"
+  ]
+}
