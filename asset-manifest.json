@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/phx-shogi/static/css/main.9eeb21a6.css",
+    "main.css": "/phx-shogi/static/css/main.6cf55850.css",
     "main.js": "/phx-shogi/static/js/main.0bd189c1.js",
     "static/media/map-locations.gif": "/phx-shogi/static/media/map-locations.badc09452bcb9b289158.gif",
     "static/media/promo-shogi.gif": "/phx-shogi/static/media/promo-shogi.442942aa5b27cba63a23.gif",
@@ -16,11 +16,11 @@
     "static/media/KongJapanese.woff2": "/phx-shogi/static/media/KongJapanese.352862c9670fa56c5519.woff2",
     "static/media/phxshogi-logo.png": "/phx-shogi/static/media/phxshogi-logo.8eee14e7e9878e1d28f3.png",
     "index.html": "/phx-shogi/index.html",
-    "main.9eeb21a6.css.map": "/phx-shogi/static/css/main.9eeb21a6.css.map",
+    "main.6cf55850.css.map": "/phx-shogi/static/css/main.6cf55850.css.map",
     "main.0bd189c1.js.map": "/phx-shogi/static/js/main.0bd189c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.9eeb21a6.css",
+    "static/css/main.6cf55850.css",
     "static/js/main.0bd189c1.js"
   ]
 }
