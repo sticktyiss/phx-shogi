@@ -1,0 +1,78 @@
+@media only screen and (max-width: 640px) {
+    .comelearn img,
+    .meetup img,
+    .homeDesc img {
+        display: none;
+    }
+
+    /* p {
+        font-size: 48px;
+    } */
+
+    header img {
+        margin-left: 25vw;
+    }
+
+    nav {
+        top: 9vh;
+    }
+
+    nav a {
+        font-size: 4vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    nav a:active,
+    nav a:hover {
+        box-shadow: none !important;
+        background-color: transparent !important;
+        color: #d04646;
+    }
+
+    .posts > div {
+        width: 100vw;
+    }
+
+    .postCard {
+        max-width: 100vw;
+        margin: 10vw;
+    }
+
+    .postCard p {
+        font-size: 5vw;
+    }
+
+    .homeDesc p {
+        width: 100vw;
+    }
+
+    .knowChess {
+        margin: 0;
+    }
+
+    .knowChess {
+        display: none;
+    }
+
+    .pieceMoves li {
+        width: 25vw;
+        height: 30vh;
+    }
+
+    .pieceMoves h3 {
+        font-size: 6vw;
+    }
+
+    .pieceMoves h4 {
+        font-size: 5vw;
+    }
+    
+    .pieceMoves h5 {
+        font-size: 5vw;
+    }
+
+    .pieceMoves p {
+        font-size: 3vw;
+    }
+}
