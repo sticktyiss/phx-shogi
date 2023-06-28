@@ -2,7 +2,7 @@
   "name": "phx-shogi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://sticktyiss.github.io/phx-shogi",
+  "homepage": "http://sticktyiss.github.io/",
   "proxy": "http://localhost:4765",
   "main": "server/index.js",
   "dependencies": {
