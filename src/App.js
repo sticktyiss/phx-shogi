@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import Learn from "./components/Learn";
 import Posts from './components/Posts'
 
+import "./mobile.css";
+
 function App() {
 
   return (
