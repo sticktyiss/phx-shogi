@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bafff09c.css",
-    "main.js": "/static/js/main.8f365466.js",
+    "main.js": "/static/js/main.9bde5b48.js",
     "static/media/map-locations.gif": "/static/media/map-locations.badc09452bcb9b289158.gif",
     "static/media/promo-shogi.gif": "/static/media/promo-shogi.442942aa5b27cba63a23.gif",
     "static/media/map.gif": "/static/media/map.f1a1cc95ce16aa4f2ee5.gif",
@@ -17,10 +17,10 @@
     "static/media/phxshogi-logo.png": "/static/media/phxshogi-logo.8eee14e7e9878e1d28f3.png",
     "index.html": "/index.html",
     "main.bafff09c.css.map": "/static/css/main.bafff09c.css.map",
-    "main.8f365466.js.map": "/static/js/main.8f365466.js.map"
+    "main.9bde5b48.js.map": "/static/js/main.9bde5b48.js.map"
   },
   "entrypoints": [
     "static/css/main.bafff09c.css",
-    "static/js/main.8f365466.js"
+    "static/js/main.9bde5b48.js"
   ]
 }
