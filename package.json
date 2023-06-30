@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://sticktyiss.github.io/",
-  "proxy": "http://localhost:4765",
   "main": "server/index.js",
   "dependencies": {
     "@supabase/supabase-js": "^2.24.0",

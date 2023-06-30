@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsDiscord } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { IconContext } from "react-icons";
 import './css/Footer.module.css'
@@ -12,6 +12,9 @@ const Footer = () => {
         <p>650-SHOGI-AZ (746-4429)</p>
         <a href="https://www.facebook.com/groups/phxshogi">
           <BsFacebook />
+        </a>
+        <a href="">
+          <BsDiscord />
         </a>
     </footer>
   );
