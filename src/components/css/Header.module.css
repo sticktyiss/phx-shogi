@@ -24,7 +24,7 @@ header h1 {
 nav {
   position: absolute;
   right: 4vw;
-  top: 6vh;
+  top: 4vw;
   align-items: flex-start;
   display: flex;
 }
@@ -39,7 +39,7 @@ nav a {
   text-decoration: none;
   margin-left: 1vw;
   margin-right: 1vw;
-  padding: .5vh .5vw;
+  padding: 0vh .5vw;
   border: 3px solid transparent;
 }
 nav a:hover {
