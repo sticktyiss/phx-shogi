@@ -3,7 +3,7 @@
   align-self: center;
   display: flex;
   flex-direction: row;
-  width: 90vw;
+  width: 94vw;
 }
 .posts > div {
   display: flex;
@@ -12,7 +12,7 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  max-width: 24vw;
+  max-width: 26vw;
   height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;
@@ -33,7 +33,7 @@
   font-size: 1vw;
 }
 .postCard > p {
-  max-height: 20vh;
+  max-height: 40vh;
   margin-bottom: 2vh;
   font-family: QueensidesBold;
   font-size: 1.25vw;
