@@ -1,8 +1,8 @@
 body {
-	background-image: url('../../images/shogi-king-BKG.jpg');
+  background-image: url("../../images/shogi-king-BKG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-	background-size: cover;
+  background-size: cover;
 }
 main {
   min-height: 90vh;
@@ -36,7 +36,7 @@ main h1 {
 }
 main h2 {
   font-family: Harukaze;
-  font-size: 10vh;
+  font-size: 8vw;
   letter-spacing: 5px;
   color: #d04646;
 }
@@ -54,6 +54,7 @@ main h2 {
   text-align: center;
 }
 .comelearn p {
+  font-size: 25px;
   line-height: 120%;
   letter-spacing: 1px;
   padding-top: 1vh;
@@ -62,7 +63,7 @@ main h2 {
 .comelearn button {
   background-color: #fcf4e1;
   font-family: Harukaze;
-  font-size: 6vh;
+  font-size: 5vw;
   letter-spacing: 5px;
   color: #d04646;
   margin-top: 5vh;
@@ -71,11 +72,11 @@ main h2 {
   border: solid 5px transparent;
   cursor: pointer;
 }
-.comelearn button:hover{
+.comelearn button:hover {
   border: solid 5px #d04646;
 }
 .comelearn img {
-  width: 100%;
+  width: 40vw;
   height: auto;
   border-radius: 10px;
   margin-left: 3vw;
@@ -90,7 +91,7 @@ main h2 {
   width: 75vw;
 }
 .meetup img {
-  width: 100%;
+  width: 40vw;
   height: auto;
   border-radius: 10px;
   margin-right: 3vw;
@@ -100,6 +101,7 @@ main h2 {
   text-align: center;
 }
 .meetup p {
+  font-size: 25px;
   line-height: 120%;
   letter-spacing: 1px;
   padding-top: 1vh;
