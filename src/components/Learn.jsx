@@ -37,7 +37,7 @@ const Learn = () => {
             captivating both masters of strategy and those venturing into its
             mystic realm for the first time.
           </p>
-          <img src={board} alt="shogi board" />
+          <img src={board} alt="shogi board" className="homeDescImg" />
         </div>
         <div className="knowChess">
         <h2>Do you know how to play Chess?</h2>

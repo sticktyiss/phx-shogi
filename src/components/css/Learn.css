@@ -24,18 +24,20 @@
   letter-spacing: 1px;
   padding-top: 1vh;
   text-align: justify;
-  width: 30vw;
+  /* width: 30vw; */
 }
 .homeDesc {
   display: inherit;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 25px;
 }
 .homeDesc img {
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
-  max-width: 45vw;;
+  max-width: 45vw;
+  margin-left: 2vw;
 }
 .knowChess {
   margin: 20vh;
