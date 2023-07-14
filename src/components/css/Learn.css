@@ -27,17 +27,18 @@
   /* width: 30vw; */
 }
 .homeDesc {
-  display: inherit;
+  /* display: inherit;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   font-size: 25px;
 }
-.homeDesc img {
+.homeDescImg {
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
-  max-width: 45vw;
-  margin-left: 2vw;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vh;
 }
 .knowChess {
   margin: 20vh;

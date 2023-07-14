@@ -20,8 +20,8 @@ const Learn = () => {
     <main className="learn">
       <div>
           <h1>What is Shogi<span className="madeRed">?</span></h1>
-        <div className="homeDesc">
-          <p>
+          <img src={board} alt="shogi board" className="homeDescImg" />
+          <p className="homeDesc">
             The captivating "<span className="madeRed">Game of Generals</span>," is an ancient Japanese chess
             variant that breathes life into the battlefield of a <span className="madeRed">9x9 board</span>. As
             the sun casts its golden rays, two players lock horns, commanding an
@@ -37,8 +37,6 @@ const Learn = () => {
             captivating both masters of strategy and those venturing into its
             mystic realm for the first time.
           </p>
-          <img src={board} alt="shogi board" className="homeDescImg" />
-        </div>
         <div className="knowChess">
         <h2>Do you know how to play Chess?</h2>
         <button onClick={() => setKnowChess(true)}>Yes</button>
