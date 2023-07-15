@@ -44,6 +44,9 @@
     font-size: 25vw;
     text-align: center;
   }
+  .home >div {
+    margin-top: 20vh;
+  }
   .comelearn {
     flex-direction: column;
     width: 90vw;
@@ -67,11 +70,36 @@
     letter-spacing: 3px;
     padding: 0px 5vw;
   }
-  .knowChess {
-    margin: 0;
+  /* LEARN PAGE */
+  .learn > div {
+    margin: 5vh 0px;
+    width: 98vw;
+    padding: 5vh 0px;
+  }
+  .learn h1 {
+    font-size: 20vw;
+    margin-bottom: 3vh;
+  }
+  .learn div img {
+    width: 94vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .homeDesc {
+    width: 94vw;
+    font-size: 4vw;
+    margin: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .knowChess {
+    margin: 0;
     display: none;
+  }
+  .learn h2 {
+    font-size: 25vw;
+    margin-top: 15vh;
   }
   .pieceMoves li {
     width: 25vw;

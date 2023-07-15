@@ -86,6 +86,9 @@
     line-height: 80%;
     padding-top: 2vh;
   }
+  .postCard h2 span {
+    font-size: 10vw;
+  }
   .postCard p {
     font-size: 4.5vw;
     width: 94vw;
