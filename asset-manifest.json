@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.963a5a07.css",
+    "main.css": "/static/css/main.02bd5380.css",
     "main.js": "/static/js/main.abaeb87e.js",
     "static/media/map-locations.gif": "/static/media/map-locations.badc09452bcb9b289158.gif",
     "static/media/promo-shogi.gif": "/static/media/promo-shogi.442942aa5b27cba63a23.gif",
@@ -16,11 +16,11 @@
     "static/media/KongJapanese.woff2": "/static/media/KongJapanese.352862c9670fa56c5519.woff2",
     "static/media/phxshogi-logo.png": "/static/media/phxshogi-logo.8eee14e7e9878e1d28f3.png",
     "index.html": "/index.html",
-    "main.963a5a07.css.map": "/static/css/main.963a5a07.css.map",
+    "main.02bd5380.css.map": "/static/css/main.02bd5380.css.map",
     "main.abaeb87e.js.map": "/static/js/main.abaeb87e.js.map"
   },
   "entrypoints": [
-    "static/css/main.963a5a07.css",
+    "static/css/main.02bd5380.css",
     "static/js/main.abaeb87e.js"
   ]
 }
