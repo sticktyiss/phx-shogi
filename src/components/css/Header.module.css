@@ -11,6 +11,11 @@ header {
   top: 0px;
   font-family: KongJapanese;
 }
+header div {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+}
 header img {
   height: 5.25vw;
   margin-left: 2vw;
