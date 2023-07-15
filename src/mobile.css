@@ -5,21 +5,32 @@
         display: none;
     }
 
-    /* p {
-        font-size: 48px;
-    } */
-
-    header img {
-        margin-left: 25vw;
+    header > div {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
     }
-
+    header img {
+        position: relative;
+        bottom: 1vh;
+        height: 5vh;
+    }
+    header h1 {
+        font-size: 5vh;
+        position: relative;
+        bottom: 1vh;
+    }
     nav {
         top: 8.5vh;
         display: flex;
         justify-content: center;
         width: 100vw;
     }
-
+    nav ul {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
     nav a {
         font-size: 2.25vh;
     }

@@ -78,13 +78,3 @@ body {
 .hidden {
 	display: none;
 }
-
-/* @media only screen and (max-width: 640px) {
-    img {
-        display: none;
-    }
-
-    p {
-        font-size: 48px;
-    }
-} */

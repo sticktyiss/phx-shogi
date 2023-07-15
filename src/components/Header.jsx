@@ -16,8 +16,10 @@ const Header = () => {
 
   return (
     <header>
+      <div>
       <img src={logo} alt="Logo" />
       <h1>Phoenix Shogi</h1>
+      </div>
       <nav>
           <ul>
             <li>
