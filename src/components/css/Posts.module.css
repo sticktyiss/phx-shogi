@@ -74,9 +74,22 @@
     flex-direction: column;
   }
   .postCard {
-    width: 100vw;
+    margin: 2vh 0px;
+    width: 94.5vw;
+    max-width: 94.5vw;
+    font-size: 4.5vw;
+  }
+  .posts h2 {
+    padding-left: 3vw;
+    font-size: 20vw;
+    letter-spacing: 1px;
+    line-height: 80%;
+    padding-top: 2vh;
   }
   .postCard p {
-    font-size: 5vw;
+    font-size: 4.5vw;
+    width: 94vw;
+    line-height: 110%;
+    max-height: 35vh;
   }
 }
