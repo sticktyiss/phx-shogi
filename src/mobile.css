@@ -73,8 +73,11 @@
   /* LEARN PAGE */
   .learn > div {
     margin: 5vh 0px;
-    width: 98vw;
+    width: 97.5vw;
     padding: 5vh 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .learn h1 {
     font-size: 20vw;
@@ -101,9 +104,19 @@
     font-size: 25vw;
     margin-top: 15vh;
   }
+  .pieceMoves ul {
+    margin: 0px;
+    width: 94vw;
+    display: flex;
+    justify-content: space-around;
+  }
   .pieceMoves li {
-    width: 25vw;
-    height: 30vh;
+    width: 40vw;
+    height: 25vh;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .pieceMoves h3 {
     font-size: 6vw;
@@ -115,6 +128,10 @@
     font-size: 5vw;
   }
   .pieceMoves p {
-    font-size: 3vw;
+    font-size: 3.5vw;
+  }
+  .pieceMoves li img {
+    width: 36vw;
+    height: auto;
   }
 }
