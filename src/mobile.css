@@ -1,90 +1,102 @@
 @media only screen and (max-width: 640px) {
-    .comelearn img,
-    .meetup img,
-    .homeDesc img {
-        display: none;
-    }
-
-    header > div {
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-    }
-    header img {
-        position: relative;
-        bottom: 1vh;
-        height: 5vh;
-    }
-    header h1 {
-        font-size: 5vh;
-        position: relative;
-        bottom: 1vh;
-    }
-    nav {
-        top: 8.5vh;
-        display: flex;
-        justify-content: center;
-        width: 100vw;
-    }
-    nav ul {
-        width: 100vw;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    nav a {
-        font-size: 2.25vh;
-    }
-
-    nav a:active,
-    nav a:hover {
-        box-shadow: none !important;
-        background-color: transparent !important;
-        color: #d04646;
-    }
-
-    .posts > div {
-        width: 100vw;
-    }
-
-    .postCard {
-        max-width: 100vw;
-        margin: 10vw;
-    }
-
-    .postCard p {
-        font-size: 5vw;
-    }
-
-    .homeDesc p {
-        width: 100vw;
-    }
-
-    .knowChess {
-        margin: 0;
-    }
-
-    .knowChess {
-        display: none;
-    }
-
-    .pieceMoves li {
-        width: 25vw;
-        height: 30vh;
-    }
-
-    .pieceMoves h3 {
-        font-size: 6vw;
-    }
-
-    .pieceMoves h4 {
-        font-size: 5vw;
-    }
-    
-    .pieceMoves h5 {
-        font-size: 5vw;
-    }
-
-    .pieceMoves p {
-        font-size: 3vw;
-    }
+  .comelearn img,
+  .meetup img,
+  .homeDesc img {
+    display: none;
+  }
+  header > div {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  header img {
+    position: relative;
+    bottom: 1vh;
+    height: 5vh;
+  }
+  header h1 {
+    font-size: 5vh;
+    position: relative;
+    bottom: 1vh;
+  }
+  nav {
+    top: 8.5vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  nav ul {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  nav a {
+    font-size: 2.25vh;
+  }
+  nav a:active,
+  nav a:hover {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    color: #d04646;
+  }
+  .title h1 {
+    letter-spacing: 1px;
+    font-size: 25vw;
+    text-align: center;
+  }
+  .comelearn {
+    flex-direction: column;
+    width: 90vw;
+  }
+  .meetup {
+    flex-direction: column;
+    width: 90vw;
+  }
+  .home div div {
+    width: 90vw;
+  }
+  .home div p {
+    font-size: 3vh;
+  }
+  .home h2 {
+    font-size: 20vw;
+    width: 90vw;
+  }
+  .comelearn button {
+    font-size: 7vh;
+    letter-spacing: 3px;
+    padding: 0px 5vw;
+  }
+  .posts > div {
+    width: 100vw;
+  }
+  .postCard {
+    max-width: 100vw;
+    margin: 10vw;
+  }
+  .postCard p {
+    font-size: 5vw;
+  }
+  .knowChess {
+    margin: 0;
+  }
+  .knowChess {
+    display: none;
+  }
+  .pieceMoves li {
+    width: 25vw;
+    height: 30vh;
+  }
+  .pieceMoves h3 {
+    font-size: 6vw;
+  }
+  .pieceMoves h4 {
+    font-size: 5vw;
+  }
+  .pieceMoves h5 {
+    font-size: 5vw;
+  }
+  .pieceMoves p {
+    font-size: 3vw;
+  }
 }
