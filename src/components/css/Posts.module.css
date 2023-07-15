@@ -67,3 +67,16 @@
   background-color: #AC8F73;
   border-radius: 2vw;
 }
+
+@media only screen and (max-width: 640px) {
+  .posts {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .postCard {
+    width: 100vw;
+  }
+  .postCard p {
+    font-size: 5vw;
+  }
+}
