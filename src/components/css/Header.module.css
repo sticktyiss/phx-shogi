@@ -10,6 +10,7 @@ header {
   position: sticky;
   top: 0px;
   font-family: KongJapanese;
+  z-index: 1;
 }
 header div {
   display: flex;
@@ -51,6 +52,7 @@ nav a:hover {
   background-color: #d04646;
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
+  color: black !important;
 }
 header button { /* TODO: FIXME: padding is messed up with the hover */
   font-size: 1.5vw;
@@ -66,5 +68,6 @@ header button:hover {
   background-color: #d04646;
   border-radius: 10px;
   box-shadow: 0px 0px 2px black;
+  color: black;
   /* padding: .5vh .5vw; */
 }
