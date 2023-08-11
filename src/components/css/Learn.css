@@ -15,6 +15,12 @@
   text-shadow: 2px 2px 2px black;
   font-size: 12vw;
 }
+/* .learn h3 {
+  font-family: Harukaze;
+  font-size: 8vw;
+  letter-spacing: 5px;
+  color: #d04646;
+} */
 .madeRed {
   color: #d04646;
   font-weight: bold;
@@ -39,10 +45,11 @@
   margin-bottom: 5vh;
 }
 .knowChess {
-  margin: 20vh;
+  /* margin: 20vh; */
   text-align: center;
   text-shadow: 2px 2px 2px black;
 }
+
 .learn button {
   background-color: #fcf4e1;
   font-family: QueensidesBold;
@@ -61,6 +68,12 @@
 text-align: center;
 }
 .pieceMoves h2 {
+  font-family: Harukaze;
+  font-size: 8vw;
+  letter-spacing: 5px;
+  color: #d04646;
+}
+.knowChess h2 {
   font-size: 20vh;
   text-shadow: 2px 2px 2px black;
 }
@@ -106,4 +119,26 @@ text-align: center;
   width: 80%;
   height: auto;
   border-radius: 5px;
+}
+.piece {
+  top: -45%;
+  left: -1px;
+  position: relative;
+  width: 30% !important;
+  height: auto !important;
+  z-index: 0;
+}
+.piece.back {
+  top: -29%;
+}
+.illegalMoves li {
+  color: #d04646;
+  font-size: 32px;
+}
+.illegalMoves p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a {
+  color: #d04646;
 }
