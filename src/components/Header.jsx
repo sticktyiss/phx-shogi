@@ -6,7 +6,7 @@ import logo from "../images/phxshogi-logo.png";
 const Header = () => {
   const styleActiveLink = ({ isActive }) => {
     return {
-      color: isActive ? "#d04646" : "#463d35", //TODO: Style this out
+      color: isActive ? "#a00000" : "#463d35", //TODO: Style this out
     };
   };
 
