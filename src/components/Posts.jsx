@@ -6,6 +6,37 @@ const Posts = () => {
     <main className={classes.main}>
       <div className={classes.posts}>
         <div className={classes.postCard}>
+          <h2>SABOTEN CON</h2>
+          <p>
+            🎌🏯 Calling all shogi enthusiasts and strategic masterminds! 🤝🤖
+            <br />
+            <br />
+            Get ready for a shogi experience like no other at Saboten Con in
+            Phoenix, AZ! 🌵🎉
+            <br />
+            <br />
+            🗓️ Date: Sept. 1-4
+            <br />
+            <br />
+            📍 Location: 340 N 3rd St, Phoenix, AZ 85004
+            <br />
+            <br />
+            Join us on a journey of checkmates and castle captures that will
+            keep your mind racing and your spirits high throughout the entire
+            convention! 🎮🔥
+            <br />
+            <br />
+            Whether you're a shogi sensei or a curious beginner, our club
+            welcomes players of all skill levels. Prepare to immerse yourself in
+            battles of wits, camaraderie, and maybe even a surprise or two! 🤩🏆
+            <br />
+            <br />
+            See you at Saboten Con, where the shogi boards will be set, the
+            pieces will clash, and the thrill of victory awaits! 🎌🤝
+          </p>
+          <h4>Posted: Aug 16th, 2023</h4>
+        </div>
+        <div className={classes.postCard}>
           <h2>
             <span>📣</span> Meet Up{" "}
           </h2>
