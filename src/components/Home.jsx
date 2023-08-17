@@ -12,6 +12,7 @@ const Home = () => {
     <main className="home">
       <div className="title">
         <h1>Welcome to Phoenix Shogi</h1>
+        {/* React icons for stuff? i.e. phone, email, discord, fb */}
         <p className="disclaimer">
           *We are a developing group and will have updates to all facets of the
           group as the organization develops.
