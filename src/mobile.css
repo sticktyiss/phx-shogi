@@ -37,7 +37,6 @@
   nav a:hover {
     box-shadow: none !important;
     background-color: transparent !important;
-    color: #d04646;
   }
   .title h1 {
     letter-spacing: 1px;
@@ -103,6 +102,9 @@
     font-size: 25vw;
     margin-top: 5vh;
   }
+  .piece.back {
+    top: -27%;
+  }
   .pieceMoves ul {
     margin: 0px;
     width: 94vw;
@@ -111,7 +113,7 @@
   }
   .pieceMoves li {
     width: 40vw;
-    height: 25vh;
+    height: 30vh;
     margin: 4px;
     display: flex;
     flex-direction: column;
