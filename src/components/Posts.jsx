@@ -6,6 +6,35 @@ const Posts = () => {
     <main className={classes.main}>
       <div className={classes.posts}>
         <div className={classes.postCard}>
+          <h2>Meet @ JFG</h2>
+          <p>
+            🏯🌸 Join us for a morning of strategic moves and friendly
+            competition at the serene Japanese Friendship Garden of Phoenix.
+            🌿🗡️
+            <br />
+            <br />
+            📅 Date: September 10th
+            <br />
+            <br />
+            ⏰ Time: 9:00 AM - 12:00 PM
+            <br />
+            <br />
+            📍 Location: Japanese Friendship Garden
+            <br />
+            1125 N. 3rd Avenue, Phoenix, Az 85003
+            <br />
+            <br />
+            Whether you're a grandmaster or just starting your shogi journey,
+            this event is for you. Sharpen your skills, make new friends, and
+            enjoy the beauty of the garden. 🌼🤝
+            <br />
+            <br />
+            Don't miss out on the chance to experience the art of shogi in a
+            tranquil setting! See you on the 10th! 🎐🙌
+          </p>
+          <h4>Posted: Aug 16th, 2023</h4>
+        </div>
+        <div className={classes.postCard}>
           <h2>SABOTEN CON</h2>
           <p>
             🎌🏯 Calling all shogi enthusiasts and strategic masterminds! 🤝🤖
@@ -69,7 +98,7 @@ const Posts = () => {
         </div>
         <div className={classes.postCard}>
           <h2>New beginnings</h2>
-          <p>Welcome to Phoenix Shogi</p>
+          <p>Phoenix Shogi website published.</p>
           <h4>- Jun 26, 2023</h4>
         </div>
       </div>

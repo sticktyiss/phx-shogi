@@ -3,7 +3,9 @@
   align-self: center;
   display: flex;
   flex-direction: row;
-  width: 94vw;
+  width: 96vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 .posts > div {
   display: flex;
@@ -12,7 +14,7 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  max-width: 26vw;
+  max-width: 25vw;
   height: fit-content;
   margin: 1vw;
   padding: 1vw 1.5vw 1.5vw 1.5vw;
