@@ -11,6 +11,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.white {
+  color: white;
+}
 .postCard {
   display: flex;
   flex-direction: column;

@@ -6,6 +6,59 @@ const Posts = () => {
     <main className={classes.main}>
       <div className={classes.posts}>
         <div className={classes.postCard}>
+          <h2 className={classes.white}>Weekly Meetup</h2>
+          <p>
+            🗓️ Our Shogi Club is
+            meeting online every Sunday and Wednesday. 🖥️♟️
+            <br />
+            <br />
+            We host our online meetups via our <a href="https://discord.gg/UVEQH9YDEk">Discord Server</a>. Please also create an account on <a href="https://lishogi.org">Lishogi</a>, where we will be playing our games.
+            <br />
+            <br />
+            👉 Join us for brain-teasing battles, strategy swaps, and a whole
+            lot of fun. It's the perfect way to level up your shogi game while
+            making new friends from around Arizona! 🤝
+            <br />
+            <br />
+            See you online! 📲👑
+          </p>
+          <h4>Posted: Sep 26th, 2023</h4>
+        </div>
+        <div className={classes.postCard}>
+          <h2>ASU Meetup</h2>
+          <p>
+            🎉🀄 Exciting News! Shogi Meets Mahjong 🀄🎉
+            <br />
+            <br />
+            Get ready for an epic clash of strategy and skill as Phoenix Shogi
+            teams up with the ASU Mahjong Club for an unforgettable evening!
+            🏯🀄
+            <br />
+            <br />
+            📅 Date: September 27th
+            <br />
+            <br />
+            🕔 Time: 5:00 PM - 9:00 PM
+            <br />
+            <br />
+            📍 Location: ASU Durham Hall - Room: L1-08
+            <br />
+            <br />
+            It's a showdown you won't want to miss! Join us for a night of
+            brain-teasing moves, thrilling matches, and tons of fun. Whether
+            you're a seasoned Shogi samurai or a Mahjong master, there's a game
+            for you.
+            <br />
+            <br />
+            Bring your A-game, bring your friends, and let's make this a
+            legendary evening together. <br /> See you there! 🤝🎲
+            <br />
+            <br />
+            #ShogiMeetsMahjong #phxshogi #ASUClubs #ShogiWithMahjong
+          </p>
+          <h4>Posted: Sep 26th, 2023</h4>
+        </div>
+        <div className={classes.postCard}>
           <h2>Meet @ JFG</h2>
           <p>
             🏯🌸 Join us for a morning of strategic moves and friendly
