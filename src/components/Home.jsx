@@ -27,6 +27,9 @@ const Home = () => {
         <div>
           <h2>Meet Up With Us!</h2>
           <p>
+            We meet every Second Sunday at the <a href="https://maps.app.goo.gl/wx3XLs76ydchXHMz9">Japanese Friendship Garden</a> from 9am to 12pm!
+          </p>
+          <p>
             Join our <a href="https://discord.gg/UVEQH9YDEk">Discord Server </a> 
             to chat and play games with us online! You can also fill out {" "}
             <a href="https://www.bit.ly/phxshogi" target="_blank">
