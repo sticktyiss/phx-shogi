@@ -218,47 +218,35 @@ const chessPlayerPieces = (
       Shogi has 8 types of pieces (called "koma" 駒) with unique move sets, and 6 of those pieces can be "promoted", giving them an altered moveset (more on promotion later). Note that while many have names similar to chess pieces,<span className="madeRed"> only the king, bishop, and rook move the same</span>. Shogi pawns move and capture forward, and shogi knights have only 2 possible moves, instead of 8.
       The Pieces are:
     </p>
-  </div>
-)
 
-const chessPlayerHTML = (
-  <div className="knowChess">
-    <h2>Shogi for Chess Players</h2>
-    <section className="learnNav">
-      <button className="learnNavBtn" id="chess1">1</button>
-      <button className="learnNavBtn" id="chess2">2</button>
-      <button className="learnNavBtn" id="chess3">3</button>
-      <button className="learnNavBtn" id="chess4">4</button>
-      <button className="learnNavBtn" id="chess5">5</button>
-    </section>
-    <p className="homeDesc">
-      Shogi and chess are such similar games that many refer to Shogi as "Japanese Chess." There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
-    </p>
-    <br></br>
-    {chessPlayerPieces}
-    
-    {/* <button></button> */}
-    {/* Use some kind of toggle here later */}
     <section className="activePiece">
       {/* {activePieceDescription} */}
       {pieceMovesHTML}
     </section>
+  </div>
+)
 
+const chessPlayerBoard = (
+  <div>
     <h2>Setting the Board</h2>
     <p className="homeDesc">
       Below you'll see how to set up a standard Shogi game. You have 9 pawns in front, in the middle you have your bishop on the left and your rook on the right, and on the back row, starting in the center and moving out, you have your king, then your gold generals, silver generals, knights, and lances. Your opponent has the same, rotated 180 degrees. Note a key difference here: <span className="madeRed">a Shogi board is 9x9, meaning your bishops directly oppose one another at the start of the game</span>. If the board were checkered, they would be bishops of the same "color".
     </p>
     <img className="board" src={setboard} />
+  </div>
+)
 
+const chessPlayerWhoFirst = (
+  <div>
     <h2>Who goes first?</h2>
     <p className="homeDesc">
-      You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so I tend to prefer using the Japanese terms to avoid confusion.
+      You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so we tend to prefer using the Japanese terms to avoid confusion.
     </p>
+  </div>
+)
 
-    {promotionHTML}
-
-    {capturesDropsHTML}
-
+const chessPlayerWinning = (
+  <div>
     <section>
       <h2>Winning the Game</h2>
       <p className="homeDesc">
@@ -278,13 +266,44 @@ const chessPlayerHTML = (
       </p>
       <img className="atamkinNotated" src={atamakinNotated} />
     </section>
+  </div>
+)
 
-    {illegalMovesHTML}
-
+const mannersHTML = (
+  <div>
     <h2>Manners</h2>
     <p className="homeDesc">
       Shogi, perhaps more than other board games, places a heavy emphasis on etiquette, or sportsmanship. In much the way that you might shake hands before a chess match, a Shogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
     </p>
+  </div>
+)
+
+const chessLearnNavHTML = (
+  <section className="learnNav">
+    <button className="learnNavBtn" id="chess1">1</button>
+    <button className="learnNavBtn" id="chess2">2</button>
+    <button className="learnNavBtn" id="chess3">3</button>
+    <button className="learnNavBtn" id="chess4">4</button>
+    <button className="learnNavBtn" id="chess5">5</button>
+  </section>
+)
+
+const chessPlayerHTML = (
+  <div className="knowChess">
+    <h2>Shogi for Chess Players</h2>
+    {chessLearnNavHTML}
+    <p className="homeDesc">
+      Shogi and chess are such similar games that many refer to Shogi as "Japanese Chess." There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
+    </p>
+    <button className="nextLearnPage">Next</button>
+    {chessPlayerPieces}
+    {chessPlayerBoard}
+    {chessPlayerWhoFirst}
+    {promotionHTML}
+    {capturesDropsHTML}
+    {chessPlayerWinning}
+    {illegalMovesHTML}
+    {mannersHTML}
   </div>
 );
 
