@@ -152,7 +152,7 @@ const chessPlayerIntro = (
       Shogi and chess are such similar games that many refer to Shogi as "Japanese Chess." There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
     </p>
     <br></br>
-    <button className="nextBtn" onClick={() => loadRulePage(chessPlayerPieces)}></button>
+    <button className="nextBtn" id="chess2" onClick={(e) => loadRulePage(e, chessPlayerPieces)}></button>
   </div>
 )
 
@@ -169,8 +169,8 @@ const chessPlayerPieces = (
       {pieceMovesHTML}
     </section>
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(chessPlayerIntro)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(chessPlayerBoard)}></button>
+    <button className="prevBtn" id="chess1" onClick={(e) => loadRulePage(e, chessPlayerIntro)}></button>
+    <button className="nextBtn" id="chess3" onClick={(e) => loadRulePage(e, chessPlayerBoard)}></button>
   </div>
 )
 
@@ -182,8 +182,8 @@ const chessPlayerBoard = (
     </p>
     <img className="board" src={setboard} />
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(chessPlayerPieces)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(chessPlayerWhoFirst)}></button>
+    <button className="prevBtn" id="chess2" onClick={(e) => loadRulePage(e, chessPlayerPieces)}></button>
+    <button className="nextBtn" id="chess4" onClick={(e) => loadRulePage(e, chessPlayerWhoFirst)}></button>
   </div>
 )
 
@@ -194,8 +194,8 @@ const chessPlayerWhoFirst = (
       You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so we tend to prefer using the Japanese terms to avoid confusion.
     </p>
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(chessPlayerBoard)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(promotionHTML)}></button>
+    <button className="prevBtn" id="chess3" onClick={(e) => loadRulePage(e, chessPlayerBoard)}></button>
+    <button className="nextBtn" id="chess5" onClick={(e) => loadRulePage(e, promotionHTML)}></button>
   </div>
 )
 
@@ -207,8 +207,8 @@ const promotionHTML = (
     </p>
     <img className="camps" src={camps} />
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(chessPlayerWhoFirst)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(capturesDropsHTML)}></button>
+    <button className="prevBtn" id="chess4" onClick={(e) => loadRulePage(e, chessPlayerWhoFirst)}></button>
+    <button className="nextBtn" id="chess6" onClick={(e) => loadRulePage(e, capturesDropsHTML)}></button>
   </section>
 )
 
@@ -231,8 +231,8 @@ const capturesDropsHTML = (
     </p>
     <img className="drop" src={drop} />
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(promotionHTML)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(chessPlayerWinning)}></button>
+    <button className="prevBtn" id="chess5" onClick={(e) => loadRulePage(e, promotionHTML)}></button>
+    <button className="nextBtn" id="chess7" onClick={(e) => loadRulePage(e, chessPlayerWinning)}></button>
   </section>
 )
 
@@ -258,8 +258,8 @@ const chessPlayerWinning = (
       <img className="atamkinNotated" src={atamakinNotated} />
     </section>
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(capturesDropsHTML)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(illegalMovesHTML)}></button>
+    <button className="prevBtn" id="chess6" onClick={(e) => loadRulePage(e, capturesDropsHTML)}></button>
+    <button className="nextBtn" id="chess8" onClick={(e) => loadRulePage(e, illegalMovesHTML)}></button>
   </div>
 )
 
@@ -295,8 +295,8 @@ const illegalMovesHTML = (
       </ul>
     </p>
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(chessPlayerWinning)}></button>
-    <button className="nextBtn" onClick={() => loadRulePage(mannersHTML)}></button>
+    <button className="prevBtn" id="chess7" onClick={(e) => loadRulePage(e, chessPlayerWinning)}></button>
+    <button className="nextBtn" id="chess9" onClick={(e) => loadRulePage(e, mannersHTML)}></button>
   </section>
 )
 
@@ -307,7 +307,7 @@ const mannersHTML = (
       Shogi, perhaps more than other board games, places a heavy emphasis on etiquette, or sportsmanship. In much the way that you might shake hands before a chess match, a Shogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
     </p>
     <br></br>
-    <button className="prevBtn" onClick={() => loadRulePage(illegalMovesHTML)}></button>
+    <button className="prevBtn" id="chess8" onClick={(e) => loadRulePage(e, illegalMovesHTML)}></button>
   </div>
 )
 
@@ -465,30 +465,37 @@ function loadRules(chessPlayer) {
   }
 }
 
-function loadRulePage(pageHTML) {
+function loadRulePage(e, pageHTML) {
   const activeRule = ReactDOM.createRoot(
     document.getElementById('activeRule')
   );
 
   activeRule.render(pageHTML);
+  document.getElementById('jump').scrollIntoView();
+
+  const thisElem = e.target.id;
+  // document.getElementsByClassName("learnNavBtn").setAttribute('style', 'background-color:#fcf4e1')
+
+  document.getElementById(thisElem).setAttribute('style', 'background-color:#d04646')
 }
 
 const chessLearnNavHTML = (
-  <section className="learnNav">
-    <button className="learnNavBtn" id="chess1" onClick={() => loadRulePage(chessPlayerIntro)}></button>
-    <button className="learnNavBtn" id="chess2" onClick={() => loadRulePage(chessPlayerPieces)}></button>
-    <button className="learnNavBtn" id="chess3" onClick={() => loadRulePage(chessPlayerBoard)}></button>
-    <button className="learnNavBtn" id="chess4" onClick={() => loadRulePage(chessPlayerWhoFirst)}></button>
-    <button className="learnNavBtn" id="chess5" onClick={() => loadRulePage(promotionHTML)}></button>
-    <button className="learnNavBtn" id="chess5" onClick={() => loadRulePage(capturesDropsHTML)}></button>
-    <button className="learnNavBtn" id="chess5" onClick={() => loadRulePage(chessPlayerWinning)}></button>
-    <button className="learnNavBtn" id="chess5" onClick={() => loadRulePage(illegalMovesHTML)}></button>
-    <button className="learnNavBtn" id="chess5" onClick={() => loadRulePage(mannersHTML)}></button>
+  <section className="learnNav" id="learnNav">
+    <button className="learnNavBtn" id="chess1" style={{"background-color":"#d04646"}} onClick={(e) => loadRulePage(e, chessPlayerIntro)}></button>
+    <button className="learnNavBtn" id="chess2" onClick={(e) => loadRulePage(e, chessPlayerPieces)}></button>
+    <button className="learnNavBtn" id="chess3" onClick={(e) => loadRulePage(e, chessPlayerBoard)}></button>
+    <button className="learnNavBtn" id="chess4" onClick={(e) => loadRulePage(e, chessPlayerWhoFirst)}></button>
+    <button className="learnNavBtn" id="chess5" onClick={(e) => loadRulePage(e, promotionHTML)}></button>
+    <button className="learnNavBtn" id="chess6" onClick={(e) => loadRulePage(e, capturesDropsHTML)}></button>
+    <button className="learnNavBtn" id="chess7" onClick={(e) => loadRulePage(e, chessPlayerWinning)}></button>
+    <button className="learnNavBtn" id="chess8" onClick={(e) => loadRulePage(e, illegalMovesHTML)}></button>
+    <button className="learnNavBtn" id="chess9" onClick={(e) => loadRulePage(e, mannersHTML)}></button>
   </section>
 )
 
 const chessPlayerHTML = (
   <div className="knowChess">
+  <div id="jump"></div>
     <h2>Shogi for Chess Players</h2>
     {chessLearnNavHTML}
     <section id="activeRule">
