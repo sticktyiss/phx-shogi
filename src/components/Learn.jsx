@@ -1,6 +1,7 @@
 import React from "react";
 // import { useState } from "react";
 import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client'; 
 
 import "./css/Learn.css";
 import board from "../images/shogiboard.jpg";
@@ -38,6 +39,14 @@ import lance from "../images/pieces/0KY.svg";
 import promolance from "../images/pieces/0NK.svg";
 import pawn from "../images/pieces/0FU.svg";
 import tokin from "../images/pieces/0TO.svg";
+
+import oushou from "../images/pieces/oushou.png";
+import gyokushou from "../images/pieces/gyokushou.png"
+import king_moves from "../images/pieces/king_moves.png"
+import hisha from "../images/pieces/hisha.png"
+import rook_moves from "../images/pieces/rook_moves.png"
+import ryuu from "../images/pieces/ryuuou.png"
+import dragon_moves from "../images/pieces/dragon_moves.png"
 
 const pieceMovesHTML = (
   <div className="pieceMoves">
@@ -156,17 +165,73 @@ const chessPlayerIntro = (
   </div>
 )
 
+function loadPiece(html) {
+  const activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
+
+  activePiece.render(html);
+}
+
+const kingHTML = (
+  <section className="pieceDesc">
+    <h3>The King <span className="japaneseText">王将・玉将</span></h3>
+    <img className="pieceImg" src={oushou}></img>
+    <img className="movementImg" src={king_moves}></img>
+    {/* <img className="pieceImg" src={gyokushou}></img> */}
+    <p>The ou-shou / gyoku-shou (abbreviated "gyoku") is <em>the most important piece in the game</em>. When one side's king is lost, the game is lost with it, so guard yours well! The king can move one space in any direction, and does not promote. The "ou-shou" king is traditionally given to the higher-rated player, while the "gyoku-shou" king goes to the lower-rated player, regardless of which player moves first. As 玉 can be used to describe jewelry, it is sometimes referred to as the "Jewel" or "Jeweled" King in English. </p>
+  </section>
+)
+
+const dragonHTML = (
+  <section className="pieceDesc">
+    <h3>Dragon <span className="japaneseText">龍王</span></h3>
+    <img className="pieceImg" src={ryuu}></img>
+    <img className="movementImg" src={dragon_moves}></img>
+    <p>(ryuu-ou, “ryuu” for short)
+Sometimes abbreviated as <span className="japaneseText">竜</span> (an easier-to-read kanji for “dragon”), the dragon is the strongest offensive piece. When the dragon closes in on the king, the end is near. A dragon can move either as a rook or as a king (forward, backward, or sideways in any direction OR one space in any direction).
+    </p>
+  </section>
+)
+
+const rookHTML = (
+  <section className="pieceDesc">
+    <h3>The Rook <span className="japaneseText">飛車</span></h3>
+    <img className="pieceImg" src={hisha}></img>
+    <img className="movementImg" src={rook_moves}></img>
+    <p>("hi-sha" pronounced "hee-shah", "sha" for short, literally "flying chariot") A powerful long-range attacker, the rook often dictates the speed and direction of the game. Promoting your rook is considered a minor victory. The rook can move any number of spaces forward, backward, or sideways (same as a chess rook).
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(dragonHTML)}>Promote!</button>
+  </section>
+)
+
+const pieceNavHTML = (
+  <section className="pieceNav">
+    <button className="pieceNavBtn" id="king" onClick={() => loadPiece(kingHTML)}>王</button>
+    <button className="pieceNavBtn" id="rook" onClick={() => loadPiece(rookHTML)}>飛</button>
+    <button className="pieceNavBtn" id="bishop" onClick={(e) => loadPiece(e)}>角</button>
+    <button className="pieceNavBtn" id="gold" onClick={(e) => loadPiece(e)}>金</button>
+    <button className="pieceNavBtn" id="silver" onClick={(e) => loadPiece(e)}>銀</button>
+    <button className="pieceNavBtn" id="pawn" onClick={(e) => loadPiece(e)}>歩</button>
+    <button className="pieceNavBtn" id="lance" onClick={(e) => loadPiece(e)}>香</button>
+    <button className="pieceNavBtn" id="knight" onClick={(e) => loadPiece(e)}>桂</button>
+  </section>
+)
+
 const chessPlayerPieces = (
   <div>
     <h2>The Pieces</h2>
     <p className="homeDesc">
       Shogi has 8 types of pieces (called "koma" 駒) with unique move sets, and 6 of those pieces can be "promoted", giving them an altered moveset (more on promotion later). Note that while many have names similar to chess pieces,<span className="madeRed"> only the king, bishop, and rook move the same</span>. Shogi pawns move and capture forward, and shogi knights have only 2 possible moves, instead of 8.
-      The Pieces are:
+      Click the pieces below to learn more about each one!
     </p>
 
-    <section className="activePiece">
+    {pieceNavHTML}
+
+    <section id="activePiece">
       {/* {activePieceDescription} */}
-      {pieceMovesHTML}
+      {/* {pieceMovesHTML} */}
     </section>
     <br></br>
     <button className="prevBtn" id="chess1" onClick={(e) => loadRulePage(e, chessPlayerIntro)}></button>
@@ -454,7 +519,7 @@ const Learn = () => {
 };
 
 function loadRules(chessPlayer) {
-  const rules = ReactDOM.createRoot(
+  const rules = createRoot(
     document.getElementById('rules')
   );
 
@@ -466,7 +531,7 @@ function loadRules(chessPlayer) {
 }
 
 function loadRulePage(e, pageHTML) {
-  const activeRule = ReactDOM.createRoot(
+  const activeRule = createRoot(
     document.getElementById('activeRule')
   );
 

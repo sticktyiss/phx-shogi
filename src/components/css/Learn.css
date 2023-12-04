@@ -73,6 +73,19 @@ text-align: center;
   letter-spacing: 5px;
   color: #d04646;
 }
+
+h3 {
+  font-family: Harukaze;
+  font-size: 8vw;
+  letter-spacing: 5px;
+  color: #d04646;
+}
+
+.japaneseText {
+  font-family: YujiSyuku;
+  font-size: 5vw;
+}
+
 .knowChess h2 {
   font-size: 20vh;
   text-shadow: 2px 2px 2px black;
@@ -111,7 +124,7 @@ text-align: center;
   font-size: 2vw;
 }
 .pieceMoves p {
-  font-size: 1vw;
+  font-size: 3vw;
   width: inherit;
   text-align: center;
 }
@@ -189,4 +202,41 @@ button.prevBtn:hover {
 button.prevBtn:hover {
   cursor: pointer;
   border-right: 30px solid #d04646;
+}
+
+button.pieceNavBtn {
+  font-family: YujiSyuku;
+  font-size: 25px;
+  text-align: center;
+  padding: 0;
+  color: black;
+  width: 50px;
+  height: 50px;
+}
+
+.pieceDesc p {
+  font-size: 2.5vw;
+}
+
+#activeRule img.pieceImg {
+  max-width: 25%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#activeRule img.movementImg {
+  max-width: 25%;
+  float: left;
+  clear: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+section.pieceDesc {
+  padding-bottom: 50px;
+}
+
+section#activePiece {
+  margin-bottom: 100px;
 }
