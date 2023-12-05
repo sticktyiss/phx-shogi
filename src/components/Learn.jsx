@@ -14,146 +14,149 @@ import drop from "../images/drop.png";
 import atamakin from "../images/atamakin.png";
 import atamakinNotated from "../images/atamakin-notated.png";
 
-import kingmoves from "../images/pieces/moves/king.png";
-import rookmoves from "../images/pieces/moves/rook.png";
-import dragonmoves from "../images/pieces/moves/dragon.png";
-import bishopmoves from "../images/pieces/moves/bishop.png";
-import horsemoves from "../images/pieces/moves/horse.png";
-import goldmoves from "../images/pieces/moves/gold.png";
-import silvermoves from "../images/pieces/moves/silver.png";
-import knightmoves from "../images/pieces/moves/knight.png";
-import lancemoves from "../images/pieces/moves/lance.png";
-import pawnmoves from "../images/pieces/moves/pawn.png";
-
-import king from "../images/pieces/0GY.svg";
-import rook from "../images/pieces/0HI.svg";
-import dragon from "../images/pieces/0RY.svg";
-import bishop from "../images/pieces/0KA.svg";
-import horse from "../images/pieces/0UM.svg";
-import gold from "../images/pieces/0KI.svg";
-import silver from "../images/pieces/0GI.svg";
-import promosilver from "../images/pieces/0NG.svg";
-import knight from "../images/pieces/0KE.svg";
-import promoknight from "../images/pieces/0NK.svg";
-import lance from "../images/pieces/0KY.svg";
-import promolance from "../images/pieces/0NK.svg";
-import pawn from "../images/pieces/0FU.svg";
-import tokin from "../images/pieces/0TO.svg";
-
 import oushou from "../images/pieces/oushou.png";
-import gyokushou from "../images/pieces/gyokushou.png"
+// import gyokushou from "../images/pieces/gyokushou.png"
 import king_moves from "../images/pieces/king_moves.png"
+
 import hisha from "../images/pieces/hisha.png"
 import rook_moves from "../images/pieces/rook_moves.png"
 import ryuu from "../images/pieces/ryuuou.png"
 import dragon_moves from "../images/pieces/dragon_moves.png"
 
-const pieceMovesHTML = (
-  <div className="pieceMoves">
-    <ul>
-      <li>
-        <h3>King</h3>
-        <p>1 space in any direction</p>
-        <img className="moveset" src={kingmoves} />
-        <img className="piece" src={king} />
-      </li>
-      <li>
-        <h3>Rook</h3>
-        <p>Any # of empty spaces vertically or horizontally</p>
-        <img className="moveset" src={rookmoves} />
-        <img className="piece" src={rook} />
-      </li>
-      <li>
-        <h4>Promoted Rook (Dragon)</h4>
-        <p>Same as Rook, but also 1 space diagonally</p>
-        <img className="moveset" src={dragonmoves} />
-        <img className="piece" src={dragon} />
-      </li>
-      <li>
-        <h3>Bishop</h3>
-        <p>Any # of empty spaces diagonally</p>
-        <img className="moveset" src={bishopmoves} />
-        <img className="piece" src={bishop} />
-      </li>
-      <li>
-        <h4>Promoted Bishop (Horse)</h4>
-        <p>Same as Bishop, but also 1 space up, down, left, or right.</p>
-        <img className="moveset" src={horsemoves} />
-        <img className="piece" src={horse} />
-      </li>
-      <li>
-        <h3>Gold General</h3>
-        <p>1 space up, down, left, right, or forwards diagonally</p>
-        <img className="moveset" src={goldmoves} />
-        <img className="piece" src={gold} />
-      </li>
-      <li>
-        <h3>
-          Silver General
-        </h3>
-        <p>1 space diagonally or up</p>
-        <img className="moveset" src={silvermoves} />
-        <img className="piece" src={silver} />
-      </li>
-      <li>
-        <h3>
-          Promoted Silver
-        </h3>
-        <p>Same as a gold</p>
-        <img className="moveset" src={goldmoves} />
-        <img className="piece" src={promosilver} />
-      </li>
-      <li>
-        <h3>
-          Knight
-        </h3>
-        <p>Jumps 2 spaces forward and 1 to the side</p>
-        <img className="moveset" src={knightmoves} />
-        <img className="piece back" src={knight} />
-      </li>
-      <li>
-        <h3>
-          Promoted Knight
-        </h3>
-        <p>Same as a gold</p>
-        <img className="moveset" src={goldmoves} />
-        <img className="piece" src={promoknight} />
-      </li>
-      <li>
-        <h3>
-          Lance
-        </h3>
-        <p>Any # of empty spaces forward</p>
-        <img className="moveset" src={lancemoves} />
-        <img className="piece back" src={lance} />
-      </li>
-      <li>
-        <h3>
-          Promoted Lance
-        </h3>
-        <p>Same as a gold</p>
-        <img className="moveset" src={goldmoves} />
-        <img className="piece" src={promolance} />
-      </li>
-      <li>
-        <h3>
-          Pawn
-        </h3>
-        <p>1 space forward</p>
-        <img className="moveset" src={pawnmoves} />
-        <img className="piece" src={pawn} />
-      </li>
-      <li>
-        <h3>
-          Promoted Pawn (Tokin)
-        </h3>
-        <p>Same as a gold</p>
-        <img className="moveset" src={goldmoves} />
-        <img className="piece" src={tokin} />
-      </li>
-    </ul>
-  </div>
-);
+import kaku from "../images/pieces/kakugyou.png"
+import bishop_moves from "../images/pieces/bishop_moves.png"
+import uma from "../images/pieces/ryuuma.png"
+import horse_moves from "../images/pieces/horse_moves.png"
+
+import kin from "../images/pieces/kinshou.png"
+import gold_moves from "../images/pieces/gold_moves.png"
+
+import gin from "../images/pieces/ginshou.png"
+import silver_moves from "../images/pieces/silver_moves.png"
+import narigin from "../images/pieces/narigin.png"
+import narigin_moves from "../images/pieces/promoted_silver_moves.png"
+
+import kei from "../images/pieces/keima.png"
+import knight_moves from "../images/pieces/knight_moves.png"
+import narikei from "../images/pieces/narikei.png"
+import narikei_moves from "../images/pieces/promoted_knight_moves.png"
+
+import kyou from "../images/pieces/kyousha.png"
+import lance_moves from "../images/pieces/lance_moves.png"
+import narikyou from "../images/pieces/narikyou.png"
+import narikyou_moves from "../images/pieces/promoted_lance_moves.png"
+
+import fu from "../images/pieces/fuhyou.png"
+import pawn_moves from "../images/pieces/pawn_moves.png"
+import tokin from "../images/pieces/tokin.png"
+import tokin_moves from "../images/pieces/tokin_moves.png"
+
+// const pieceMovesHTML = (
+//   <div className="pieceMoves">
+//     <ul>
+//       <li>
+//         <h3>King</h3>
+//         <p>1 space in any direction</p>
+//         <img className="moveset" src={kingmoves} />
+//         <img className="piece" src={king} />
+//       </li>
+//       <li>
+//         <h3>Rook</h3>
+//         <p>Any # of empty spaces vertically or horizontally</p>
+//         <img className="moveset" src={rookmoves} />
+//         <img className="piece" src={rook} />
+//       </li>
+//       <li>
+//         <h4>Promoted Rook (Dragon)</h4>
+//         <p>Same as Rook, but also 1 space diagonally</p>
+//         <img className="moveset" src={dragonmoves} />
+//         <img className="piece" src={dragon} />
+//       </li>
+//       <li>
+//         <h3>Bishop</h3>
+//         <p>Any # of empty spaces diagonally</p>
+//         <img className="moveset" src={bishopmoves} />
+//         <img className="piece" src={bishop} />
+//       </li>
+//       <li>
+//         <h4>Promoted Bishop (Horse)</h4>
+//         <p>Same as Bishop, but also 1 space up, down, left, or right.</p>
+//         <img className="moveset" src={horsemoves} />
+//         <img className="piece" src={horse} />
+//       </li>
+//       <li>
+//         <h3>Gold General</h3>
+//         <p>1 space up, down, left, right, or forwards diagonally</p>
+//         <img className="moveset" src={goldmoves} />
+//         <img className="piece" src={gold} />
+//       </li>
+//       <li>
+//         <h3>
+//           Silver General
+//         </h3>
+//         <p>1 space diagonally or up</p>
+//         <img className="moveset" src={silvermoves} />
+//         <img className="piece" src={silver} />
+//       </li>
+//       <li>
+//         <h3>
+//           Promoted Silver
+//         </h3>
+//         <p>Same as a gold</p>
+//         <img className="moveset" src={goldmoves} />
+//         <img className="piece" src={promosilver} />
+//       </li>
+//       <li>
+//         <h3>
+//           Knight
+//         </h3>
+//         <p>Jumps 2 spaces forward and 1 to the side</p>
+//         <img className="moveset" src={knightmoves} />
+//         <img className="piece back" src={knight} />
+//       </li>
+//       <li>
+//         <h3>
+//           Promoted Knight
+//         </h3>
+//         <p>Same as a gold</p>
+//         <img className="moveset" src={goldmoves} />
+//         <img className="piece" src={promoknight} />
+//       </li>
+//       <li>
+//         <h3>
+//           Lance
+//         </h3>
+//         <p>Any # of empty spaces forward</p>
+//         <img className="moveset" src={lancemoves} />
+//         <img className="piece back" src={lance} />
+//       </li>
+//       <li>
+//         <h3>
+//           Promoted Lance
+//         </h3>
+//         <p>Same as a gold</p>
+//         <img className="moveset" src={goldmoves} />
+//         <img className="piece" src={promolance} />
+//       </li>
+//       <li>
+//         <h3>
+//           Pawn
+//         </h3>
+//         <p>1 space forward</p>
+//         <img className="moveset" src={pawnmoves} />
+//         <img className="piece" src={pawn} />
+//       </li>
+//       <li>
+//         <h3>
+//           Promoted Pawn (Tokin)
+//         </h3>
+//         <p>Same as a gold</p>
+//         <img className="moveset" src={goldmoves} />
+//         <img className="piece" src={tokin} />
+//       </li>
+//     </ul>
+//   </div>
+// );
 
 const chessPlayerIntro = (
   <div>
@@ -206,16 +209,143 @@ const rookHTML = (
   </section>
 )
 
+const horseHTML = (
+  <section className="pieceDesc">
+    <h3>Horse <span className="japaneseText">龍馬</span></h3>
+    <img className="pieceImg" src={uma}></img>
+    <img className="movementImg" src={horse_moves}></img>
+    <p>(ryuu-uma, "uma" for short)
+      Sometimes abbreviated as <span className="japaneseText">馬</span> (an easier-to-read kanji for "horse"), the horse...
+    </p>
+  </section>
+)
+
+const bishopHTML = (
+  <section className="pieceDesc">
+    <h3>The Bishop <span className="japaneseText">角行</span></h3>
+    <img className="pieceImg" src={kaku}></img>
+    <img className="movementImg" src={bishop_moves}></img>
+    <p>BISHOP
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(horseHTML)}>Promote!</button>
+  </section>
+)
+
+const goldHTML = (
+  <section className="pieceDesc">
+    <h3>Gold General <span className="japaneseText">金将</span></h3>
+    <img className="pieceImg" src={kin}></img>
+    <img className="movementImg" src={gold_moves}></img>
+    <p>(kin-shou, "kin" for short)
+      GOLD
+      the gold does not promote
+    </p>
+  </section>
+)
+
+const nariginHTML = (
+  <section className="pieceDesc">
+    <h3>Promoted Silver <span className="japaneseText">成銀</span></h3>
+    <img className="pieceImg" src={narigin}></img>
+    <img className="movementImg" src={narigin_moves}></img>
+    <p>P SILVER
+    </p>
+  </section>
+)
+
+const silverHTML = (
+  <section className="pieceDesc">
+    <h3>Silver General <span className="japaneseText">銀将</span></h3>
+    <img className="pieceImg" src={gin}></img>
+    <img className="movementImg" src={silver_moves}></img>
+    <p>(gin-shou, "gin" for short)
+      SILVER
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(nariginHTML)}>Promote!</button>
+  </section>
+)
+
+const tokinHTML = (
+  <section className="pieceDesc">
+    <h3>Promoted Pawn (Tokin)<span className="japaneseText">と金</span></h3>
+    <img className="pieceImg" src={tokin}></img>
+    <img className="movementImg" src={tokin_moves}></img>
+    <p>Like the silver, a pawn moves the same as a gold general when promoted. However, a tokin is particularly valuable; when your opponent captures a gold, they can use it against you, but if they capture a tokin, they gain a mere pawn.
+    </p>
+  </section>
+)
+
+const pawnHTML = (
+  <section className="pieceDesc">
+    <h3>Pawn <span className="japaneseText">歩兵</span></h3>
+    <img className="pieceImg" src={fu}></img>
+    <img className="movementImg" src={pawn_moves}></img>
+    <p>(fu-hyou, "fu" for short)
+    The humble pawn (“foot soldier”) moves just one space forward at a time. A pawn in hand is very versatile, and works well both offensively and defensively, as exemplified in the proverb: 一歩千金 (i-ppu sen kin) “One pawn; a thousand golds”
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(tokinHTML)}>Promote!</button>
+  </section>
+)
+
+const narikyouHTML = (
+  <section className="pieceDesc">
+    <h3>Promoted Lance<span className="japaneseText">成香</span></h3>
+    <img className="pieceImg" src={narikyou}></img>
+    <img className="movementImg" src={narikyou_moves}></img>
+    <p>P LANCE
+    </p>
+  </section>
+)
+
+const lanceHTML = (
+  <section className="pieceDesc">
+    <h3>Lance <span className="japaneseText">香車</span></h3>
+    <img className="pieceImg" src={kyou}></img>
+    <img className="movementImg" src={lance_moves}></img>
+    <p>(kyou-sha, "kyou" for short)
+    LANCE
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(narikyouHTML)}>Promote!</button>
+  </section>
+)
+
+const narkeiHTML = (
+  <section className="pieceDesc">
+    <h3>Promoted Knight<span className="japaneseText">成桂</span></h3>
+    <img className="pieceImg" src={narikei}></img>
+    <img className="movementImg" src={narikei_moves}></img>
+    <p>P KNIGHT
+    </p>
+  </section>
+)
+
+const knightHTML = (
+  <section className="pieceDesc">
+    <h3>Knight <span className="japaneseText">桂馬</span></h3>
+    <img className="pieceImg" src={kei}></img>
+    <img className="movementImg" src={knight_moves}></img>
+    <p>(kei-ma, "kei" for short)
+    KNIGHT
+    </p>
+    <br></br>
+    <button onClick={() => loadPiece(narkeiHTML)}>Promote!</button>
+  </section>
+)
+
 const pieceNavHTML = (
   <section className="pieceNav">
     <button className="pieceNavBtn" id="king" onClick={() => loadPiece(kingHTML)}>王</button>
     <button className="pieceNavBtn" id="rook" onClick={() => loadPiece(rookHTML)}>飛</button>
-    <button className="pieceNavBtn" id="bishop" onClick={(e) => loadPiece(e)}>角</button>
-    <button className="pieceNavBtn" id="gold" onClick={(e) => loadPiece(e)}>金</button>
-    <button className="pieceNavBtn" id="silver" onClick={(e) => loadPiece(e)}>銀</button>
-    <button className="pieceNavBtn" id="pawn" onClick={(e) => loadPiece(e)}>歩</button>
-    <button className="pieceNavBtn" id="lance" onClick={(e) => loadPiece(e)}>香</button>
-    <button className="pieceNavBtn" id="knight" onClick={(e) => loadPiece(e)}>桂</button>
+    <button className="pieceNavBtn" id="bishop" onClick={() => loadPiece(bishopHTML)}>角</button>
+    <button className="pieceNavBtn" id="gold" onClick={() => loadPiece(goldHTML)}>金</button>
+    <button className="pieceNavBtn" id="silver" onClick={() => loadPiece(silverHTML)}>銀</button>
+    <button className="pieceNavBtn" id="pawn" onClick={() => loadPiece(pawnHTML)}>歩</button>
+    <button className="pieceNavBtn" id="lance" onClick={() => loadPiece(lanceHTML)}>香</button>
+    <button className="pieceNavBtn" id="knight" onClick={() => loadPiece(knightHTML)}>桂</button>
   </section>
 )
 
@@ -399,11 +529,9 @@ const noChessHTML = (
       with unique move sets, and 6 of those pieces can be "promoted", giving them an altered moveset (more on promotion later). 
       They are:
     </p>
-    {/* <button></button> */}
-    {/* Use some kind of toggle here later */}
     <section className="activePiece">
       {/* {activePieceDescription} */}
-      {pieceMovesHTML}
+      {/* {pieceMovesHTML} */}
     </section>
 
     <h2>Setting the Board</h2>
