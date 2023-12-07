@@ -57,11 +57,9 @@ let activeRule = null;
 let activePiece = null;
 
 function loadKing() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
@@ -90,26 +88,25 @@ function loadDragon() {
       <h3>Dragon <span className="japaneseText">龍王</span></h3>
       <img className="pieceImg" src={ryuu}></img>
       <img className="movementImg" src={dragon_moves}></img>
-      <p>(ryuu-ou, “ryuu” for short)
-        Sometimes abbreviated as <span className="japaneseText">竜</span> (an easier-to-read kanji for “dragon”), the dragon is the strongest offensive piece. When the dragon closes in on the king, the end is near. A dragon can move either as a rook or as a king (forward, backward, or sideways in any direction OR one space in any direction).
+      <p>(ryuu-ou, abbreviated as "ryuu")<br></br>
+        Sometimes abbreviated as <span className="japaneseText">竜</span> (an easier-to-read kanji for "dragon"), the dragon is the strongest offensive piece. When the dragon closes in on the king, the end is near. A dragon can move either as a rook or as a king (any number of spaces forward, backward, or sideways OR one space diagonally).
       </p>
     </section>
   )
 }
 
 function loadRook() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>The Rook <span className="japaneseText">飛車</span></h3>
       <img className="pieceImg" src={hisha}></img>
       <img className="movementImg" src={rook_moves}></img>
-      <p>("hi-sha" pronounced "hee-shah", "sha" for short, literally "flying chariot") A powerful long-range attacker, the rook often dictates the speed and direction of the game. Promoting your rook is considered a minor victory. The rook can move any number of spaces forward, backward, or sideways (same as a chess rook).
+      <p>("hi-sha" pronounced "hee-shah", abbreviated as "sha", literally "flying chariot")<br></br> 
+      A powerful long-range attacker, the rook often dictates the speed and direction of the game. Promoting your rook is considered a minor victory. The rook can move any number of spaces forward, backward, or sideways (same as a chess rook).
       </p>
       <br></br>
       <button onClick={() => loadDragon()}>Promote!</button>
@@ -129,26 +126,25 @@ function loadHorse() {
       <h3>Horse <span className="japaneseText">龍馬</span></h3>
       <img className="pieceImg" src={uma}></img>
       <img className="movementImg" src={horse_moves}></img>
-      <p>(ryuu-uma, "uma" for short)
-        Sometimes abbreviated as <span className="japaneseText">馬</span> (an easier-to-read kanji for "horse"), the horse...
+      <p>(ryuu-uma, abbreviated as "uma")
+        Sometimes abbreviated as <span className="japaneseText">馬</span> (an easier-to-read kanji for "horse"), the horse is second only to the dragon, and can be even more deadly in many positions. Unlike the dragon, the horse prefers to attack from a distance. The hose can move either as a bishop or as a king (any number of spaces diagonally OR one space forward, backward, or sideways).
       </p>
     </section>
   )
 }
 
 function loadBishop() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>The Bishop <span className="japaneseText">角行</span></h3>
       <img className="pieceImg" src={kaku}></img>
       <img className="movementImg" src={bishop_moves}></img>
-      <p>BISHOP
+      <p>("kaku-gyou", abbreviated as "kaku")<br></br> 
+      Another valuable long-range piece, the bishop can be manuevered around the board a bit more easily than the rook, and is considered stronger than the rook during the start of the game. A bishop can move any number of spaces in diagonally (same as a chess bishop).
       </p>
       <br></br>
       <button onClick={() => loadHorse()}>Promote!</button>
@@ -157,20 +153,17 @@ function loadBishop() {
 }
 
 function loadGold() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>Gold General <span className="japaneseText">金将</span></h3>
       <img className="pieceImg" src={kin}></img>
       <img className="movementImg" src={gold_moves}></img>
-      <p>(kin-shou, "kin" for short)
-        GOLD
-        the gold does not promote
+      <p>(kin-shou, abbreviated as "kin")<br></br>
+        A gold general (or simply "a gold") is a valuable defender, and typically works well when kept near the king. A gold general <span className="madeRed">in hand</span> is even better and, used effectively, can win the game! A gold general can move one space in any direction except diagonally backwards, similar to a king but weak at its flanks. Gold generals are the only pieces other than the king that cannot promote.
       </p>
     </section>
   )
@@ -188,26 +181,25 @@ function loadNarigin() {
       <h3>Promoted Silver <span className="japaneseText">成銀</span></h3>
       <img className="pieceImg" src={narigin}></img>
       <img className="movementImg" src={narigin_moves}></img>
-      <p>P SILVER
+      <p>(nari-gin)<br></br>
+        The promoted silver moves the same as a gold general and has the same strengths and weaknesses as a gold. While this is usually an upgrade, it can limit mobility, and it might be good to leave your silver unpromoted until the time is right.
       </p>
     </section>
   )
 }
 
 function loadSilver() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>Silver General <span className="japaneseText">銀将</span></h3>
       <img className="pieceImg" src={gin}></img>
       <img className="movementImg" src={silver_moves}></img>
-      <p>(gin-shou, "gin" for short)
-        SILVER
+      <p>(gin-shou, abbreviated as "gin")<br></br>
+        In contrast to the gold generals, silver generals (or simply silvers) are more effective offensively, but still often play a role in defense. Typically, one silver stays behind to protect the king while another leads the charge into enemy territory. A silver can move one space on any diagonal and directly forward, but not sideways nor directly backward, a kind of "inverted gold". 
       </p>
       <br></br>
       <button onClick={() => loadNarigin()}>Promote!</button>
@@ -227,18 +219,16 @@ function loadTokin() {
       <h3>Promoted Pawn (Tokin)<span className="japaneseText">と金</span></h3>
       <img className="pieceImg" src={tokin}></img>
       <img className="movementImg" src={tokin_moves}></img>
-      <p>Like the silver, a pawn moves the same as a gold general when promoted. However, a tokin is particularly valuable; when your opponent captures a gold, they can use it against you, but if they capture a tokin, they gain a mere pawn.
+      <p>Like a silver, a pawn moves the same as a gold general when promoted. However, for the pawn this is always an upgrade; the tokin can still move like a pawn and has five <em>more</em> spaces it can go. When your opponent captures a gold or a promoted general, they gain a powerful piece, but if they capture a tokin, they gain a mere pawn, highlighting a key strength of promoted pieces.
       </p>
     </section>
   )
 }
 
 function loadPawn() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
@@ -246,7 +236,7 @@ function loadPawn() {
       <img className="pieceImg" src={fu}></img>
       <img className="movementImg" src={pawn_moves}></img>
       <p>(fu-hyou, "fu" for short)
-      The humble pawn (“foot soldier”) moves just one space forward at a time. A pawn in hand is very versatile, and works well both offensively and defensively, as exemplified in the proverb: 一歩千金 (i-ppu sen kin) “One pawn; a thousand golds”
+      The humble pawn ("foot soldier") moves just one space forward at a time. A pawn in hand is very versatile, and works well both offensively and defensively, as exemplified in the proverb: 一歩千金 (i-ppu sen kin) "One pawn; a thousand golds".
       </p>
       <br></br>
       <button onClick={() => loadTokin()}>Promote!</button>
@@ -263,29 +253,28 @@ function loadNarikyou() {
 
   activePiece.render(
     <section className="pieceDesc">
-      <h3>Promoted Lance<span className="japaneseText">成香</span></h3>
+      <h3>Promoted Lance <span className="japaneseText">成香</span></h3>
       <img className="pieceImg" src={narikyou}></img>
       <img className="movementImg" src={narikyou_moves}></img>
-      <p>P LANCE
+      <p>(nari-kyou)<br></br>
+        Just like silvers and pawns, when a lance promotes, it moves the same as a gold. A promoted lance can move around more easily than an unpromoted one, so unless you need to keep the range, it's best to promote.
       </p>
     </section>
   )
 }
 
 function loadLance() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>Lance <span className="japaneseText">香車</span></h3>
       <img className="pieceImg" src={kyou}></img>
       <img className="movementImg" src={lance_moves}></img>
-      <p>(kyou-sha, "kyou" for short)
-      LANCE
+      <p>(kyou-sha, abbreviated as "kyou")<br></br>
+        A lance is, in a way, like a super pawn! It can move any number of spaces forward, instead of just the one. A lance normally works best as a support, guarding your pieces from the back rank, ready to spear forward when an enemy piece wanders into its sights.
       </p>
       <br></br>
       <button onClick={() => loadNarikyou()}>Promote!</button>
@@ -302,29 +291,28 @@ function loadNarikei() {
 
   activePiece.render(
     <section className="pieceDesc">
-      <h3>Promoted Knight<span className="japaneseText">成桂</span></h3>
+      <h3>Promoted Knight <span className="japaneseText">成桂</span></h3>
       <img className="pieceImg" src={narikei}></img>
       <img className="movementImg" src={narikei_moves}></img>
-      <p>P KNIGHT
+      <p>(nari-kei)<br></br>
+        The promoted knight moves the same as, you guessed it, a gold general. As with the lance, this usually means an upgrade, but the unique ability to jump over other pieces gives an unpromoted knight a special attack you may want to keep. Choose wisely. 
       </p>
     </section>
   )
 }
 
 function loadKnight() {
-  if(activePiece === null) {
-    activePiece = createRoot(
-      document.getElementById('activePiece')
-    );
-  }
+  activePiece = createRoot(
+    document.getElementById('activePiece')
+  );
 
   activePiece.render(
     <section className="pieceDesc">
       <h3>Knight <span className="japaneseText">桂馬</span></h3>
       <img className="pieceImg" src={kei}></img>
       <img className="movementImg" src={knight_moves}></img>
-      <p>(kei-ma, "kei" for short)
-      KNIGHT
+      <p>(kei-ma, abbreviated as "kei")<br></br>
+        Knights are the only pieces that can <span className="madeRed">jump over other pieces</span>, which can make them very tricky attackers. Unlike chess knights, however, they have only two possible moves. Because of this, "a knight that jumps too high falls prey to a pawn". Knights move up one and diagonally one space to the left or right (or you could think of it as "up two and over one"), in a "T" shape.
       </p>
       <br></br>
       <button onClick={() => loadNarikei()}>Promote!</button>
@@ -366,7 +354,9 @@ function loadIntro() {
           </p>
       }
       <br></br>
-      <button className="nextBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
+      <div className="navButtons">
+        <button className="nextBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
+      </div>
     </div>
   );
 
@@ -388,8 +378,11 @@ function loadBasics() {
           You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so we tend to prefer using the Japanese terms to avoid confusion.
         </p>
         <br></br>
-        <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
-        <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+        <br></br>
+        <div className="navButtons">
+          <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
+          <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+        </div>
       </div>
     )
   } else {
@@ -399,8 +392,11 @@ function loadBasics() {
         <p className="homeDesc">
           Shogi is a game played by two people who sit on opposite ends of a board. The first player to make a move is called "Sente", and the player that moves second is called "Gote". On each of their turns, a player may move one of the pieces they have on the board, or "drop" one of the pieces from their "hand" onto the board. The goal of the game is to put the opponent's king into "tsumi" (checkmate). More details on each of these rules on the following pages.
         </p>
-        <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
-        <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+        <br></br>
+        <div className="navButtons">
+          <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
+          <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+        </div>
       </div>
     );
   }
@@ -423,7 +419,7 @@ function loadPiecesPage() {
       </p>
       {
         isChessPlayer ? 
-        <p>
+        <p className="homeDesc">
           Note that while many have names similar to chess pieces,<span className="madeRed"> only the king, bishop, and rook move the same</span>. Shogi pawns move and capture forward, and shogi knights have only 2 possible moves, instead of 8.
           <br></br>
           Click the pieces below to learn more about each one!
@@ -439,9 +435,10 @@ function loadPiecesPage() {
         {/* {pieceMovesHTML} */}
       </section>
       <br></br>
-      
-      <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
-      <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
+      <div className="navButtons"> 
+        <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
+        <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
+      </div>
     </div>
   )
 }
@@ -461,14 +458,16 @@ function loadBoard() {
       </p>
       {
         isChessPlayer ? 
-        <p>Note a key difference here: <span className="madeRed">a Shogi board is 9x9, meaning your bishops directly oppose one another at the start of the game</span>. If the board were checkered, they would be bishops of the same "color".</p>
+        <p className="homeDesc">Note a key difference here: <span className="madeRed">a Shogi board is 9x9, meaning your bishops directly oppose one another at the start of the game</span>. If the board were checkered, they would be bishops of the same "color".</p>
         :
         null
       }
       <img className="board" src={setboard} />
       <br></br>
-      <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
-      <button className="nextBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+        <button className="nextBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
+      </div>
     </div>
   )
 }
@@ -481,16 +480,18 @@ function loadPromotion() {
   }
 
   activeRule.render(
-    <section>
+    <div>
       <h2>Promotion</h2>
       <p className="homeDesc">
         Note the area of the board that your pieces and your opponent's pieces occupy at the start of the game. These are your "camps". Anytime one of your pieces <span className="madeRed">moves into, moves through, or moves out of</span> your enemy's camp, it may promote as part of this move. Your opponent can do the same with their pieces in your camp. You do not <em>need</em> to promote a piece unless it will be unable to move on your next turn (e.g. a pawn that reaches the back of the board), although it is usually favorable to do so. To promote a piece, simply flip it over before placing it on the board.
       </p>
       <img className="camps" src={camps} />
       <br></br>
-      <button className="prevBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
-      <button className="nextBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
-    </section>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
+        <button className="nextBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
+      </div>
+    </div>
   )
 }
 
@@ -502,7 +503,7 @@ function loadCapturesAndDrops() {
   }
 
   activeRule.render(
-    <section>
+    <div>
       <h2>Captures and Drops</h2>
       <p className="homeDesc">
         If an opponent's piece occupies a space that your piece can move to, you can <span className="madeRed">capture</span> it as part of your move. If you capture a piece in your opponent's camp, you can also promote on the same turn. Efficient! A piece you've captured is not gone forever, but instead goes into your "hand", usually an area off to the side of the board.
@@ -520,9 +521,11 @@ function loadCapturesAndDrops() {
       </p>
       <img className="drop" src={drop} />
       <br></br>
-      <button className="prevBtn" id="learn5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
-      <button className="nextBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
-    </section>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
+        <button className="nextBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
+      </div>
+    </div>
   )
 }
 
@@ -556,8 +559,10 @@ function loadWinning() {
         <img className="atamkinNotated" src={atamakinNotated} />
       </section>
       <br></br>
-      <button className="prevBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
-      <button className="nextBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
+        <button className="nextBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      </div>
     </div>
   )  
 }
@@ -570,7 +575,7 @@ function loadIllegalMoves() {
   }
 
   activeRule.render(
-    <section>
+    <div>
       <h2>Illegal Moves</h2>
       <p className="homeDesc">
         I did mention you could drop a piece <span className="madeRed">almost</span> anywhere on your turn. There are some exceptions, as well as some other moves that you are not allowed to make.
@@ -608,9 +613,11 @@ function loadIllegalMoves() {
         </ul>
       </p>
       <br></br>
-      <button className="prevBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
-      <button className="nextBtn" id="learn9" onClick={(e) => {updateLearnNav(e); loadManners()}}></button>
-    </section>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
+        <button className="nextBtn" id="learn9" onClick={(e) => {updateLearnNav(e); loadManners()}}></button>
+      </div>
+    </div>
   )
 }
 
@@ -629,7 +636,9 @@ function loadManners() {
         { isChessPlayer == true ? <span>In much the way that you might shake hands before a chess match, a S</span> : <span>A s</span> }hogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
       </p>
       <br></br>
-      <button className="prevBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      <div className="navButtons">
+        <button className="prevBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      </div>
     </div>
   )
 }
@@ -708,7 +717,6 @@ function loadRules(userResponse) {
 
   console.log(isChessPlayer);
 
-  // update later
   rulesRoot.render(
     <div className="knowChess">
       <div id="jump"></div>

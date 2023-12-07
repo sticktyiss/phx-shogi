@@ -86,6 +86,11 @@ h3 {
   font-size: 5vw;
 }
 
+p .japaneseText {
+  font-family: YujiSyuku;
+  font-size: 32px;
+}
+
 .knowChess h2 {
   font-size: 20vh;
   text-shadow: 2px 2px 2px black;
@@ -215,7 +220,7 @@ button.pieceNavBtn {
 }
 
 .pieceDesc p {
-  font-size: 2.5vw;
+  font-size: 25px;
 }
 
 #activeRule img.pieceImg {
@@ -228,15 +233,20 @@ button.pieceNavBtn {
 #activeRule img.movementImg {
   max-width: 25%;
   float: left;
-  clear: left;
+  /* clear: left; */
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+section#activePiece {
+  clear: both;
 }
 
 section.pieceDesc {
   padding-bottom: 50px;
 }
 
-section#activePiece {
-  margin-bottom: 100px;
+#activeRule .navButtons {
+  margin-top: 100px;
+  clear: both;
 }
