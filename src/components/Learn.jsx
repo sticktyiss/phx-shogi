@@ -356,23 +356,54 @@ function loadIntro() {
     <div>
       <h2>{isChessPlayer}</h2>
       {
-        true ?
+        isChessPlayer == true ?
           <p className="homeDesc">
-            Shogi and chess are such similar games that many refer to Shogi as "Japanese Chess." There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
+            Shogi and chess are such similar games that many refer to shogi as "Japanese Chess" (and in Japan chess is called "Western Shogi!"). There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
           </p>
         :
           <p className="homeDesc">
-            You're definitely starting on the more exciting board game! While knowing chess may give you 
-            tactics and tricks to use, it can also be hard to "unlearn" some common chess techniques that
-            don't work very well in Shogi, so don't worry too much either way.
+            You're definitely starting on the more exciting board game! While knowing chess may give you tactics and tricks to use, it can also be hard to "unlearn" some common chess techniques that don't work very well in Shogi, so don't worry too much either way.
           </p>
       }
       <br></br>
-      <button className="nextBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+      <button className="nextBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
     </div>
   );
 
   document.getElementById('jump').scrollIntoView();
+}
+
+function loadBasics() {
+  if(activeRule === null) {
+    activeRule = createRoot(
+      document.getElementById('activeRule')
+    );
+  }
+
+  if(isChessPlayer) {
+    activeRule.render(
+      <div>
+        <h2>Who goes first?</h2>
+        <p className="homeDesc">
+          You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so we tend to prefer using the Japanese terms to avoid confusion.
+        </p>
+        <br></br>
+        <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
+        <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+      </div>
+    )
+  } else {
+    activeRule.render(
+      <div>
+        <h2>The Basics</h2>
+        <p className="homeDesc">
+          Shogi is a game played by two people who sit on opposite ends of a board. The first player to make a move is called "Sente", and the player that moves second is called "Gote". On each of their turns, a player may move one of the pieces they have on the board, or "drop" one of the pieces from their "hand" onto the board. The goal of the game is to put the opponent's king into "tsumi" (checkmate). More details on each of these rules on the following pages.
+        </p>
+        <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
+        <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+      </div>
+    );
+  }
 }
 
 function loadPiecesPage() {
@@ -387,11 +418,14 @@ function loadPiecesPage() {
       <h2>The Pieces</h2>
       <p className="homeDesc">
         Shogi has 8 types of pieces (called "koma" 駒) with unique move sets, and 6 of those pieces can be "promoted", giving them an altered moveset (more on promotion later). 
+        <br></br>
+        Click the pieces below to learn more about each one!
       </p>
       {
         isChessPlayer ? 
         <p>
           Note that while many have names similar to chess pieces,<span className="madeRed"> only the king, bishop, and rook move the same</span>. Shogi pawns move and capture forward, and shogi knights have only 2 possible moves, instead of 8.
+          <br></br>
           Click the pieces below to learn more about each one!
         </p>
         :
@@ -405,8 +439,9 @@ function loadPiecesPage() {
         {/* {pieceMovesHTML} */}
       </section>
       <br></br>
-      <button className="prevBtn" id="learn1" onClick={(e) => {updateLearnNav(e); loadIntro()}}></button>
-      <button className="nextBtn" id="chess3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
+      
+      <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
+      <button className="nextBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
     </div>
   )
 }
@@ -422,32 +457,18 @@ function loadBoard() {
     <div>
       <h2>Setting the Board</h2>
       <p className="homeDesc">
-        Below you'll see how to set up a standard Shogi game. You have 9 pawns in front, in the middle you have your bishop on the left and your rook on the right, and on the back row, starting in the center and moving out, you have your king, then your gold generals, silver generals, knights, and lances. Your opponent has the same, rotated 180 degrees. Note a key difference here: <span className="madeRed">a Shogi board is 9x9, meaning your bishops directly oppose one another at the start of the game</span>. If the board were checkered, they would be bishops of the same "color".
+        Below you'll see how to set up a standard Shogi game. You have 9 pawns in front, in the middle you have your bishop on the left and your rook on the right, and on the back row, starting in the center and moving out, you have your king, then your gold generals, silver generals, knights, and lances. Your opponent has the same, rotated 180 degrees.
       </p>
+      {
+        isChessPlayer ? 
+        <p>Note a key difference here: <span className="madeRed">a Shogi board is 9x9, meaning your bishops directly oppose one another at the start of the game</span>. If the board were checkered, they would be bishops of the same "color".</p>
+        :
+        null
+      }
       <img className="board" src={setboard} />
       <br></br>
       <button className="prevBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
-      <button className="nextBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadWhoFirst()}}></button>
-    </div>
-  )
-}
-
-function loadWhoFirst() {
-  if(activeRule === null) {
-    activeRule = createRoot(
-      document.getElementById('activeRule')
-    );
-  }
-
-  activeRule.render(
-    <div>
-      <h2>Who goes first?</h2>
-      <p className="homeDesc">
-        You'll note there are no colored pieces in Shogi. Instead, the direction a piece is facing inidcates whose piece it is. The first player to make a move is called "Sente", and the player that moves second is called "Gote". Some books and notation will refer to sente as "black" and gote as "white", which is the opposite of the chess move order, so we tend to prefer using the Japanese terms to avoid confusion.
-      </p>
-      <br></br>
-      <button className="prevBtn" id="chess3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
-      <button className="nextBtn" id="chess5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
+      <button className="nextBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
     </div>
   )
 }
@@ -467,8 +488,8 @@ function loadPromotion() {
       </p>
       <img className="camps" src={camps} />
       <br></br>
-      <button className="prevBtn" id="chess4" onClick={(e) => {updateLearnNav(e); loadWhoFirst()}}></button>
-      <button className="nextBtn" id="chess6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
+      <button className="prevBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
+      <button className="nextBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
     </section>
   )
 }
@@ -499,8 +520,8 @@ function loadCapturesAndDrops() {
       </p>
       <img className="drop" src={drop} />
       <br></br>
-      <button className="prevBtn" id="chess5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
-      <button className="nextBtn" id="chess7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
+      <button className="prevBtn" id="learn5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
+      <button className="nextBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
     </section>
   )
 }
@@ -516,26 +537,27 @@ function loadWinning() {
     <div>
       <section>
         <h2>Winning the Game</h2>
-        <p className="homeDesc">
-          As in chess, you win the game by putting the enemy king in <span className="madeRed">checkmate</span>. This is called "tsumi"
-          or "tsume" in Japanese, and just as in chess it is a position where the king is being attacked and cannot move, and is easier 
-          to do when the king is forced into a corner. Unlike chess, the most common way of checkmating is not by manuevering your pieces 
-          around, but rather by <span className="madeRed">dropping</span> a piece directly next to the king! Yes, you can drop pieces for 
-          checks and even for a mate. You can also drop a piece to block a check, which is why you almost always need to get in up close and 
-          personal to deliver the final blow. A common mate, called "atamakin" or "a gold to the head", is shown below.
-        </p>
+        {
+          isChessPlayer == true ? 
+            <p className="homeDesc">
+              As in chess, you win the game by putting the enemy king in <span className="madeRed">checkmate</span>. This is called "tsumi" in Japanese, and just as in chess it is a position where the king is being attacked and cannot move, and is easier to do when the king is forced into a corner. Unlike chess, the most common way of checkmating is not by manuevering your pieces around, but rather by <span className="madeRed">dropping</span> a piece directly next to the king! Yes, you can drop pieces for checks and even for a mate. You can also drop a piece to block a check, which is why you almost always need to get in up close and personal to deliver the final blow. A common mate, called "atamakin" or "a gold to the head", is shown below.
+            </p>
+          :
+          <p className="homeDesc">
+            You win a game of Shogi by putting the enemy king in <span className="madeRed">checkmate</span>. This is called "tsumi" in Japanese, a position where the king is being attacked and cannot move, and it is easier to reach by forcing the king into a corner. The most common way of checkmating is not by manuevering your pieces around, but rather by <span className="madeRed">dropping</span> a piece directly next to the king! Yes, you can drop pieces for checks and even for a mate. You can also drop a piece to block a check, which is why you almost always need to get in up close and personal to deliver the final blow. A common mate, called "atamakin" or "a gold to the head", is shown below.
+          </p>
+        }
+        
         <img className="atamkin" src={atamakin} />
   
         <p className="homeDesc">
-          Note that the gold at the king's "head" is attacking the king and every space around it, and the king cannot take the gold 
-          because it is protected by another piece. You might have thought it odd that so many pieces move the same as a gold general 
-          when promoted, but you can see here just how deadly a gold so close to the king can be!
+          Note that the gold at the king's "head" is attacking the king and every space around it, and the king cannot take the gold because it is protected by another piece. You might have thought it odd that so many pieces move the same as a gold general when promoted, but you can see here just how deadly a gold so close to the king can be!
         </p>
         <img className="atamkinNotated" src={atamakinNotated} />
       </section>
       <br></br>
-      <button className="prevBtn" id="chess6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
-      <button className="nextBtn" id="chess8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      <button className="prevBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
+      <button className="nextBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
     </div>
   )  
 }
@@ -573,14 +595,21 @@ function loadIllegalMoves() {
           </p>
           
           <li>Leaving the king in check (or moving it into check)</li>
-          <p>
-            This should come as no surprise; just like in chess, you cannot endanger your king by leaving it open for capture on your opponent's next turn. You can't move into check, and if you are in check, you must use your turn to escape it. The one difference is in Shogi you can block with pieces in your hand instead of pieces on the board, so a material advantage can also mean a big defensive advantage.
-          </p>
+          {
+            isChessPlayer == true ?
+              <p>
+                This should come as no surprise; just like in chess, you cannot endanger your king by leaving it open for capture on your opponent's next turn. You can't move into check, and if you are in check, you must use your turn to escape it. The one difference is in Shogi you can block with pieces in your hand instead of pieces on the board, so a material advantage can also mean a big defensive advantage.
+              </p>
+            :
+              <p>
+                Protect your king! If your king can be captured by your opponent on their next turn, you must do something to stop them. Similarly, you cannot endanger your king by moving it to a square that is being attacked by an enemy piece. If you lose the king you lose the game, even if you have have an amazing move ready. When your king is being attacked, it is in "check". You can get out of check by capturing the attacking piece (if there's only one), moving the king out of the way, moving a piece to block the attacker, or dropping a piece to block the attacker. If you cannot escape the attack, you are in "checkmate", and have lost the game. 
+              </p>
+          }
         </ul>
       </p>
       <br></br>
-      <button className="prevBtn" id="chess7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
-      <button className="nextBtn" id="chess9" onClick={(e) => {updateLearnNav(e); loadManners()}}></button>
+      <button className="prevBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
+      <button className="nextBtn" id="learn9" onClick={(e) => {updateLearnNav(e); loadManners()}}></button>
     </section>
   )
 }
@@ -596,10 +625,11 @@ function loadManners() {
     <div>
       <h2>Manners</h2>
       <p className="homeDesc">
-        Shogi, perhaps more than other board games, places a heavy emphasis on etiquette, or sportsmanship. In much the way that you might shake hands before a chess match, a Shogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
+        Shogi, perhaps more than other board games, places a heavy emphasis on etiquette, or sportsmanship. 
+        { isChessPlayer == true ? <span>In much the way that you might shake hands before a chess match, a S</span> : <span>A s</span> }hogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
       </p>
       <br></br>
-      <button className="prevBtn" id="chess8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
+      <button className="prevBtn" id="learn8" onClick={(e) => {updateLearnNav(e); loadIllegalMoves()}}></button>
     </div>
   )
 }
@@ -607,9 +637,9 @@ function loadManners() {
 const learnNavHTML = (
   <section className="learnNav" id="learnNav">
     <button className="learnNavBtn" id="learn1" style={{"backgroundColor":"#d04646"}} onClick={(e) => {updateLearnNav(e); loadIntro();}}></button>
-    <button className="learnNavBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
-    <button className="learnNavBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
-    <button className="learnNavBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadWhoFirst()}}></button>
+    <button className="learnNavBtn" id="learn2" onClick={(e) => {updateLearnNav(e); loadBasics()}}></button>
+    <button className="learnNavBtn" id="learn3" onClick={(e) => {updateLearnNav(e); loadPiecesPage()}}></button>
+    <button className="learnNavBtn" id="learn4" onClick={(e) => {updateLearnNav(e); loadBoard()}}></button>
     <button className="learnNavBtn" id="learn5" onClick={(e) => {updateLearnNav(e); loadPromotion()}}></button>
     <button className="learnNavBtn" id="learn6" onClick={(e) => {updateLearnNav(e); loadCapturesAndDrops()}}></button>
     <button className="learnNavBtn" id="learn7" onClick={(e) => {updateLearnNav(e); loadWinning()}}></button>
@@ -617,94 +647,6 @@ const learnNavHTML = (
     <button className="learnNavBtn" id="learn9" onClick={(e) => {updateLearnNav(e); loadManners()}}></button>
   </section>
 )
-
-const noChessHTMLOLD = (
-  <div className="knowChess">
-    <h2>Shogi for Beginners</h2>
-
-    <h2>The Basics</h2>
-    <p className="homeDesc">
-      Shogi is a game played by two people who sit on opposite ends of a board. The first player to make a move is called 
-      "Sente", and the player that moves second is called "Gote". On each of their turns, a player may move one of
-      the pieces they have on the board, or "drop" one of the pieces from their "hand" onto the board. The goal of the game is to put the 
-      opponent's king into "tsumi" (checkmate). More details on each of these rules below.
-    </p>
-
-    <h2>The Pieces</h2>
-    <p className="homeDesc">
-      Shogi has 8 types of pieces (called "koma" 駒) 
-      with unique move sets, and 6 of those pieces can be "promoted", giving them an altered moveset (more on promotion later). 
-      They are:
-    </p>
-    <section className="activePiece">
-      {/* {activePieceDescription} */}
-      {/* {pieceMovesHTML} */}
-    </section>
-
-    <h2>Setting the Board</h2>
-    <p className="homeDesc">
-      Below you'll see how to set up a standard Shogi game. You have 9 pawns in front, in the middle you have 
-      your bishop on the left and your rook on the right, and on the back row, starting in the center and moving out,
-      you have your king, then your gold generals, silver generals, knights, and lances. Your opponent has the same, 
-      rotated 180 degrees.
-    </p>
-    <img className="board" src={setboard} />
-
-
-    <h2>Winning the Game</h2>
-    <p className="homeDesc">
-      You win a game of Shogi by putting the enemy king in <span className="madeRed">checkmate</span>. This is called "tsumi"
-      or "tsume" in Japanese, a position where the king is being attacked and cannot move, and it is easier to reach by forcing the king 
-      into a corner. The most common way of checkmating is not by manuevering your pieces 
-      around, but rather by <span className="madeRed">dropping</span> a piece directly next to the king! Yes, you can drop pieces for 
-      checks and even for a mate. You can also drop a piece to block a check, which is why you almost always need to get in up close and 
-      personal to deliver the final blow. A common mate, called "atamakin" or "a gold to the head", is shown below.
-    </p>
-    <img className="atamkin" src={atamakin} />
-
-    <p className="homeDesc">
-      Note that the gold at the king's "head" is attacking the king and every space around it, and the king cannot take the gold 
-      because it is protected by another piece. You might have thought it odd that so many pieces move the same as a gold general 
-      when promoted, but you can see here just how deadly a gold so close to the king can be!
-    </p>
-    <img className="atamkinNotated" src={atamakinNotated} />
-
-    <h2>Illegal Moves</h2>
-    <p className="homeDesc">
-      I did mention you could drop a piece <span className="madeRed">almost</span> anywhere on your turn. There are some exceptions, as well as some other moves that you are not allowed to make.
-      <br></br>
-        <ul className="illegalMoves">
-          <li>Dropping a piece where it cannot move</li>
-          <p>
-            Remember that a piece that has no moves left must promote, and in order to promote, you must make a move. If you drop 
-            a lance or pawn on the back rank (or a knight on either of the back two ranks), it would have no moves, as these pieces cannot 
-            move backwards until promoted, and cannot promote until moving. To avoid this paradox, you're simply not allowed to put a piece 
-            where it can't (and never will be able to) move.
-          </p>
-
-          <li>Doubled Pawns, "Nifu"</li>
-          <p>
-            Ah, the bane of Shogi players everywhere. Pawns must remain in their own lane. Possibly to stop you from creating an impenetrable wall of vertical pawns, or to prevent you from getting in your own way, you cannot place a pawn anywhere in the same column as another pawn. If you do this in a tournament, you lose the game! One thing to note is a promoted pawn, a "tokin", has ascended its status as a mere pawn, and does not count for the purposes of this rule, so you can totally make an impenetrable cluster of tokins.
-          </p>
-
-          <li>Checkmate with a dropped pawn, "uchi fu tsumi"</li>
-          <p>
-            Perhaps because there are simply so many of them, you cannot drop a pawn to checkmate a king. Any other piece can be dropped for a checkmate, and you can move a pawn to deliver a mate, but you're likely to have a good few pawns in hand during most games, and you can't use a drop to mate with one.
-          </p>
-          
-          <li>Leaving the king in check (or moving it into check)</li>
-          <p>
-            Protect your king! If your king can be captured by your opponent on their next turn, you must do something to stop them. Similarly, you cannot endanger your king by moving it to a square that is being attacked by an enemy piece. If you lose the king you lose the game, even if you have have an amazing move ready. When your king is being attacked, it is in "check". You can get out of check by capturing the attacking piece (if there's only one), moving the king out of the way, moving a piece to block the attacker, or dropping a piece to block the attacker. If you cannot escape the attack, you are in "checkmate", and have lost the game. 
-          </p>
-        </ul>
-    </p>
-
-    <h2>Manners</h2>
-    <p className="homeDesc">
-      Shogi, perhaps more than other board games, places a heavy emphasis on etiquette, or sportsmanship. A Shogi game does not begin until opponents greet each other with a head bow and "onegaishimasu" (similar to saying "good luck"), and does not truly end until one player says "makemashita" ("I have lost"). After the game is over, thank your opponent with another bow and "arigatou gozaimasu" ("Thank you [for the game]"). After all, win or lose, without our opponent, we would not get to enjoy such a fun and exciting game.
-    </p>
-  </div>
-);
 
 const Learn = () => {
   // const [knowChess, setKnowChess] = useState(null);
@@ -771,16 +713,15 @@ function loadRules(userResponse) {
     <div className="knowChess">
       <div id="jump"></div>
         {
-          isChessPlayer ? 
+          isChessPlayer == true ? 
             <h2>Shogi for Chess Players</h2> 
           :
             <h2>Shogi for Beginners</h2>
         }
       {learnNavHTML}
       <section id="activeRule">
-      <h2>{isChessPlayer}</h2>
         {
-          true ?
+          isChessPlayer == true ? 
             <p className="homeDesc">
               Shogi and chess are such similar games that many refer to Shogi as "Japanese Chess." There are, however, some key differences that make the two quite distinct in both gameplay and strategy. Shogi is most similar to a variant of chess called "Crazy House" (a two player version of Bug House), but even knowing this, the pieces take some getting used to.
             </p>
