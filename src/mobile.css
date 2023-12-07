@@ -102,10 +102,10 @@
     font-size: 25vw;
     margin-top: 5vh;
   }
-  .piece.back {
+  /* .piece.back {
     top: -27%;
-  }
-  .pieceMoves ul {
+  } */
+  /* .pieceMoves ul {
     margin: 0px;
     width: 94vw;
     display: flex;
@@ -118,11 +118,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  } */
+  .pieceDesc h3 {
+    font-size: 10vw;
+    margin: 5px;
   }
-  .pieceMoves h3 {
-    font-size: 6vw;
-  }
-  .pieceMoves h4 {
+  /* .pieceMoves h4 {
     font-size: 5vw;
   }
   .pieceMoves h5 {
@@ -134,10 +135,37 @@
   .pieceMoves li img {
     width: 36vw;
     height: auto;
+  } */
+  .pieceDesc p {
+    font-size: 4vw;
+    margin: 10px;
+  }
+  #activeRule img.pieceImg {
+    max-width: 40%;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #activeRule img.movementImg {
+    max-width: 42%;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  section#activePiece {
+    clear: both;
+  }
+  
+  #activeRule .navButtons {
+    margin-top: 5px;
+    clear: both;
   }
   .illegalMoves li {
     font-size: 24px;
     margin-top: 2vh;
     line-height: 3vh;
   }
+
 }

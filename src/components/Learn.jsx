@@ -66,6 +66,7 @@ function loadKing() {
       <h3>The King <span className="japaneseText">王将・玉将</span></h3>
       <img className="pieceImg" src={oushou}></img>
       <img className="movementImg" src={king_moves}></img>
+      <br></br>
       {
         isChessPlayer ? 
           <p>The ou-shou / gyoku-shou (abbreviated "gyoku") is <em>the most important piece in the game</em>. When one side's king is lost, the game is lost with it, so guard yours well! The king can move one space in any direction (the same as a chess king), and does not promote. The "ou-shou" king is traditionally given to the higher-rated player, while the "gyoku-shou" king goes to the lower-rated player, regardless of which player moves first. As 玉 can be used to describe jewelry, it is sometimes referred to as the "Jewel" or "Jeweled" King in English. </p> 
