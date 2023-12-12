@@ -61,7 +61,7 @@
   border-radius: 10px;
   border: solid 5px #463d35;
 }
-.learn button:hover {
+.knowChess button:hover {
   border: solid 5px #d04646;
 }
 .pieceMoves {
@@ -73,6 +73,24 @@ text-align: center;
   letter-spacing: 5px;
   color: #d04646;
 }
+
+h3 {
+  font-family: Harukaze;
+  font-size: 8vw;
+  letter-spacing: 5px;
+  color: #d04646;
+}
+
+.japaneseText {
+  font-family: YujiSyuku;
+  font-size: 5vw;
+}
+
+p .japaneseText {
+  font-family: YujiSyuku;
+  font-size: 32px;
+}
+
 .knowChess h2 {
   font-size: 20vh;
   text-shadow: 2px 2px 2px black;
@@ -111,7 +129,7 @@ text-align: center;
   font-size: 2vw;
 }
 .pieceMoves p {
-  font-size: 1vw;
+  font-size: 3vw;
   width: inherit;
   text-align: center;
 }
@@ -131,6 +149,9 @@ text-align: center;
 .piece.back {
   top: -29%;
 }
+#activeRule img {
+  max-width: 100%;
+}
 .illegalMoves li {
   color: #d04646;
   font-size: 32px;
@@ -141,4 +162,90 @@ text-align: center;
 }
 a {
   color: #d04646;
+}
+
+button.learnNavBtn {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  font-size: 32px;
+  text-align: center;
+  padding: 5px;
+}
+
+button.nextBtn,
+button.nextBtn:hover {
+  height: 0;
+  width: 0;
+  border: none;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 30px solid #fcf4e1;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+button.nextBtn:hover {
+  cursor: pointer;
+  border-left: 30px solid #d04646;
+}
+
+button.prevBtn,
+button.prevBtn:hover {
+  height: 0;
+  width: 0;
+  border: none;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 30px solid #fcf4e1;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+button.prevBtn:hover {
+  cursor: pointer;
+  border-right: 30px solid #d04646;
+}
+
+button.pieceNavBtn {
+  font-family: YujiSyuku;
+  font-size: 25px;
+  text-align: center;
+  padding: 0;
+  color: black;
+  width: 50px;
+  height: 50px;
+}
+
+.pieceDesc p {
+  font-size: 25px;
+}
+
+#activeRule img.pieceImg {
+  max-width: 25%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#activeRule img.movementImg {
+  max-width: 25%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+section#activePiece {
+  clear: both;
+}
+
+section.pieceDesc {
+  padding-bottom: 50px;
+}
+
+#activeRule .navButtons {
+  margin-top: 100px;
+  clear: both;
 }

@@ -1,0 +1,106 @@
+const pieceMovesHTML = (
+  <div className="pieceMoves">
+    <ul>
+      <li>
+        <h3>King</h3>
+        <p>1 space in any direction</p>
+        <img className="moveset" src={kingmoves} />
+        <img className="piece" src={king} />
+      </li>
+      <li>
+        <h3>Rook</h3>
+        <p>Any # of empty spaces vertically or horizontally</p>
+        <img className="moveset" src={rookmoves} />
+        <img className="piece" src={rook} />
+      </li>
+      <li>
+        <h4>Promoted Rook (Dragon)</h4>
+        <p>Same as Rook, but also 1 space diagonally</p>
+        <img className="moveset" src={dragonmoves} />
+        <img className="piece" src={dragon} />
+      </li>
+      <li>
+        <h3>Bishop</h3>
+        <p>Any # of empty spaces diagonally</p>
+        <img className="moveset" src={bishopmoves} />
+        <img className="piece" src={bishop} />
+      </li>
+      <li>
+        <h4>Promoted Bishop (Horse)</h4>
+        <p>Same as Bishop, but also 1 space up, down, left, or right.</p>
+        <img className="moveset" src={horsemoves} />
+        <img className="piece" src={horse} />
+      </li>
+      <li>
+        <h3>Gold General</h3>
+        <p>1 space up, down, left, right, or forwards diagonally</p>
+        <img className="moveset" src={goldmoves} />
+        <img className="piece" src={gold} />
+      </li>
+      <li>
+        <h3>
+          Silver General
+        </h3>
+        <p>1 space diagonally or up</p>
+        <img className="moveset" src={silvermoves} />
+        <img className="piece" src={silver} />
+      </li>
+      <li>
+        <h3>
+          Promoted Silver
+        </h3>
+        <p>Same as a gold</p>
+        <img className="moveset" src={goldmoves} />
+        <img className="piece" src={promosilver} />
+      </li>
+      <li>
+        <h3>
+          Knight
+        </h3>
+        <p>Jumps 2 spaces forward and 1 to the side</p>
+        <img className="moveset" src={knightmoves} />
+        <img className="piece back" src={knight} />
+      </li>
+      <li>
+        <h3>
+          Promoted Knight
+        </h3>
+        <p>Same as a gold</p>
+        <img className="moveset" src={goldmoves} />
+        <img className="piece" src={promoknight} />
+      </li>
+      <li>
+        <h3>
+          Lance
+        </h3>
+        <p>Any # of empty spaces forward</p>
+        <img className="moveset" src={lancemoves} />
+        <img className="piece back" src={lance} />
+      </li>
+      <li>
+        <h3>
+          Promoted Lance
+        </h3>
+        <p>Same as a gold</p>
+        <img className="moveset" src={goldmoves} />
+        <img className="piece" src={promolance} />
+      </li>
+      <li>
+        <h3>
+          Pawn
+        </h3>
+        <p>1 space forward</p>
+        <img className="moveset" src={pawnmoves} />
+        <img className="piece" src={pawn} />
+      </li>
+      <li>
+        <h3>
+          Promoted Pawn (Tokin)
+        </h3>
+        <p>Same as a gold</p>
+        <img className="moveset" src={goldmoves} />
+        <img className="piece" src={tokin} />
+      </li>
+    </ul>
+  </div>
+);

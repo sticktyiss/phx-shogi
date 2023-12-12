@@ -60,6 +60,10 @@ table {
 	src: url('./components/css/fonts/HarukazeSolid.otf');
 }
 @font-face {
+	font-family: YujiSyuku;
+	src: url('./components/css/fonts/YujiSyuku-Regular.ttf');
+}
+@font-face {
 	font-family: Queensides;
 	src: url('./components/css/fonts/Queensides.ttf');
 }
