@@ -2,7 +2,7 @@ import React from "react";
 import "./css/Home.css";
 import promo from "../images/promo-shogi.gif";
 import mapLoc from "../images/map-locations.gif";
-import map from "../images/map.gif";
+import meetup from "../images/meetup.jpg";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div className="meetup">
-        <img src={map} alt="Map Gif" />
+        <img src={meetup} alt="Map Gif" />
         <div>
           <h2>Meet Up With Us!</h2>
           <p>
