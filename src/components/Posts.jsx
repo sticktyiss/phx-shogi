@@ -6,18 +6,18 @@ const Posts = () => {
     <main className={classes.main}>
       <div className={classes.posts}>
       <div className={classes.postCard}>
-          <h2>Matsuri 2024!</h2>
+          <h2>MATSURI</h2>
           <p>
             🍡Come find us at Matsuri, the Japanese cultural festival!🎌 
             <br />
             <br />
-            We'll be teaching everyone how to play shogi and will be showcasing a special variant with cute animal pieces! 🐱🐶🦁🐶🐱
+            The event will be held at <a href="https://maps.app.goo.gl/2fJnayb5dqE8oW5P6">Steele Indian School Park</a>  on February 24th and 25th from 9am to 5pm. We'll be teaching everyone how to play shogi and will be showcasing a special variant with cute animal pieces! 🐱🐶🦁🐶🐱
             <br />
             <br />
-            Enjoy some Japanese festival food and then get your game face on and take the 👺 SHOGI CHALLENGE:tTry to defeat The Phoenix King in an even game!👹
+            Enjoy some Japanese festival food and then get your game face on and take the 👺 SHOGI CHALLENGE: try to defeat The Phoenix King in an even game!👹
             <br />
           </p>
-          <h4>Posted: Sep 26th, 2023</h4>
+          <h4>Posted: Feb 1st, 2024</h4>
         </div>
         {/* <div className={classes.postCard}>
           <h2 className={classes.white}>Weekly Meetup</h2>
