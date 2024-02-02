@@ -5,7 +5,21 @@ const Posts = () => {
   return (
     <main className={classes.main}>
       <div className={classes.posts}>
-        <div className={classes.postCard}>
+      <div className={classes.postCard}>
+          <h2>Matsuri 2024!</h2>
+          <p>
+            🍡Come find us at Matsuri, the Japanese cultural festival!🎌 
+            <br />
+            <br />
+            We'll be teaching everyone how to play shogi and will be showcasing a special variant with cute animal pieces! 🐱🐶🦁🐶🐱
+            <br />
+            <br />
+            Enjoy some Japanese festival food and then get your game face on and take the 👺 SHOGI CHALLENGE:tTry to defeat The Phoenix King in an even game!👹
+            <br />
+          </p>
+          <h4>Posted: Sep 26th, 2023</h4>
+        </div>
+        {/* <div className={classes.postCard}>
           <h2 className={classes.white}>Weekly Meetup</h2>
           <p>
             🗓️ Our Shogi Club is
@@ -23,7 +37,7 @@ const Posts = () => {
             See you online! 📲👑
           </p>
           <h4>Posted: Sep 26th, 2023</h4>
-        </div>
+        </div> */}
         <div className={classes.postCard}>
           <h2>ASU Meetup</h2>
           <p>
