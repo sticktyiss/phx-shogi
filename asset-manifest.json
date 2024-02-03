@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4b6f7ee.css",
-    "main.js": "/static/js/main.35e4fc3e.js",
+    "main.css": "/static/css/main.997ee3d3.css",
+    "main.js": "/static/js/main.30aee009.js",
     "static/media/YujiSyuku-Regular.ttf": "/static/media/YujiSyuku-Regular.597f191659eefd846b89.ttf",
     "static/media/map-locations.gif": "/static/media/map-locations.badc09452bcb9b289158.gif",
     "static/media/promo-shogi.gif": "/static/media/promo-shogi.442942aa5b27cba63a23.gif",
-    "static/media/map.gif": "/static/media/map.f1a1cc95ce16aa4f2ee5.gif",
+    "static/media/meetup.jpg": "/static/media/meetup.0f05143f74ff87d12dd0.jpg",
     "static/media/KongJapanese.otf": "/static/media/KongJapanese.aaf4760be7ab0939ba25.otf",
     "static/media/recapture.png": "/static/media/recapture.528c48dd4386dd6ba339.png",
     "static/media/drop.png": "/static/media/drop.fdf1530165806c9a2000.png",
@@ -45,11 +45,11 @@
     "static/media/promoted_lance_moves.png": "/static/media/promoted_lance_moves.63034479dccd890e8fad.png",
     "static/media/narigin.png": "/static/media/narigin.f751b1b12598344b1bad.png",
     "index.html": "/index.html",
-    "main.c4b6f7ee.css.map": "/static/css/main.c4b6f7ee.css.map",
-    "main.35e4fc3e.js.map": "/static/js/main.35e4fc3e.js.map"
+    "main.997ee3d3.css.map": "/static/css/main.997ee3d3.css.map",
+    "main.30aee009.js.map": "/static/js/main.30aee009.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4b6f7ee.css",
-    "static/js/main.35e4fc3e.js"
+    "static/css/main.997ee3d3.css",
+    "static/js/main.30aee009.js"
   ]
 }
