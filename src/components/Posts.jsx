@@ -11,7 +11,7 @@ const Posts = () => {
           Join us for a beginner's workshop at the Japanese Friendship Garden. This session will cover the fundamentals of shogi, providing participants with a brief look at the history and legacy of the game, as well as a chance to learn and play with others. Whether you're completely new or have played a game or two, this workshop promises an insightful journey into the fascinating world of shogi.
           </p>
           <p>
-            Register for the workshop here: <a href="https://japanesefriendshipgarden.doubleknot.com/event/intro-to-shogi/3036990">https://japanesefriendshipgarden.doubleknot.com/event/intro-to-shogi/3036990</a>
+            Register for the workshop <a href="https://japanesefriendshipgarden.doubleknot.com/event/intro-to-shogi/3036990">here</a>
           </p>
           <h4>Posted: Feb 26th, 2024</h4>
         </div>
